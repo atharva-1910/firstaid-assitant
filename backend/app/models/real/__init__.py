@@ -12,7 +12,7 @@ import logging
 import urllib.request
 
 from ... import config
-from ..stub import StubExplainer, StubLanguageId, StubSituationClassifier, StubTriage
+from ..stub import StubExplainer, StubSituationClassifier, StubTriage
 
 log = logging.getLogger(__name__)
 URGENCY_LABELS = ["emergency", "clinic", "home"]
@@ -22,7 +22,9 @@ class RealLanguageId:
     """IndicLID (native and romanised). Falls back to the stub rules if IndicLID is missing."""
 
     def __init__(self) -> None:
-        self._fallback = StubLanguageId()
+        from .. import default_langid
+
+        self._fallback = default_langid()
         try:
             from ai4bharat.IndicLID import IndicLID  # type: ignore
 

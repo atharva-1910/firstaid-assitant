@@ -4,6 +4,8 @@ from __future__ import annotations
 from functools import lru_cache
 
 from .. import config
+from .ngram_langid import WEIGHTS as LANGID_WEIGHTS
+from .ngram_langid import NgramLanguageId
 from .stub import (
     StubExplainer,
     StubLanguageId,
@@ -15,7 +17,7 @@ from .stub import (
 
 MODEL_NAMES = {
     "stub": {
-        "langid": "stub: script ranges + Hinglish word list",
+        "langid": "char n-gram TF-IDF + logistic regression (trained, scripts/train_langid.py)",
         "triage": "stub: lexicon keyword rules",
         "situation": "stub: keyword overlap",
         "verifier": "stub: always reject",
@@ -23,7 +25,7 @@ MODEL_NAMES = {
         "explainer": "stub: rule trigger words",
     },
     "real": {
-        "langid": "IndicLID (AI4Bharat, 2023)",
+        "langid": "IndicLID (AI4Bharat, 2023), char n-gram model as fallback",
         "triage": "IndicBERT v2 (2023), fine-tuned",
         "situation": "BGE-M3 (2024)",
         "verifier": "mmBERT (2025), fine-tuned on IndicXNLI",
@@ -33,6 +35,19 @@ MODEL_NAMES = {
 }
 
 
+def use_ngram_langid() -> bool:
+    return config.LANGID != "rules" and LANGID_WEIGHTS.exists()
+
+
+def langid_name() -> str:
+    return MODEL_NAMES[config.MODEL_MODE]["langid"] if use_ngram_langid() else "rules: script ranges + word lists"
+
+
+def default_langid():
+    """The trained n-gram model when its weights exist; LANGID=rules forces the word-list rules."""
+    return NgramLanguageId() if use_ngram_langid() else StubLanguageId()
+
+
 @lru_cache(maxsize=1)
 def registry() -> dict:
     if config.MODEL_MODE == "real":
@@ -40,7 +55,7 @@ def registry() -> dict:
 
         return build()
     return {
-        "langid": StubLanguageId(),
+        "langid": default_langid(),
         "triage": StubTriage(),
         "situation": StubSituationClassifier(),
         "verifier": StubStepVerifier(),

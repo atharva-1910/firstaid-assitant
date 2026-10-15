@@ -8,7 +8,7 @@ from __future__ import annotations
 from . import clarify, content, safety_rules
 from .config import LANGS, MAX_QUESTIONS_IN_ROW, SITUATIONS
 from .explain import explain
-from .extract import extract
+from .extract import extract_safe
 from .memory import Session, store
 from .models import registry
 from .urgency import max_urgency
@@ -127,7 +127,7 @@ def analyze(session_id: str | None, text: str, ui_lang: str = "auto") -> dict:
     models = registry()
     lang = models["langid"].detect(text)["lang"]
     sess.lang = lang
-    ext = extract(text, lang)
+    ext = extract_safe(text, lang)
     sess.apply_extraction(ext, text)
     joined = " . ".join(sess.texts)
     sess.last_prediction = models["situation"].predict(joined, lang)

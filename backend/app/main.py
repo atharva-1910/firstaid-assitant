@@ -10,7 +10,7 @@ from pydantic import BaseModel, Field
 
 from . import config, content, pipeline, summary
 from .memory import store
-from .models import MODEL_NAMES
+from .models import MODEL_NAMES, langid_name
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
@@ -92,7 +92,7 @@ def health() -> dict:
         "model_mode": config.MODEL_MODE,
         "versions": {
             "app": app.version,
-            "models": MODEL_NAMES.get(config.MODEL_MODE, {}),
+            "models": {**MODEL_NAMES.get(config.MODEL_MODE, {}), "langid": langid_name()},
             "content": {sid: r["review_status"] for sid, r in recs.items()},
         },
     }

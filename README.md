@@ -61,7 +61,8 @@ message ─► normalise ─► language id ─► F1 extraction + F3 negation �
 | Piece | File | Owner |
 |---|---|---|
 | Normalise (Unicode, Devanagari digits, nukta, curly quotes) | `backend/app/normalize.py` | — |
-| Language id: script, Hinglish markers, Hindi vs Marathi lexicon evidence | `backend/app/models/stub` | — |
+| Language id: trained char n-gram model (script first, then classifier); word-list rules with `LANGID=rules` | `backend/app/models/ngram_langid.py`, `backend/scripts/train_langid.py` | — |
+| Cross-language safety net: sibling-language pass that can only raise urgency | `backend/app/extract.py` (`extract_safe`) | — |
 | **F1** detail extraction (slots of Section 8.3, typo-tolerant) | `backend/app/extract.py`, `content/lexicons/*.json` | Taneesha |
 | **F2** clarifying question (information gain) and conversation memory | `backend/app/clarify.py`, `backend/app/memory.py` | Atharva |
 | **F3** negation and uncertainty (3-token window, per-language direction) | `backend/app/negation.py` | Siddhi |

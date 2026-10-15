@@ -169,3 +169,64 @@ def extract(text: str, lang: str) -> Extraction:
         if slot in out.slots:
             out.uncertain.discard(slot)
     return out
+
+
+# ---------------------------------------------------------------- cross-language safety net
+
+# The other language written in the same script: a wrong language guess lands on it.
+SIBLING = {"hi": "mr", "mr": "hi", "en": "hinglish", "hinglish": "en"}
+# Values that can only make the system more cautious.
+RAISING = {
+    "responsive": {"no"},
+    "breathing": {"absent", "abnormal"},
+    "chest_pain": {"yes"},
+    "choking_signs": {"weak_or_silent"},
+    "bite_type": {"snake"},
+    "allergy_signs": {"yes"},
+    "burn_cause": {"electrical", "chemical_acid"},
+    "burn_area": {"eyes_or_face", "large", "sensitive_area"},
+    "power_off": {"no"},
+    "age_group": {"infant", "child"},
+}
+# Context slots: taken only when the main pass found none, so a burn or bite is not missed.
+CONTEXT = ("burn_cause", "bite_type")
+
+
+def _more_severe(slot: str, new: str, old: str | None) -> bool:
+    if old is None:
+        return True
+    order = SEVERITY.get(slot, [])
+    return new in order and old in order and order.index(new) < order.index(old)
+
+
+def extract_safe(text: str, lang: str) -> Extraction:
+    """F1 with a safety net against a wrong language guess.
+
+    Runs extraction again with the sibling language's lexicon and keeps only facts that raise
+    urgency, from words the main pass did not already read. A model can only make the system
+    more cautious, never less (Section 8.2).
+    """
+    out = extract(text, lang)
+    other = extract(text, SIBLING.get(lang, lang)) if SIBLING.get(lang) else None
+    if other is None:
+        return out
+    seen = [(e.start, e.end) for e in out.evidence]
+    for ev in other.evidence:
+        if any(ev.start < e and s < ev.end for s, e in seen):
+            continue
+        adopted = {
+            k: v for k, v in ev.slots.items()
+            if (v in RAISING.get(k, ()) and _more_severe(k, v, out.slots.get(k))) or (k in CONTEXT and k not in out.slots)
+        }
+        new_flags = [f for f in ev.flags if f not in out.flags]
+        if not adopted and not new_flags:
+            continue
+        out.slots.update(adopted)
+        for slot in adopted:
+            out.uncertain.discard(slot)
+        out.flags.update(new_flags)
+        for s in ev.sits:
+            out.sits[s] = out.sits.get(s, 0.0) + 1.0
+        out.evidence.append(ev)
+        seen.append((ev.start, ev.end))
+    return out

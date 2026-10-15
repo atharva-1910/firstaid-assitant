@@ -23,6 +23,8 @@ def _load_dotenv() -> None:
 _load_dotenv()
 
 MODEL_MODE = os.environ.get("MODEL_MODE", "stub").lower()
+# Language id: "ngram" (trained char n-gram model, default) or "rules" (word lists, for comparison).
+LANGID = os.environ.get("LANGID", "ngram").lower()
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 REPHRASE_ENABLED = os.environ.get("REPHRASE_ENABLED", "false").lower() == "true"
 SESSION_TTL_SECONDS = int(os.environ.get("SESSION_TTL_SECONDS", str(2 * 60 * 60)))

@@ -1,8 +1,10 @@
-import { Activity, Bug, Flame, HeartPulse, UserX } from "lucide-react";
-import { useState } from "react";
+import { Activity, Bug, Flame, HeartPulse, Mic, Square, UserX } from "lucide-react";
+import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { PrimaryButton } from "../components/Buttons";
+import type { Lang } from "../api/client";
+import { PrimaryButton, SecondaryButton } from "../components/Buttons";
+import { useSpeechInput } from "../speech";
 
 const TILES = [
   { key: "unresponsive", icon: UserX },
@@ -13,14 +15,23 @@ const TILES = [
 ] as const;
 
 export function Home({ onSubmit, onAbout, busy }: { onSubmit: (text: string) => void; onAbout: () => void; busy: boolean }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [text, setText] = useState("");
+  // Spoken words are added after whatever was already typed when the mic was switched on.
+  const typedBefore = useRef("");
+  const speech = useSpeechInput(i18n.language as Lang, (spoken) => setText((typedBefore.current + " " + spoken).trim()));
+  const toggleMic = () => {
+    if (speech.listening) return speech.stop();
+    typedBefore.current = text;
+    speech.start();
+  };
   return (
     <div className="flex flex-col gap-6">
       <form
         className="flex flex-col gap-3"
         onSubmit={(e) => {
           e.preventDefault();
+          speech.stop();
           if (text.trim()) onSubmit(text.trim());
         }}
       >
@@ -35,6 +46,17 @@ export function Home({ onSubmit, onAbout, busy }: { onSubmit: (text: string) => 
           placeholder={t("own_words")}
           className="w-full resize-none rounded-card border border-border bg-surface p-4 text-body text-text placeholder:text-text-muted focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/20"
         />
+        {speech.supported && (
+          <div className="flex flex-col gap-2">
+            <SecondaryButton type="button" onClick={toggleMic} disabled={busy} aria-pressed={speech.listening}>
+              {speech.listening ? <Square aria-hidden size={20} /> : <Mic aria-hidden size={22} />}
+              {speech.listening ? t("mic_stop") : t("mic_start")}
+            </SecondaryButton>
+            <p role="status" aria-live="polite" className="text-note text-text-muted">
+              {speech.listening ? t("mic_listening") : speech.error ? t(`mic_${speech.error}`) : t("mic_note")}
+            </p>
+          </div>
+        )}
         <PrimaryButton type="submit" disabled={busy || !text.trim()}>
           {busy ? t("loading") : t("continue")}
         </PrimaryButton>

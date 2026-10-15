@@ -77,5 +77,12 @@
   "question_hint": "Ek jawab chuniye",
   "home": "Home",
   "steps_done_title": "Aapne list ke saare steps poore kiye.",
-  "fallback_title": "Hum pakka nahi samajh paaye ki kya hua"
+  "fallback_title": "Hum pakka nahi samajh paaye ki kya hua",
+  "mic_start": "Bol kar batayein",
+  "mic_stop": "Sunna band karein",
+  "mic_listening": "Sun rahe hain. Ab boliye, phir likha hua check kar lein.",
+  "mic_note": "Aapka browser awaaz ko text mein badalta hai aur iske liye online service use kar sakta hai. Aage badhne se pehle text check kar lein.",
+  "mic_denied": "Microphone ki permission band hai. Browser mein allow karein, ya likh kar batayein.",
+  "mic_no_speech": "Humein kuch sunaai nahi diya. Phir se try karein, ya likh kar batayein.",
+  "mic_failed": "Abhi bol kar batana kaam nahi kar raha. Kripya likh kar batayein."
 }

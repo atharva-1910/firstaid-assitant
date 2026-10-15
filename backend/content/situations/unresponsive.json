@@ -4,14 +4,14 @@
   "age_scope": "adult",
   "names": {
     "en": "Unresponsive or unconscious",
-    "hi": "",
+    "hi": "प्रतिक्रिया न देना या बेहोश",
     "hinglish": "",
     "mr": ""
   },
   "recognition": [
     {
       "en": "Does not respond to a loud voice or a tap on the shoulders.",
-      "hi": "",
+      "hi": "ज़ोर से आवाज़ देने या कंधे थपथपाने पर कोई प्रतिक्रिया नहीं देते।",
       "hinglish": "",
       "mr": ""
     }
@@ -36,7 +36,7 @@
           "order": 1,
           "text": {
             "en": "Make sure the area is safe for you. If electricity may be involved, do not touch them until the power is off.",
-            "hi": "",
+            "hi": "पक्का करें कि जगह आपके लिए सुरक्षित है। अगर बिजली का ख़तरा हो सकता है, तो बिजली बंद होने तक उन्हें न छुएँ।",
             "hinglish": "",
             "mr": ""
           },
@@ -57,7 +57,7 @@
           "order": 2,
           "text": {
             "en": "Tap their shoulders and ask loudly, \"Are you all right?\"",
-            "hi": "",
+            "hi": "उनके कंधे थपथपाएँ और ज़ोर से पूछें, \"क्या आप ठीक हैं?\"",
             "hinglish": "",
             "mr": ""
           },
@@ -78,7 +78,7 @@
           "order": 3,
           "text": {
             "en": "Look at the chest for up to 10 seconds. Are they breathing normally?",
-            "hi": "",
+            "hi": "10 सेकंड तक उनकी छाती को देखें। क्या वे सामान्य रूप से साँस ले रहे हैं?",
             "hinglish": "",
             "mr": ""
           },
@@ -107,7 +107,7 @@
           "order": 4,
           "text": {
             "en": "Call 112 now and put the phone on speaker.",
-            "hi": "",
+            "hi": "अभी 112 पर कॉल करें और फ़ोन स्पीकर पर रखें।",
             "hinglish": "",
             "mr": ""
           },
@@ -127,7 +127,7 @@
           "order": 5,
           "text": {
             "en": "Ask someone to bring an AED (defibrillator) if one is nearby.",
-            "hi": "",
+            "hi": "अगर पास में AED (डिफ़िब्रिलेटर) हो, तो किसी से उसे लाने को कहें।",
             "hinglish": "",
             "mr": ""
           },
@@ -148,7 +148,7 @@
           "order": 6,
           "text": {
             "en": "Put the heel of one hand in the centre of the chest, the other hand on top, arms straight.",
-            "hi": "",
+            "hi": "एक हाथ की हथेली का निचला हिस्सा छाती के बीच में रखें, दूसरा हाथ उसके ऊपर रखें, और बाँहें सीधी रखें।",
             "hinglish": "",
             "mr": ""
           },
@@ -170,7 +170,7 @@
           "order": 7,
           "text": {
             "en": "Push hard and fast: at least 5 cm deep but not more than 6 cm, 100 to 120 times a minute. Let the chest rise fully each time.",
-            "hi": "",
+            "hi": "ज़ोर से और तेज़ी से दबाएँ: कम से कम 5 सेमी गहरा, पर 6 सेमी से ज़्यादा नहीं, एक मिनट में 100 से 120 बार। हर बार छाती को पूरी तरह ऊपर आने दें।",
             "hinglish": "",
             "mr": ""
           },
@@ -191,7 +191,7 @@
           "order": 8,
           "text": {
             "en": "If you are trained and willing, give 2 breaths after every 30 pushes. If not, keep pushing without stopping.",
-            "hi": "",
+            "hi": "अगर आप प्रशिक्षित हैं और तैयार हैं, तो हर 30 बार दबाने के बाद 2 बार साँस दें। नहीं तो, बिना रुके दबाते रहें।",
             "hinglish": "",
             "mr": ""
           },
@@ -213,7 +213,7 @@
           "order": 9,
           "text": {
             "en": "When the AED arrives, switch it on and follow its voice instructions.",
-            "hi": "",
+            "hi": "जब AED आ जाए, तो उसे चालू करें और उसके बोले गए निर्देशों का पालन करें।",
             "hinglish": "",
             "mr": ""
           },
@@ -239,7 +239,7 @@
           "order": 10,
           "text": {
             "en": "Keep going until help takes over, they start breathing normally, or you cannot continue.",
-            "hi": "",
+            "hi": "तब तक करते रहें जब तक मदद आकर काम न सँभाल ले, वे सामान्य रूप से साँस न लेने लगें, या आप आगे जारी न रख पाएँ।",
             "hinglish": "",
             "mr": ""
           },
@@ -261,7 +261,7 @@
           "order": 4,
           "text": {
             "en": "Call 112.",
-            "hi": "",
+            "hi": "112 पर कॉल करें।",
             "hinglish": "",
             "mr": ""
           },
@@ -282,7 +282,7 @@
           "order": 5,
           "text": {
             "en": "Roll them onto their side (recovery position) so their airway stays open, unless you think they have a neck or back injury.",
-            "hi": "",
+            "hi": "उन्हें करवट दिलाकर लिटा दें (रिकवरी पोज़िशन), ताकि साँस का रास्ता खुला रहे, जब तक आपको गर्दन या पीठ में चोट का शक न हो।",
             "hinglish": "",
             "mr": ""
           },
@@ -308,7 +308,7 @@
           "order": 6,
           "text": {
             "en": "Keep checking their breathing. If it stops or becomes gasping, go to Path A.",
-            "hi": "",
+            "hi": "उनकी साँस जाँचते रहें। अगर साँस रुक जाए या हाँफने जैसी हो जाए, तो पथ A पर जाएँ।",
             "hinglish": "",
             "mr": ""
           },
@@ -333,7 +333,7 @@
           "order": 7,
           "text": {
             "en": "Stay with them until help arrives.",
-            "hi": "",
+            "hi": "मदद आने तक उनके साथ रहें।",
             "hinglish": "",
             "mr": ""
           },
@@ -354,7 +354,7 @@
         {
           "text": {
             "en": "Do not mistake occasional gasps for normal breathing.",
-            "hi": "",
+            "hi": "बीच-बीच में हाँफने को सामान्य साँस न समझें।",
             "hinglish": "",
             "mr": ""
           },
@@ -369,13 +369,13 @@
         {
           "text": {
             "en": "Do not give food, water or medicine by mouth.",
-            "hi": "",
+            "hi": "मुँह से खाना, पानी या दवा न दें।",
             "hinglish": "",
             "mr": ""
           },
           "reason": {
             "en": "They cannot swallow safely.",
-            "hi": "",
+            "hi": "वे सुरक्षित रूप से निगल नहीं सकते।",
             "hinglish": "",
             "mr": ""
           },
@@ -384,7 +384,7 @@
         {
           "text": {
             "en": "Do not throw water on the face or make them sit up.",
-            "hi": "",
+            "hi": "चेहरे पर पानी न डालें और उन्हें उठाकर न बैठाएँ।",
             "hinglish": "",
             "mr": ""
           },
@@ -399,13 +399,13 @@
         {
           "text": {
             "en": "Do not make them smell onions or shoes.",
-            "hi": "",
+            "hi": "उन्हें प्याज़ या जूता न सुँघाएँ।",
             "hinglish": "",
             "mr": ""
           },
           "reason": {
             "en": "It does not help and wastes time.",
-            "hi": "",
+            "hi": "इससे कोई फ़ायदा नहीं होता और समय बर्बाद होता है।",
             "hinglish": "",
             "mr": ""
           },
@@ -414,7 +414,7 @@
         {
           "text": {
             "en": "Do not leave them alone.",
-            "hi": "",
+            "hi": "उन्हें अकेला न छोड़ें।",
             "hinglish": "",
             "mr": ""
           },

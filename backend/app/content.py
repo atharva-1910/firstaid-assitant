@@ -82,7 +82,8 @@ def localized(value: dict | None, lang: str) -> tuple[str, bool]:
     text = (value.get(lang) or "").strip()
     if text:
         return text, False
-    return value.get("en", ""), lang != "en"
+    en = value.get("en", "")
+    return en, lang != "en" and bool(en.strip())
 
 
 def all_step_texts() -> set[str]:

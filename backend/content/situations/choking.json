@@ -4,14 +4,14 @@
   "age_scope": "adult",
   "names": {
     "en": "Choking",
-    "hi": "",
+    "hi": "गले में कुछ फँसना",
     "hinglish": "",
     "mr": ""
   },
   "recognition": [
     {
       "en": "Suddenly cannot speak, breathe or cough, often while eating; may clutch the throat.",
-      "hi": "",
+      "hi": "अचानक बोल, साँस ले या खाँस नहीं पाते, अक्सर खाते समय; गला पकड़ सकते हैं।",
       "hinglish": "",
       "mr": ""
     }
@@ -33,7 +33,7 @@
           "order": 1,
           "text": {
             "en": "Ask, \"Are you choking?\" If they can cough strongly, let them keep coughing and watch them closely.",
-            "hi": "",
+            "hi": "पूछें, \"क्या आपके गले में कुछ फँसा है?\" अगर वे ज़ोर से खाँस पा रहे हैं, तो उन्हें खाँसने दें और ध्यान से देखते रहें।",
             "hinglish": "",
             "mr": ""
           },
@@ -53,7 +53,7 @@
           "order": 2,
           "text": {
             "en": "If the cough is weak or they cannot breathe or speak, call 112, or ask someone to call.",
-            "hi": "",
+            "hi": "अगर खाँसी कमज़ोर है या वे साँस नहीं ले पा रहे या बोल नहीं पा रहे, तो 112 पर कॉल करें, या किसी और से कॉल करवाएँ।",
             "hinglish": "",
             "mr": ""
           },
@@ -73,7 +73,7 @@
           "order": 3,
           "text": {
             "en": "Stand slightly behind them, support their chest with one hand and lean them forward.",
-            "hi": "",
+            "hi": "उनके थोड़ा पीछे खड़े हों, एक हाथ से उनकी छाती को सहारा दें और उन्हें आगे की ओर झुकाएँ।",
             "hinglish": "",
             "mr": ""
           },
@@ -94,7 +94,7 @@
           "order": 4,
           "text": {
             "en": "Give 5 firm back blows between the shoulder blades with the heel of your hand.",
-            "hi": "",
+            "hi": "अपनी हथेली के निचले हिस्से से दोनों कंधों की हड्डियों के बीच 5 बार ज़ोर से थपकी मारें।",
             "hinglish": "",
             "mr": ""
           },
@@ -120,7 +120,7 @@
           "order": 5,
           "text": {
             "en": "Then give 5 abdominal thrusts: stand behind them, place a fist just above the belly button, hold it with your other hand, and pull sharply inwards and upwards.",
-            "hi": "",
+            "hi": "फिर पेट पर 5 बार दबाव दें: उनके पीछे खड़े हों, मुट्ठी नाभि के ठीक ऊपर रखें, उसे दूसरे हाथ से पकड़ें, और झटके से अंदर और ऊपर की ओर खींचें।",
             "hinglish": "",
             "mr": ""
           },
@@ -146,7 +146,7 @@
           "order": 6,
           "text": {
             "en": "Keep repeating 5 back blows and 5 abdominal thrusts until the object comes out or they become unresponsive.",
-            "hi": "",
+            "hi": "जब तक चीज़ बाहर न निकल जाए या वे प्रतिक्रिया देना बंद न कर दें, तब तक 5 बार पीठ पर थपकी और 5 बार पेट पर दबाव दोहराते रहें।",
             "hinglish": "",
             "mr": ""
           },
@@ -166,7 +166,7 @@
           "order": 7,
           "text": {
             "en": "If they become unresponsive, start CPR, beginning with chest pushes (Situation 9.1, Path A).",
-            "hi": "",
+            "hi": "अगर वे प्रतिक्रिया देना बंद कर दें, तो छाती दबाने से CPR शुरू करें (स्थिति 9.1, पथ A)।",
             "hinglish": "",
             "mr": ""
           },
@@ -190,7 +190,7 @@
           "order": 8,
           "text": {
             "en": "After abdominal thrusts, they should see a doctor, even if they feel fine.",
-            "hi": "",
+            "hi": "पेट पर दबाव देने के बाद, उन्हें डॉक्टर को दिखाना चाहिए, भले ही वे ठीक महसूस करें।",
             "hinglish": "",
             "mr": ""
           },
@@ -211,7 +211,7 @@
         {
           "text": {
             "en": "Do not sweep inside the mouth with your finger unless you can clearly see the object.",
-            "hi": "",
+            "hi": "जब तक चीज़ साफ़ दिखाई न दे, उँगली से मुँह के अंदर टटोलकर न निकालें।",
             "hinglish": "",
             "mr": ""
           },
@@ -226,13 +226,13 @@
         {
           "text": {
             "en": "Do not give water or food.",
-            "hi": "",
+            "hi": "पानी या खाना न दें।",
             "hinglish": "",
             "mr": ""
           },
           "reason": {
             "en": "It can block the airway further.",
-            "hi": "",
+            "hi": "इससे साँस की नली और ज़्यादा बंद हो सकती है।",
             "hinglish": "",
             "mr": ""
           },
@@ -241,7 +241,7 @@
         {
           "text": {
             "en": "Do not hit their back while they are still coughing strongly.",
-            "hi": "",
+            "hi": "जब तक वे ज़ोर से खाँस रहे हैं, उनकी पीठ पर न मारें।",
             "hinglish": "",
             "mr": ""
           },
@@ -258,7 +258,7 @@
   },
   "out_of_scope_note": {
     "en": "For pregnant people or people too large to reach around, this case is not covered. Call 112.",
-    "hi": "",
+    "hi": "गर्भवती व्यक्ति या जिनके चारों ओर हाथ न पहुँचें, उनके लिए यह जानकारी उपलब्ध नहीं है। 112 पर कॉल करें।",
     "hinglish": "",
     "mr": ""
   },

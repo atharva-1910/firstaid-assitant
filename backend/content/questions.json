@@ -6,7 +6,7 @@
       "use_in_gain": true,
       "text": {
         "en": "Does the person respond when you tap their shoulders and speak loudly?",
-        "hi": "",
+        "hi": "कंधे थपथपाने और ज़ोर से बोलने पर क्या व्यक्ति कोई प्रतिक्रिया देता है?",
         "hinglish": "",
         "mr": ""
       },
@@ -84,7 +84,7 @@
           "id": "no",
           "label": {
             "en": "No, or only gasping",
-            "hi": "",
+            "hi": "नहीं, या सिर्फ़ हाँफ रहे हैं",
             "hinglish": "",
             "mr": ""
           },
@@ -117,7 +117,7 @@
       "use_in_gain": true,
       "text": {
         "en": "Do they have pain, pressure or tightness in the chest?",
-        "hi": "",
+        "hi": "क्या उनकी छाती में दर्द, दबाव या जकड़न है?",
         "hinglish": "",
         "mr": ""
       },
@@ -162,7 +162,7 @@
       "use_in_gain": true,
       "text": {
         "en": "Can the person cough, speak or breathe?",
-        "hi": "",
+        "hi": "क्या व्यक्ति खाँस, बोल या साँस ले पा रहा है?",
         "hinglish": "",
         "mr": ""
       },
@@ -171,7 +171,7 @@
           "id": "strong",
           "label": {
             "en": "Yes, coughing strongly",
-            "hi": "",
+            "hi": "हाँ, ज़ोर से खाँस रहे हैं",
             "hinglish": "",
             "mr": ""
           },
@@ -183,7 +183,7 @@
           "id": "weak",
           "label": {
             "en": "No, or very weakly",
-            "hi": "",
+            "hi": "नहीं, या बहुत कमज़ोर",
             "hinglish": "",
             "mr": ""
           },
@@ -205,7 +205,7 @@
       "use_in_gain": true,
       "text": {
         "en": "What bit or stung them?",
-        "hi": "",
+        "hi": "उन्हें किसने काटा या डंक मारा?",
         "hinglish": "",
         "mr": ""
       },
@@ -214,7 +214,7 @@
           "id": "snake",
           "label": {
             "en": "Snake",
-            "hi": "",
+            "hi": "साँप",
             "hinglish": "",
             "mr": ""
           },
@@ -226,7 +226,7 @@
           "id": "insect",
           "label": {
             "en": "Insect or bee",
-            "hi": "",
+            "hi": "कीड़ा या मधुमक्खी",
             "hinglish": "",
             "mr": ""
           },
@@ -238,7 +238,7 @@
           "id": "scorpion",
           "label": {
             "en": "Scorpion",
-            "hi": "",
+            "hi": "बिच्छू",
             "hinglish": "",
             "mr": ""
           },
@@ -250,7 +250,7 @@
           "id": "dog",
           "label": {
             "en": "Dog or other animal",
-            "hi": "",
+            "hi": "कुत्ता या कोई और जानवर",
             "hinglish": "",
             "mr": ""
           },
@@ -284,7 +284,7 @@
       "use_in_gain": false,
       "text": {
         "en": "Is there swelling of the face or throat, trouble breathing, or a rash spreading over the body?",
-        "hi": "",
+        "hi": "क्या चेहरे या गले में सूजन, साँस लेने में तकलीफ़, या शरीर पर फैलते चकत्ते हैं?",
         "hinglish": "",
         "mr": ""
       },
@@ -322,7 +322,7 @@
       "use_in_gain": true,
       "text": {
         "en": "What caused the burn?",
-        "hi": "",
+        "hi": "जलने की वजह क्या थी?",
         "hinglish": "",
         "mr": ""
       },
@@ -331,7 +331,7 @@
           "id": "fire",
           "label": {
             "en": "Fire or hot object",
-            "hi": "",
+            "hi": "आग या गर्म चीज़",
             "hinglish": "",
             "mr": ""
           },
@@ -343,7 +343,7 @@
           "id": "hot_liquid",
           "label": {
             "en": "Hot liquid or steam",
-            "hi": "",
+            "hi": "गर्म तरल या भाप",
             "hinglish": "",
             "mr": ""
           },
@@ -355,7 +355,7 @@
           "id": "chemical",
           "label": {
             "en": "Chemical or acid",
-            "hi": "",
+            "hi": "केमिकल या तेज़ाब",
             "hinglish": "",
             "mr": ""
           },
@@ -367,7 +367,7 @@
           "id": "electricity",
           "label": {
             "en": "Electricity",
-            "hi": "",
+            "hi": "बिजली",
             "hinglish": "",
             "mr": ""
           },
@@ -389,7 +389,7 @@
       "use_in_gain": false,
       "text": {
         "en": "Is the electricity switched off, or is the person clear of the source?",
-        "hi": "",
+        "hi": "क्या बिजली बंद कर दी गई है, या व्यक्ति बिजली के स्रोत से दूर है?",
         "hinglish": "",
         "mr": ""
       },
@@ -439,7 +439,7 @@
       "use_in_gain": false,
       "text": {
         "en": "Is the person an adult, a child or a baby?",
-        "hi": "",
+        "hi": "व्यक्ति वयस्क है, बच्चा है या शिशु?",
         "hinglish": "",
         "mr": ""
       },
@@ -448,7 +448,7 @@
           "id": "adult",
           "label": {
             "en": "Adult",
-            "hi": "",
+            "hi": "वयस्क",
             "hinglish": "",
             "mr": ""
           },
@@ -460,7 +460,7 @@
           "id": "child",
           "label": {
             "en": "Child",
-            "hi": "",
+            "hi": "बच्चा",
             "hinglish": "",
             "mr": ""
           },
@@ -472,7 +472,7 @@
           "id": "baby",
           "label": {
             "en": "Baby",
-            "hi": "",
+            "hi": "शिशु",
             "hinglish": "",
             "mr": ""
           },

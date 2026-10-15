@@ -113,7 +113,23 @@
           "evidence": "unchecked",
           "next": "ch_s5",
           "verified": false,
-          "verify_note": "VERIFY technique in G1 p. 238"
+          "verify_note": "VERIFY technique in G1 p. 238",
+          "image": {
+            "file": "ch_s4.webp",
+            "title": "Back blows (back slaps) against choking for adult people",
+            "author": "Trakotako",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Back_blows_(back_slaps)_against_choking_for_adult_people.jpg",
+            "alt": {
+              "en": "Person leaning forward while the rescuer strikes between the shoulder blades.",
+              "hi": "व्यक्ति आगे झुका है और बचाने वाला कंधों की हड्डियों के बीच थपकी मार रहा है।",
+              "hinglish": "Vyakti aage jhuka hai aur bachaane waala kandhon ki haddiyon ke beech thapki maar raha hai.",
+              "mr": "व्यक्ती पुढे वाकलेली आणि मदत करणारा खांद्यांच्या हाडांमध्ये थाप मारत आहे."
+            },
+            "changes": "Resized to 500 px, white background, converted to WebP.",
+            "verified": false
+          }
         },
         {
           "id": "ch_s5",
@@ -139,7 +155,23 @@
           "evidence": "unchecked",
           "next": "ch_s6",
           "verified": false,
-          "verify_note": "VERIFY technique in G1 p. 238"
+          "verify_note": "VERIFY technique in G1 p. 238",
+          "image": {
+            "file": "ch_s5.webp",
+            "title": "AbdominalThrust HeimlichManoeuvre",
+            "author": "Evolution and evolvability",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "source_url": "https://commons.wikimedia.org/wiki/File:AbdominalThrust_HeimlichManoeuvre.svg",
+            "alt": {
+              "en": "Rescuer standing behind, fist just above the belly button, pulling in and up.",
+              "hi": "बचाने वाला पीछे खड़ा, मुट्ठी नाभि के ठीक ऊपर, अंदर और ऊपर की ओर खींचते हुए।",
+              "hinglish": "Bachaane waala peeche khada, mutthi naabhi ke theek upar, andar aur upar ki taraf kheenchte hue.",
+              "mr": "मदत करणारा मागे उभा, मूठ बेंबीच्या थोडी वर, आत आणि वर ओढताना."
+            },
+            "changes": "Resized to 500 px, white background, converted to WebP.",
+            "verified": false
+          }
         },
         {
           "id": "ch_s6",

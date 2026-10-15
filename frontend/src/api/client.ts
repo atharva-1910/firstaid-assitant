@@ -17,6 +17,17 @@ export interface DoNot {
   step?: string | null;
 }
 
+export interface StepImage {
+  src: string;
+  alt: string;
+  title: string;
+  author: string;
+  license: string;
+  license_url: string;
+  source_url: string;
+  verified: boolean;
+}
+
 export interface Step {
   id: string;
   order: number;
@@ -31,6 +42,7 @@ export interface Step {
   verify_note?: string | null;
   cpr_rhythm: boolean;
   link?: { situation: string; branch?: string } | null;
+  image?: StepImage | null;
   do_not: DoNot[];
 }
 

@@ -3,7 +3,7 @@ import copy
 
 import pytest
 
-from app import content, pipeline
+from app import config, content, pipeline
 from app.config import LANGS, SITUATIONS
 
 
@@ -84,3 +84,26 @@ def test_localized_fallback_rules():
     assert content.localized({"en": "Call 112.", "hi": "112 पर कॉल करें।"}, "hi") == ("112 पर कॉल करें।", False)
     assert content.localized({"en": "", "hi": ""}, "hi") == ("", False)
     assert content.localized({"en": "Call 112."}, "en") == ("Call 112.", False)
+
+
+def test_step_images_exist_and_are_credited():
+    steps_dir = config.REPO_DIR / "frontend" / "public" / "steps"
+    found = 0
+    for rec in content.situations().values():
+        for branch in rec["branches"].values():
+            for s in branch["steps"]:
+                img = s.get("image")
+                if not img:
+                    continue
+                found += 1
+                assert (steps_dir / img["file"]).is_file(), img["file"]
+                assert img["author"] and img["license"] and img["source_url"].startswith("https://commons.wikimedia.org/")
+                for lang in LANGS:
+                    assert img["alt"][lang].strip(), (s["id"], lang)
+    assert found >= 5
+
+
+def test_api_returns_step_image():
+    r = pipeline.analyze(None, "my father collapsed and is not breathing")
+    imgs = {s["id"]: s["image"] for s in r["steps"] if s["image"]}
+    assert imgs["unr_a3"]["src"] == "/steps/unr_a3.webp" and imgs["unr_a3"]["license"]

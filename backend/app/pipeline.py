@@ -94,9 +94,19 @@ def render_steps(record: dict, branch: dict, slots: dict, lang: str) -> list[dic
             "verify_note": s.get("verify_note"),
             "cpr_rhythm": bool(s.get("cpr_rhythm")),
             "link": s.get("link"),
+            "image": render_image(s.get("image"), lang),
             "do_not": step_dn,
         })
     return out
+
+
+def render_image(img: dict | None, lang: str) -> dict | None:
+    """Openly licensed illustration for a step, with the credit its licence requires."""
+    if not img:
+        return None
+    alt, _ = content.localized(img["alt"], lang)
+    keys = ("title", "author", "license", "license_url", "source_url", "verified")
+    return {"src": f"/steps/{img['file']}", "alt": alt, **{k: img[k] for k in keys}}
 
 
 def render_do_not(branch: dict, lang: str) -> list[dict]:

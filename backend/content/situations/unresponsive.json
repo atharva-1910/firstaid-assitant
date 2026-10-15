@@ -163,7 +163,23 @@
           "next": "unr_a4",
           "verified": false,
           "verify_note": "VERIFY",
-          "cpr_rhythm": true
+          "cpr_rhythm": true,
+          "image": {
+            "file": "unr_a3.webp",
+            "title": "CPR Adult Chest Compression",
+            "author": "BruceBlaus",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "source_url": "https://commons.wikimedia.org/wiki/File:CPR_Adult_Chest_Compression.png",
+            "alt": {
+              "en": "Heel of one hand on the centre of the chest, other hand on top.",
+              "hi": "छाती के बीच में एक हाथ की हथेली का निचला हिस्सा, उसके ऊपर दूसरा हाथ।",
+              "hinglish": "Chhaati ke beech mein ek haath ki hatheli ka nichla hissa, upar doosra haath.",
+              "mr": "छातीच्या मध्यभागी एका हाताच्या तळव्याचा खालचा भाग, त्यावर दुसरा हात."
+            },
+            "changes": "Resized to 500 px, white background, converted to WebP.",
+            "verified": false
+          }
         },
         {
           "id": "unr_a4",
@@ -184,7 +200,23 @@
           "evidence": "unchecked",
           "next": "unr_a5",
           "verified": false,
-          "cpr_rhythm": true
+          "cpr_rhythm": true,
+          "image": {
+            "file": "unr_a4.webp",
+            "title": "CPR Adult Chest Compression 2",
+            "author": "BruceBlaus",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "source_url": "https://commons.wikimedia.org/wiki/File:CPR_Adult_Chest_Compression_2.png",
+            "alt": {
+              "en": "Rescuer kneeling with straight arms and shoulders over the hands, pushing on the chest.",
+              "hi": "बचाने वाला घुटनों पर, बाँहें सीधी और कंधे हाथों के ऊपर, छाती दबाते हुए।",
+              "hinglish": "Bachaane waala ghutnon par, baanhein seedhi aur kandhe haathon ke upar, chhaati dabaate hue.",
+              "mr": "मदत करणारा गुडघ्यांवर, हात सरळ आणि खांदे हातांच्या वर, छाती दाबताना."
+            },
+            "changes": "Resized to 500 px, white background, converted to WebP.",
+            "verified": false
+          }
         },
         {
           "id": "unr_a5",
@@ -301,7 +333,23 @@
           "evidence": "unchecked",
           "next": "unr_b3",
           "verified": false,
-          "verify_note": "VERIFY injury exception"
+          "verify_note": "VERIFY injury exception",
+          "image": {
+            "file": "unr_b2.webp",
+            "title": "Recovery position 02",
+            "author": "Mrmw",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Recovery_position_02.svg",
+            "alt": {
+              "en": "Person lying on their side, top knee bent, arm in front (recovery position).",
+              "hi": "व्यक्ति करवट लेटा है, ऊपर वाला घुटना मुड़ा है, बाँह आगे है (रिकवरी पोज़िशन)।",
+              "hinglish": "Vyakti karvat leta hai, upar waala ghutna muda hai, baanh aage hai (recovery position).",
+              "mr": "व्यक्ती कुशीवर झोपलेली, वरचा गुडघा वाकलेला, हात पुढे (रिकव्हरी पोझिशन)."
+            },
+            "changes": "Resized to 500 px, white background, converted to WebP.",
+            "verified": false
+          }
         },
         {
           "id": "unr_b3",

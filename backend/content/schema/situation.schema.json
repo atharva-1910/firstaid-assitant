@@ -48,6 +48,22 @@
         "quote_checked": {"type": "boolean"}
       }
     },
+    "image": {
+      "type": "object",
+      "required": ["file", "title", "author", "license", "license_url", "source_url", "alt", "verified"],
+      "additionalProperties": false,
+      "properties": {
+        "file": {"type": "string", "pattern": "^[a-z0-9_]+\\.webp$"},
+        "title": {"type": "string"},
+        "author": {"type": "string", "minLength": 1},
+        "license": {"type": "string", "minLength": 1},
+        "license_url": {"type": "string", "pattern": "^https://"},
+        "source_url": {"type": "string", "pattern": "^https://"},
+        "changes": {"type": "string"},
+        "alt": {"$ref": "#/$defs/localized"},
+        "verified": {"type": "boolean"}
+      }
+    },
     "step": {
       "type": "object",
       "required": ["id", "order", "text", "source", "agreement", "evidence", "verified"],
@@ -57,6 +73,7 @@
         "text": {"$ref": "#/$defs/localized"},
         "source": {"$ref": "#/$defs/source"},
         "also_in": {"type": "array", "items": {"$ref": "#/$defs/source"}},
+        "image": {"$ref": "#/$defs/image"},
         "agreement": {"enum": ["agree", "differ", "single_source", "unchecked"]},
         "evidence": {"enum": ["strong", "weak", "good_practice", "unchecked"]},
         "next": {

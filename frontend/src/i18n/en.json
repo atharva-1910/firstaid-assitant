@@ -84,5 +84,6 @@
   "mic_note": "Your browser turns speech into text and may use an online service. Check the text before you continue.",
   "mic_denied": "Microphone access is blocked. Allow it in your browser, or type instead.",
   "mic_no_speech": "We did not hear anything. Try again, or type instead.",
-  "mic_failed": "Speaking is not working right now. Please type instead."
+  "mic_failed": "Speaking is not working right now. Please type instead.",
+  "image_credit": "Picture:"
 }

@@ -77,3 +77,10 @@ def test_missing_translation_falls_back_to_english_with_label():
             assert s["text"] == next(
                 st["text"]["en"] for b in content.situations()["unresponsive"]["branches"].values() for st in b["steps"] if st["id"] == s["id"]
             )
+
+
+def test_localized_fallback_rules():
+    assert content.localized({"en": "Call 112.", "hi": ""}, "hi") == ("Call 112.", True)
+    assert content.localized({"en": "Call 112.", "hi": "112 पर कॉल करें।"}, "hi") == ("112 पर कॉल करें।", False)
+    assert content.localized({"en": "", "hi": ""}, "hi") == ("", False)
+    assert content.localized({"en": "Call 112."}, "en") == ("Call 112.", False)

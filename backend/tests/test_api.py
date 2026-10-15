@@ -63,7 +63,8 @@ def test_situation_endpoint():
     assert r.status_code == 200
     body = r.json()
     assert body["branch"] == "snake" and body["steps"][0]["id"] == "bite_snake_s1"
-    assert body["steps"][0]["translation_pending"] is True
+    assert body["steps"][0]["translation_pending"] is False
+    assert body["steps"][0]["text"].startswith("112 वर कॉल करा")
     cpr = client.get("/api/situations/unresponsive", params={"branch": "path_a"}).json()
     assert cpr["branch"] == "path_a" and cpr["steps"][3]["id"] == "unr_a1"
     assert client.get("/api/situations/stroke").status_code == 404

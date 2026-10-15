@@ -5,15 +5,15 @@
   "names": {
     "en": "Heart attack",
     "hi": "दिल का दौरा",
-    "hinglish": "",
-    "mr": ""
+    "hinglish": "Heart attack",
+    "mr": "हृदयविकाराचा झटका"
   },
   "recognition": [
     {
       "en": "Pain, pressure, squeezing or tightness in the chest, which may spread to the arm, jaw, neck or back; may come with breathlessness, sweating, nausea or feeling faint. Symptoms can be mild.",
       "hi": "छाती में दर्द, दबाव, भिंचाव या जकड़न, जो बाँह, जबड़े, गर्दन या पीठ तक फैल सकती है; साथ में साँस फूलना, पसीना, जी मिचलाना या बेहोशी जैसा लगना हो सकता है। लक्षण हल्के भी हो सकते हैं।",
-      "hinglish": "",
-      "mr": ""
+      "hinglish": "Chhaati mein dard, dabaav, bhinchaav ya jakdan, jo baanh, jabde, gardan ya peeth tak fail sakti hai; saath mein saans phoolna, paseena, ji machlaana ya behoshi jaisa lagna ho sakta hai. Lakshan halke bhi ho sakte hain.",
+      "mr": "छातीत दुखणे, दाब, आवळल्यासारखे किंवा घट्टपणा, जे हात, जबडा, मान किंवा पाठीपर्यंत पसरू शकते; सोबत धाप लागणे, घाम येणे, मळमळ किंवा चक्कर येऊ शकते. लक्षणे सौम्यही असू शकतात."
     }
   ],
   "branch_on": null,
@@ -32,8 +32,8 @@
           "text": {
             "en": "Call 112 now. Do not wait to see if the pain passes.",
             "hi": "अभी 112 पर कॉल करें। दर्द अपने आप जाने का इंतज़ार न करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Abhi 112 par call karein. Dard apne aap jaane ka intezaar na karein.",
+            "mr": "आत्ताच 112 वर कॉल करा. दुखणे आपोआप जाईल याची वाट पाहू नका."
           },
           "source": {
             "doc": "G1",
@@ -53,8 +53,8 @@
           "text": {
             "en": "Help them sit in the position they find most comfortable, and keep them still and calm.",
             "hi": "उन्हें उस स्थिति में बैठने में मदद करें जिसमें उन्हें सबसे ज़्यादा आराम लगे, और उन्हें स्थिर और शांत रखें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Unhe us position mein baithne mein madad karein jismein unhe sabse zyada aaraam lage, aur unhe sthir aur shaant rakhein.",
+            "mr": "त्यांना सर्वात आरामदायक वाटेल अशा स्थितीत बसायला मदत करा, आणि त्यांना स्थिर व शांत ठेवा."
           },
           "source": {
             "doc": "G1",
@@ -74,8 +74,8 @@
           "text": {
             "en": "Loosen tight clothing.",
             "hi": "तंग कपड़े ढीले कर दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Tight kapde dheele kar dein.",
+            "mr": "घट्ट कपडे सैल करा."
           },
           "source": {
             "doc": "G1",
@@ -95,8 +95,8 @@
           "text": {
             "en": "If they are not allergic to aspirin and have not been told not to take it, give aspirin to chew.",
             "hi": "अगर उन्हें एस्पिरिन से एलर्जी नहीं है और उन्हें इसे लेने से मना नहीं किया गया है, तो चबाने के लिए एस्पिरिन दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Agar unhe aspirin se allergy nahi hai aur unhe ise lene se mana nahi kiya gaya hai, to chabaane ke liye aspirin dein.",
+            "mr": "त्यांना ॲस्पिरिनची ॲलर्जी नसेल आणि ती घेऊ नका असे सांगितलेले नसेल, तर चावण्यासाठी ॲस्पिरिन द्या."
           },
           "source": {
             "doc": "G1",
@@ -125,8 +125,8 @@
           "text": {
             "en": "If they have their own prescribed medicine for chest pain, help them take it.",
             "hi": "अगर उनके पास छाती के दर्द की डॉक्टर की लिखी अपनी दवा है, तो उसे लेने में उनकी मदद करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Agar unke paas chhaati ke dard ki doctor ki likhi apni dawa hai, to use lene mein unki madad karein.",
+            "mr": "त्यांच्याकडे छातीत दुखण्यासाठी डॉक्टरांनी लिहून दिलेले स्वतःचे औषध असेल, तर ते घ्यायला मदत करा."
           },
           "source": {
             "doc": "G1",
@@ -146,8 +146,8 @@
           "text": {
             "en": "Ask someone to find an AED if one is nearby.",
             "hi": "अगर पास में AED (डिफ़िब्रिलेटर) हो, तो किसी से उसे ढूँढकर लाने को कहें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Agar paas mein AED (defibrillator) ho, to kisi se use dhoondhkar laane ko kahein.",
+            "mr": "जवळ AED (डिफिब्रिलेटर) असेल, तर कोणाला तरी ते शोधून आणायला सांगा."
           },
           "source": {
             "doc": "G1",
@@ -167,8 +167,8 @@
           "text": {
             "en": "Stay with them. If they become unresponsive and are not breathing normally, start CPR (Situation 9.1, Path A).",
             "hi": "उनके साथ रहें। अगर वे प्रतिक्रिया देना बंद कर दें और सामान्य रूप से साँस न लें, तो CPR शुरू करें (स्थिति 9.1, पथ A)।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Unke saath rahein. Agar woh response dena band kar dein aur normal saans na lein, to CPR shuru karein (Situation 9.1, Path A).",
+            "mr": "त्यांच्यासोबत राहा. ते प्रतिसाद देणे थांबवले आणि नीट श्वास घेत नसतील, तर CPR सुरू करा (परिस्थिती 9.1, मार्ग A)."
           },
           "source": {
             "doc": "G3",
@@ -191,8 +191,8 @@
           "text": {
             "en": "Do not let them walk around or exert themselves.",
             "hi": "उन्हें चलने-फिरने या मेहनत करने न दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Unhe chalne-phirne ya mehnat karne na dein.",
+            "mr": "त्यांना चालू-फिरू देऊ नका किंवा श्रम करू देऊ नका."
           },
           "reason": {
             "en": "",
@@ -206,8 +206,8 @@
           "text": {
             "en": "Do not give food or drink.",
             "hi": "खाने या पीने को कुछ न दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Khaane ya peene ko kuch na dein.",
+            "mr": "खायला किंवा प्यायला काहीही देऊ नका."
           },
           "reason": {
             "en": "",
@@ -221,14 +221,14 @@
           "text": {
             "en": "Do not treat it as gas or acidity and wait.",
             "hi": "इसे गैस या एसिडिटी समझकर इंतज़ार न करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Ise gas ya acidity samajhkar intezaar na karein.",
+            "mr": "हे गॅस किंवा ॲसिडिटी समजून वाट पाहू नका."
           },
           "reason": {
             "en": "Delay can cost a life; call 112.",
             "hi": "देरी से जान जा सकती है; 112 पर कॉल करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Der se jaan ja sakti hai; 112 par call karein.",
+            "mr": "उशिरामुळे जीव जाऊ शकतो; 112 वर कॉल करा."
           },
           "step": "ha_s1"
         },
@@ -236,8 +236,8 @@
           "text": {
             "en": "Do not give aspirin if they are allergic to it.",
             "hi": "अगर उन्हें एस्पिरिन से एलर्जी है, तो एस्पिरिन न दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Agar unhe aspirin se allergy hai, to aspirin na dein.",
+            "mr": "त्यांना ॲस्पिरिनची ॲलर्जी असेल, तर ॲस्पिरिन देऊ नका."
           },
           "reason": {
             "en": "",

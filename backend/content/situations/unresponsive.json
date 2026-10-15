@@ -5,15 +5,15 @@
   "names": {
     "en": "Unresponsive or unconscious",
     "hi": "प्रतिक्रिया न देना या बेहोश",
-    "hinglish": "",
-    "mr": ""
+    "hinglish": "Response na dena ya behosh",
+    "mr": "प्रतिसाद न देणे किंवा बेशुद्ध"
   },
   "recognition": [
     {
       "en": "Does not respond to a loud voice or a tap on the shoulders.",
       "hi": "ज़ोर से आवाज़ देने या कंधे थपथपाने पर कोई प्रतिक्रिया नहीं देते।",
-      "hinglish": "",
-      "mr": ""
+      "hinglish": "Zor se awaaz dene ya kandhe thapthapaane par koi response nahi dete.",
+      "mr": "मोठ्याने हाक मारल्यावर किंवा खांद्यावर थोपटल्यावर प्रतिसाद देत नाहीत."
     }
   ],
   "branch_on": null,
@@ -37,8 +37,8 @@
           "text": {
             "en": "Make sure the area is safe for you. If electricity may be involved, do not touch them until the power is off.",
             "hi": "पक्का करें कि जगह आपके लिए सुरक्षित है। अगर बिजली का ख़तरा हो सकता है, तो बिजली बंद होने तक उन्हें न छुएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Pakka karein ki jagah aapke liye surakshit hai. Agar bijli ka khatra ho sakta hai, to bijli band hone tak unhe na chhuein.",
+            "mr": "ती जागा तुमच्यासाठी सुरक्षित आहे याची खात्री करा. विजेचा धोका असू शकतो, तर वीज बंद होईपर्यंत त्यांना हात लावू नका."
           },
           "source": {
             "doc": "G1",
@@ -58,8 +58,8 @@
           "text": {
             "en": "Tap their shoulders and ask loudly, \"Are you all right?\"",
             "hi": "उनके कंधे थपथपाएँ और ज़ोर से पूछें, \"क्या आप ठीक हैं?\"",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Unke kandhe thapthapaayein aur zor se poochein, \"Kya aap theek hain?\"",
+            "mr": "त्यांच्या खांद्यावर थोपटा आणि मोठ्याने विचारा, \"तुम्ही ठीक आहात का?\""
           },
           "source": {
             "doc": "G1",
@@ -79,8 +79,8 @@
           "text": {
             "en": "Look at the chest for up to 10 seconds. Are they breathing normally?",
             "hi": "10 सेकंड तक उनकी छाती को देखें। क्या वे सामान्य रूप से साँस ले रहे हैं?",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "10 second tak unki chhaati ko dekhein. Kya woh normal saans le rahe hain?",
+            "mr": "10 सेकंदांपर्यंत त्यांच्या छातीकडे पाहा. ते नीट श्वास घेत आहेत का?"
           },
           "source": {
             "doc": "G1",
@@ -108,8 +108,8 @@
           "text": {
             "en": "Call 112 now and put the phone on speaker.",
             "hi": "अभी 112 पर कॉल करें और फ़ोन स्पीकर पर रखें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Abhi 112 par call karein aur phone speaker par rakhein.",
+            "mr": "आत्ताच 112 वर कॉल करा आणि फोन स्पीकरवर ठेवा."
           },
           "source": {
             "doc": "G3",
@@ -128,8 +128,8 @@
           "text": {
             "en": "Ask someone to bring an AED (defibrillator) if one is nearby.",
             "hi": "अगर पास में AED (डिफ़िब्रिलेटर) हो, तो किसी से उसे लाने को कहें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Agar paas mein AED (defibrillator) ho, to kisi se use laane ko kahein.",
+            "mr": "जवळ AED (डिफिब्रिलेटर) असेल, तर कोणाला तरी ते आणायला सांगा."
           },
           "source": {
             "doc": "G1",
@@ -149,8 +149,8 @@
           "text": {
             "en": "Put the heel of one hand in the centre of the chest, the other hand on top, arms straight.",
             "hi": "एक हाथ की हथेली का निचला हिस्सा छाती के बीच में रखें, दूसरा हाथ उसके ऊपर रखें, और बाँहें सीधी रखें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Ek haath ki hatheli ka nichla hissa chhaati ke beech mein rakhein, doosra haath uske upar rakhein, aur baanhein seedhi rakhein.",
+            "mr": "एका हाताच्या तळव्याचा खालचा भाग छातीच्या मध्यभागी ठेवा, दुसरा हात त्यावर ठेवा, आणि हात सरळ ठेवा."
           },
           "source": {
             "doc": "G1",
@@ -171,8 +171,8 @@
           "text": {
             "en": "Push hard and fast: at least 5 cm deep but not more than 6 cm, 100 to 120 times a minute. Let the chest rise fully each time.",
             "hi": "ज़ोर से और तेज़ी से दबाएँ: कम से कम 5 सेमी गहरा, पर 6 सेमी से ज़्यादा नहीं, एक मिनट में 100 से 120 बार। हर बार छाती को पूरी तरह ऊपर आने दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Zor se aur tezi se dabaayein: kam se kam 5 cm gehra, par 6 cm se zyada nahi, ek minute mein 100 se 120 baar. Har baar chhaati ko poori tarah upar aane dein.",
+            "mr": "जोरात आणि वेगाने दाबा: किमान 5 सेमी खोल, पण 6 सेमीपेक्षा जास्त नाही, एका मिनिटात 100 ते 120 वेळा. प्रत्येक वेळी छाती पूर्ण वर येऊ द्या."
           },
           "source": {
             "doc": "G3",
@@ -192,8 +192,8 @@
           "text": {
             "en": "If you are trained and willing, give 2 breaths after every 30 pushes. If not, keep pushing without stopping.",
             "hi": "अगर आप प्रशिक्षित हैं और तैयार हैं, तो हर 30 बार दबाने के बाद 2 बार साँस दें। नहीं तो, बिना रुके दबाते रहें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Agar aap trained hain aur taiyaar hain, to har 30 baar dabaane ke baad 2 baar saans dein. Nahi to, bina ruke dabaate rahein.",
+            "mr": "तुम्ही प्रशिक्षित असाल आणि तयार असाल, तर प्रत्येक 30 दाबांनंतर 2 श्वास द्या. नाहीतर, न थांबता दाबत राहा."
           },
           "source": {
             "doc": "G3",
@@ -214,8 +214,8 @@
           "text": {
             "en": "When the AED arrives, switch it on and follow its voice instructions.",
             "hi": "जब AED आ जाए, तो उसे चालू करें और उसके बोले गए निर्देशों का पालन करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Jab AED aa jaaye, to use on karein aur uske bole gaye instructions follow karein.",
+            "mr": "AED आल्यावर ते चालू करा आणि त्याच्या आवाजातील सूचनांचे पालन करा."
           },
           "source": {
             "doc": "G1",
@@ -240,8 +240,8 @@
           "text": {
             "en": "Keep going until help takes over, they start breathing normally, or you cannot continue.",
             "hi": "तब तक करते रहें जब तक मदद आकर काम न सँभाल ले, वे सामान्य रूप से साँस न लेने लगें, या आप आगे जारी न रख पाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Tab tak karte rahein jab tak madad aakar kaam na sambhaal le, woh normal saans na lene lagein, ya aap aage jaari na rakh paayein.",
+            "mr": "मदत येऊन काम हाती घेईपर्यंत, ते नीट श्वास घेऊ लागेपर्यंत, किंवा तुम्हाला पुढे करता येईनासे होईपर्यंत करत राहा."
           },
           "source": {
             "doc": "G1",
@@ -262,8 +262,8 @@
           "text": {
             "en": "Call 112.",
             "hi": "112 पर कॉल करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "112 par call karein.",
+            "mr": "112 वर कॉल करा."
           },
           "source": {
             "doc": "G1",
@@ -283,8 +283,8 @@
           "text": {
             "en": "Roll them onto their side (recovery position) so their airway stays open, unless you think they have a neck or back injury.",
             "hi": "उन्हें करवट दिलाकर लिटा दें (रिकवरी पोज़िशन), ताकि साँस का रास्ता खुला रहे, जब तक आपको गर्दन या पीठ में चोट का शक न हो।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Unhe karvat dilaakar lita dein (recovery position), taaki saans ka raasta khula rahe, jab tak aapko gardan ya peeth mein chot ka shak na ho.",
+            "mr": "श्वासमार्ग मोकळा राहावा म्हणून त्यांना कुशीवर वळवा (रिकव्हरी पोझिशन), मान किंवा पाठीला इजा झाल्याची शंका नसेल तर."
           },
           "source": {
             "doc": "G1",
@@ -309,8 +309,8 @@
           "text": {
             "en": "Keep checking their breathing. If it stops or becomes gasping, go to Path A.",
             "hi": "उनकी साँस जाँचते रहें। अगर साँस रुक जाए या हाँफने जैसी हो जाए, तो पथ A पर जाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Unki saans check karte rahein. Agar saans ruk jaaye ya haanfne jaisi ho jaaye, to Path A par jaayein.",
+            "mr": "त्यांचा श्वास तपासत राहा. श्वास थांबला किंवा धाप लागल्यासारखा झाला, तर मार्ग A वर जा."
           },
           "source": {
             "doc": "G1",
@@ -334,8 +334,8 @@
           "text": {
             "en": "Stay with them until help arrives.",
             "hi": "मदद आने तक उनके साथ रहें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Madad aane tak unke saath rahein.",
+            "mr": "मदत येईपर्यंत त्यांच्यासोबत राहा."
           },
           "source": {
             "doc": "G1",
@@ -355,8 +355,8 @@
           "text": {
             "en": "Do not mistake occasional gasps for normal breathing.",
             "hi": "बीच-बीच में हाँफने को सामान्य साँस न समझें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Beech-beech mein haanfne ko normal saans na samjhein.",
+            "mr": "मधूनमधून धाप लागण्याला नीट श्वास समजू नका."
           },
           "reason": {
             "en": "",
@@ -370,14 +370,14 @@
           "text": {
             "en": "Do not give food, water or medicine by mouth.",
             "hi": "मुँह से खाना, पानी या दवा न दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Munh se khaana, paani ya dawa na dein.",
+            "mr": "तोंडाने अन्न, पाणी किंवा औषध देऊ नका."
           },
           "reason": {
             "en": "They cannot swallow safely.",
             "hi": "वे सुरक्षित रूप से निगल नहीं सकते।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Woh surakshit roop se nigal nahi sakte.",
+            "mr": "ते सुरक्षितपणे गिळू शकत नाहीत."
           },
           "step": "unr_b4"
         },
@@ -385,8 +385,8 @@
           "text": {
             "en": "Do not throw water on the face or make them sit up.",
             "hi": "चेहरे पर पानी न डालें और उन्हें उठाकर न बैठाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Chehre par paani na daalein aur unhe uthaakar na baithaayein.",
+            "mr": "चेहऱ्यावर पाणी टाकू नका आणि त्यांना उठवून बसवू नका."
           },
           "reason": {
             "en": "",
@@ -400,14 +400,14 @@
           "text": {
             "en": "Do not make them smell onions or shoes.",
             "hi": "उन्हें प्याज़ या जूता न सुँघाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Unhe pyaaz ya joota na sunghaayein.",
+            "mr": "त्यांना कांदा किंवा चप्पल हुंगवू नका."
           },
           "reason": {
             "en": "It does not help and wastes time.",
             "hi": "इससे कोई फ़ायदा नहीं होता और समय बर्बाद होता है।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Isse koi faayda nahi hota aur time barbaad hota hai.",
+            "mr": "याचा काही उपयोग होत नाही आणि वेळ वाया जातो."
           },
           "step": "unr_s2"
         },
@@ -415,8 +415,8 @@
           "text": {
             "en": "Do not leave them alone.",
             "hi": "उन्हें अकेला न छोड़ें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Unhe akela na chhodein.",
+            "mr": "त्यांना एकटे सोडू नका."
           },
           "reason": {
             "en": "",

@@ -5,15 +5,15 @@
   "names": {
     "en": "Bites and stings",
     "hi": "काटना और डंक",
-    "hinglish": "",
-    "mr": ""
+    "hinglish": "Kaatna aur dank",
+    "mr": "चावणे आणि डंख"
   },
   "recognition": [
     {
       "en": "Bitten or stung by a snake, insect, scorpion, dog or other animal.",
       "hi": "साँप, कीड़े, बिच्छू, कुत्ते या किसी और जानवर ने काटा या डंक मारा है।",
-      "hinglish": "",
-      "mr": ""
+      "hinglish": "Saanp, keede, bichhoo, kutte ya kisi aur jaanwar ne kaata ya dank maara hai.",
+      "mr": "साप, कीटक, विंचू, कुत्रा किंवा इतर प्राण्याने चावले किंवा डंख मारला आहे."
     }
   ],
   "branch_on": "bite_type",
@@ -40,8 +40,8 @@
           "text": {
             "en": "Call 112 or get them to the nearest hospital immediately.",
             "hi": "112 पर कॉल करें या उन्हें तुरंत सबसे पास के अस्पताल ले जाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "112 par call karein ya unhe turant sabse paas ke hospital le jaayein.",
+            "mr": "112 वर कॉल करा किंवा त्यांना ताबडतोब जवळच्या रुग्णालयात न्या."
           },
           "source": {
             "doc": "G2",
@@ -65,8 +65,8 @@
           "text": {
             "en": "Move away from the snake. Do not try to catch or kill it.",
             "hi": "साँप से दूर हट जाएँ। उसे पकड़ने या मारने की कोशिश न करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Saanp se door hat jaayein. Use pakadne ya maarne ki koshish na karein.",
+            "mr": "सापापासून दूर व्हा. त्याला पकडण्याचा किंवा मारण्याचा प्रयत्न करू नका."
           },
           "source": {
             "doc": "G1",
@@ -86,8 +86,8 @@
           "text": {
             "en": "Keep the person calm and as still as possible.",
             "hi": "व्यक्ति को शांत रखें और जितना हो सके, हिलने न दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Vyakti ko shaant rakhein aur jitna ho sake, hilne na dein.",
+            "mr": "व्यक्तीला शांत ठेवा आणि शक्य तितके हलू देऊ नका."
           },
           "source": {
             "doc": "G1",
@@ -107,8 +107,8 @@
           "text": {
             "en": "Keep the bitten arm or leg still, as you would a broken limb.",
             "hi": "काटे गए हाथ या पैर को स्थिर रखें, जैसे टूटी हड्डी वाले अंग को रखते हैं।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Kaate gaye haath ya pair ko sthir rakhein, jaise tooti haddi waale ang ko rakhte hain.",
+            "mr": "चावलेला हात किंवा पाय स्थिर ठेवा, जसा मोडलेला अवयव ठेवतो तसा."
           },
           "source": {
             "doc": "G1",
@@ -128,8 +128,8 @@
           "text": {
             "en": "Remove rings, bangles, watches and tight clothing near the bite before swelling starts.",
             "hi": "सूजन आने से पहले, काटे गए स्थान के पास से अँगूठी, चूड़ियाँ, घड़ी और तंग कपड़े उतार दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Soojan aane se pehle, kaati gayi jagah ke paas se angoothi, choodiyan, ghadi aur tight kapde utaar dein.",
+            "mr": "सूज येण्यापूर्वी, चावलेल्या जागेजवळच्या अंगठ्या, बांगड्या, घड्याळ आणि घट्ट कपडे काढा."
           },
           "source": {
             "doc": "G1",
@@ -149,8 +149,8 @@
           "text": {
             "en": "Note the time of the bite.",
             "hi": "काटने का समय याद रखें या लिख लें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Kaatne ka time yaad rakhein ya likh lein.",
+            "mr": "चावल्याची वेळ लक्षात ठेवा किंवा लिहून ठेवा."
           },
           "source": {
             "doc": "G1",
@@ -170,14 +170,14 @@
           "text": {
             "en": "Do not tie a tourniquet.",
             "hi": "कसकर पट्टी या रस्सी (टूर्निकेट) न बाँधें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Kaskar patti ya rassi (tourniquet) na baandhein.",
+            "mr": "घट्ट पट्टी किंवा दोरी (टूर्निकेट) बांधू नका."
           },
           "reason": {
             "en": "Named as a harmful practice by the Health Ministry (G5).",
             "hi": "स्वास्थ्य मंत्रालय ने इसे हानिकारक तरीका बताया है (G5)।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Health Ministry ne ise nuksaan-dayak tareeka bataya hai (G5).",
+            "mr": "आरोग्य मंत्रालयाने हे हानिकारक असल्याचे सांगितले आहे (G5)."
           },
           "step": "bite_snake_s4"
         },
@@ -185,14 +185,14 @@
           "text": {
             "en": "Do not cut or suck the wound.",
             "hi": "घाव को न काटें और न ही चूसें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Ghaav ko na kaatein aur na hi choosein.",
+            "mr": "जखम कापू नका किंवा चोखू नका."
           },
           "reason": {
             "en": "Named as a harmful practice by the Health Ministry (G5).",
             "hi": "स्वास्थ्य मंत्रालय ने इसे हानिकारक तरीका बताया है (G5)।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Health Ministry ne ise nuksaan-dayak tareeka bataya hai (G5).",
+            "mr": "आरोग्य मंत्रालयाने हे हानिकारक असल्याचे सांगितले आहे (G5)."
           },
           "step": "bite_snake_s3"
         },
@@ -200,14 +200,14 @@
           "text": {
             "en": "Do not use herbal remedies.",
             "hi": "जड़ी-बूटी वाले घरेलू उपाय न करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Jadi-booti waale gharelu upaay na karein.",
+            "mr": "जडीबुटीचे घरगुती उपाय करू नका."
           },
           "reason": {
             "en": "Delays the anti-venom treatment that saves lives (G5).",
             "hi": "इससे जान बचाने वाले एंटी-वेनम इलाज में देरी होती है (G5)।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Isse jaan bachaane waale anti-venom ilaaj mein der hoti hai (G5).",
+            "mr": "यामुळे जीव वाचवणाऱ्या अँटी-व्हेनम उपचाराला उशीर होतो (G5)."
           },
           "step": "bite_snake_s1"
         },
@@ -215,8 +215,8 @@
           "text": {
             "en": "Do not apply ice.",
             "hi": "बर्फ़ न लगाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Barf na lagaayein.",
+            "mr": "बर्फ लावू नका."
           },
           "reason": {
             "en": "",
@@ -230,8 +230,8 @@
           "text": {
             "en": "Do not wait for symptoms before going to hospital.",
             "hi": "अस्पताल जाने से पहले लक्षणों का इंतज़ार न करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Hospital jaane se pehle lakshanon ka intezaar na karein.",
+            "mr": "रुग्णालयात जाण्यापूर्वी लक्षणे दिसण्याची वाट पाहू नका."
           },
           "reason": {
             "en": "",
@@ -269,8 +269,8 @@
           "text": {
             "en": "Watch for a severe allergic reaction: trouble breathing, swelling of the face, lips or throat, a spreading rash, or feeling faint. If any appear, call 112.",
             "hi": "गंभीर एलर्जी के लक्षणों पर नज़र रखें: साँस लेने में तकलीफ़, चेहरे, होंठों या गले में सूजन, फैलते हुए चकत्ते, या बेहोशी जैसा लगना। इनमें से कुछ भी दिखे, तो 112 पर कॉल करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Gambhir allergy ke lakshanon par nazar rakhein: saans lene mein takleef, chehre, honthon ya gale mein soojan, failte hue chakatte, ya behoshi jaisa lagna. Inmein se kuch bhi dikhe, to 112 par call karein.",
+            "mr": "गंभीर ॲलर्जीच्या लक्षणांकडे लक्ष ठेवा: श्वास घेण्यास त्रास, चेहरा, ओठ किंवा घसा सुजणे, पसरणारे पुरळ, किंवा चक्कर येणे. यापैकी काहीही दिसल्यास 112 वर कॉल करा."
           },
           "source": {
             "doc": "G2",
@@ -294,8 +294,8 @@
           "text": {
             "en": "If a sting is left in the skin, remove it quickly.",
             "hi": "अगर डंक त्वचा में रह गया है, तो उसे जल्दी निकाल दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Agar dank skin mein reh gaya hai, to use jaldi nikaal dein.",
+            "mr": "डंख त्वचेत राहिला असेल, तर तो लवकर काढा."
           },
           "source": {
             "doc": "G1",
@@ -315,8 +315,8 @@
           "text": {
             "en": "Wash the area with soap and water.",
             "hi": "उस जगह को साबुन और पानी से धोएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Us jagah ko sabun aur paani se dhoyein.",
+            "mr": "ती जागा साबण आणि पाण्याने धुवा."
           },
           "source": {
             "doc": "G1",
@@ -336,8 +336,8 @@
           "text": {
             "en": "Apply a cold pack wrapped in cloth to ease pain and swelling.",
             "hi": "दर्द और सूजन कम करने के लिए कपड़े में लपेटा ठंडा पैक लगाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Dard aur soojan kam karne ke liye kapde mein lipta thanda pack lagaayein.",
+            "mr": "वेदना आणि सूज कमी करण्यासाठी कापडात गुंडाळलेला थंड पॅक लावा."
           },
           "source": {
             "doc": "G1",
@@ -357,8 +357,8 @@
           "text": {
             "en": "For a scorpion sting, take them to a clinic or hospital.",
             "hi": "बिच्छू के डंक पर उन्हें क्लिनिक या अस्पताल ले जाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Bichhoo ke dank par unhe clinic ya hospital le jaayein.",
+            "mr": "विंचू चावल्यास त्यांना दवाखान्यात किंवा रुग्णालयात न्या."
           },
           "source": {
             "doc": "G2",
@@ -378,8 +378,8 @@
           "text": {
             "en": "Do not squeeze or scratch the area.",
             "hi": "उस जगह को न दबाएँ और न खुजलाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Us jagah ko na dabaayein aur na khujlaayein.",
+            "mr": "ती जागा दाबू नका किंवा खाजवू नका."
           },
           "reason": {
             "en": "",
@@ -393,8 +393,8 @@
           "text": {
             "en": "Do not apply mud, lime or other home remedies.",
             "hi": "मिट्टी, चूना या दूसरे घरेलू उपाय न लगाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Mitti, choona ya doosre gharelu upaay na lagaayein.",
+            "mr": "माती, चुना किंवा इतर घरगुती उपाय लावू नका."
           },
           "reason": {
             "en": "",
@@ -426,8 +426,8 @@
           "text": {
             "en": "Watch for a severe allergic reaction: trouble breathing, swelling of the face, lips or throat, a spreading rash, or feeling faint. If any appear, call 112.",
             "hi": "गंभीर एलर्जी के लक्षणों पर नज़र रखें: साँस लेने में तकलीफ़, चेहरे, होंठों या गले में सूजन, फैलते हुए चकत्ते, या बेहोशी जैसा लगना। इनमें से कुछ भी दिखे, तो 112 पर कॉल करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Gambhir allergy ke lakshanon par nazar rakhein: saans lene mein takleef, chehre, honthon ya gale mein soojan, failte hue chakatte, ya behoshi jaisa lagna. Inmein se kuch bhi dikhe, to 112 par call karein.",
+            "mr": "गंभीर ॲलर्जीच्या लक्षणांकडे लक्ष ठेवा: श्वास घेण्यास त्रास, चेहरा, ओठ किंवा घसा सुजणे, पसरणारे पुरळ, किंवा चक्कर येणे. यापैकी काहीही दिसल्यास 112 वर कॉल करा."
           },
           "source": {
             "doc": "G2",
@@ -451,8 +451,8 @@
           "text": {
             "en": "If a sting is left in the skin, remove it quickly.",
             "hi": "अगर डंक त्वचा में रह गया है, तो उसे जल्दी निकाल दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Agar dank skin mein reh gaya hai, to use jaldi nikaal dein.",
+            "mr": "डंख त्वचेत राहिला असेल, तर तो लवकर काढा."
           },
           "source": {
             "doc": "G1",
@@ -472,8 +472,8 @@
           "text": {
             "en": "Wash the area with soap and water.",
             "hi": "उस जगह को साबुन और पानी से धोएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Us jagah ko sabun aur paani se dhoyein.",
+            "mr": "ती जागा साबण आणि पाण्याने धुवा."
           },
           "source": {
             "doc": "G1",
@@ -493,8 +493,8 @@
           "text": {
             "en": "Apply a cold pack wrapped in cloth to ease pain and swelling.",
             "hi": "दर्द और सूजन कम करने के लिए कपड़े में लपेटा ठंडा पैक लगाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Dard aur soojan kam karne ke liye kapde mein lipta thanda pack lagaayein.",
+            "mr": "वेदना आणि सूज कमी करण्यासाठी कापडात गुंडाळलेला थंड पॅक लावा."
           },
           "source": {
             "doc": "G1",
@@ -514,8 +514,8 @@
           "text": {
             "en": "For a scorpion sting, take them to a clinic or hospital.",
             "hi": "बिच्छू के डंक पर उन्हें क्लिनिक या अस्पताल ले जाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Bichhoo ke dank par unhe clinic ya hospital le jaayein.",
+            "mr": "विंचू चावल्यास त्यांना दवाखान्यात किंवा रुग्णालयात न्या."
           },
           "source": {
             "doc": "G2",
@@ -535,8 +535,8 @@
           "text": {
             "en": "Do not squeeze or scratch the area.",
             "hi": "उस जगह को न दबाएँ और न खुजलाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Us jagah ko na dabaayein aur na khujlaayein.",
+            "mr": "ती जागा दाबू नका किंवा खाजवू नका."
           },
           "reason": {
             "en": "",
@@ -550,8 +550,8 @@
           "text": {
             "en": "Do not apply mud, lime or other home remedies.",
             "hi": "मिट्टी, चूना या दूसरे घरेलू उपाय न लगाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Mitti, choona ya doosre gharelu upaay na lagaayein.",
+            "mr": "माती, चुना किंवा इतर घरगुती उपाय लावू नका."
           },
           "reason": {
             "en": "",
@@ -583,8 +583,8 @@
           "text": {
             "en": "Move away from the animal to a safe place.",
             "hi": "जानवर से दूर किसी सुरक्षित जगह पर चले जाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Jaanwar se door kisi surakshit jagah par chale jaayein.",
+            "mr": "प्राण्यापासून दूर सुरक्षित ठिकाणी जा."
           },
           "source": {
             "doc": "G1",
@@ -604,8 +604,8 @@
           "text": {
             "en": "Wash the wound right away with plenty of running water and soap for about 15 minutes.",
             "hi": "घाव को तुरंत बहते पानी और साबुन से लगभग 15 मिनट तक अच्छी तरह धोएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Ghaav ko turant behte paani aur sabun se lagbhag 15 minute tak achhi tarah dhoyein.",
+            "mr": "जखम लगेच वाहत्या पाण्याने आणि साबणाने सुमारे 15 मिनिटे भरपूर धुवा."
           },
           "source": {
             "doc": "G1",
@@ -625,8 +625,8 @@
           "text": {
             "en": "If it is bleeding, press on it with a clean cloth.",
             "hi": "अगर खून बह रहा है, तो साफ़ कपड़े से उस पर दबाव डालें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Agar khoon beh raha hai, to saaf kapde se us par dabaav daalein.",
+            "mr": "रक्त येत असेल, तर स्वच्छ कापडाने त्यावर दाब द्या."
           },
           "source": {
             "doc": "G1",
@@ -646,8 +646,8 @@
           "text": {
             "en": "Cover it with a clean dressing.",
             "hi": "उसे साफ़ पट्टी से ढक दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Use saaf patti se dhak dein.",
+            "mr": "स्वच्छ पट्टीने ती झाका."
           },
           "source": {
             "doc": "G1",
@@ -667,8 +667,8 @@
           "text": {
             "en": "Go to a clinic or hospital today, even for a small bite or scratch, to ask about rabies vaccination.",
             "hi": "छोटा-सा काटा या खरोंच हो, तब भी आज ही क्लिनिक या अस्पताल जाएँ और रेबीज़ के टीके के बारे में पूछें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Chhota sa kaata ya kharonch ho, tab bhi aaj hi clinic ya hospital jaayein aur rabies ke teeke ke baare mein poochein.",
+            "mr": "लहान चावा किंवा ओरखडा असला तरी आजच दवाखान्यात किंवा रुग्णालयात जा आणि रेबीज लसीबद्दल विचारा."
           },
           "source": {
             "doc": "G1",
@@ -688,14 +688,14 @@
           "text": {
             "en": "Do not put chilli powder, turmeric, oil, lime or other home remedies on the wound.",
             "hi": "घाव पर मिर्च पाउडर, हल्दी, तेल, चूना या दूसरे घरेलू उपाय न लगाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Ghaav par mirch powder, haldi, tel, choona ya doosre gharelu upaay na lagaayein.",
+            "mr": "जखमेवर तिखट, हळद, तेल, चुना किंवा इतर घरगुती उपाय लावू नका."
           },
           "reason": {
             "en": "Does not clean the wound; washing with soap and water does.",
             "hi": "इससे घाव साफ़ नहीं होता; साबुन और पानी से धोने से होता है।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Isse ghaav saaf nahi hota; sabun aur paani se dhone se hota hai.",
+            "mr": "यामुळे जखम स्वच्छ होत नाही; साबण आणि पाण्याने धुतल्याने होते."
           },
           "step": "bite_dog_s2"
         },
@@ -703,14 +703,14 @@
           "text": {
             "en": "Do not ignore a small bite or scratch.",
             "hi": "छोटे काटे या खरोंच को नज़रअंदाज़ न करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Chhote kaate ya kharonch ko ignore na karein.",
+            "mr": "लहान चावा किंवा ओरखड्याकडे दुर्लक्ष करू नका."
           },
           "reason": {
             "en": "Even small bites can transmit rabies.",
             "hi": "छोटे से काटने से भी रेबीज़ हो सकता है।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Chhote se kaatne se bhi rabies ho sakta hai.",
+            "mr": "लहान चाव्यानेही रेबीज होऊ शकतो."
           },
           "step": "bite_dog_s5"
         }

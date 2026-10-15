@@ -5,15 +5,15 @@
   "names": {
     "en": "Choking",
     "hi": "गले में कुछ फँसना",
-    "hinglish": "",
-    "mr": ""
+    "hinglish": "Gale mein kuch phasna",
+    "mr": "घशात काहीतरी अडकणे"
   },
   "recognition": [
     {
       "en": "Suddenly cannot speak, breathe or cough, often while eating; may clutch the throat.",
       "hi": "अचानक बोल, साँस ले या खाँस नहीं पाते, अक्सर खाते समय; गला पकड़ सकते हैं।",
-      "hinglish": "",
-      "mr": ""
+      "hinglish": "Achanak bol, saans le ya khaans nahi paate, aksar khaate samay; gala pakad sakte hain.",
+      "mr": "अचानक बोलता, श्वास घेता किंवा खोकता येत नाही, बहुतेक वेळा जेवताना; घसा धरू शकतात."
     }
   ],
   "branch_on": null,
@@ -34,8 +34,8 @@
           "text": {
             "en": "Ask, \"Are you choking?\" If they can cough strongly, let them keep coughing and watch them closely.",
             "hi": "पूछें, \"क्या आपके गले में कुछ फँसा है?\" अगर वे ज़ोर से खाँस पा रहे हैं, तो उन्हें खाँसने दें और ध्यान से देखते रहें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Poochein, \"Kya aapke gale mein kuch phasa hai?\" Agar woh zor se khaans pa rahe hain, to unhe khaansne dein aur dhyaan se dekhte rahein.",
+            "mr": "विचारा, \"तुमच्या घशात काही अडकलं आहे का?\" ते जोरात खोकत असतील, तर त्यांना खोकू द्या आणि त्यांच्याकडे लक्ष ठेवा."
           },
           "source": {
             "doc": "G3",
@@ -54,8 +54,8 @@
           "text": {
             "en": "If the cough is weak or they cannot breathe or speak, call 112, or ask someone to call.",
             "hi": "अगर खाँसी कमज़ोर है या वे साँस नहीं ले पा रहे या बोल नहीं पा रहे, तो 112 पर कॉल करें, या किसी और से कॉल करवाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Agar khaansi kamzor hai ya woh saans nahi le pa rahe ya bol nahi pa rahe, to 112 par call karein, ya kisi aur se call karwaayein.",
+            "mr": "खोकला कमजोर असेल किंवा त्यांना श्वास घेता किंवा बोलता येत नसेल, तर 112 वर कॉल करा, किंवा कोणाला तरी कॉल करायला सांगा."
           },
           "source": {
             "doc": "G3",
@@ -74,8 +74,8 @@
           "text": {
             "en": "Stand slightly behind them, support their chest with one hand and lean them forward.",
             "hi": "उनके थोड़ा पीछे खड़े हों, एक हाथ से उनकी छाती को सहारा दें और उन्हें आगे की ओर झुकाएँ।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Unke thoda peeche khade hon, ek haath se unki chhaati ko sahaara dein aur unhe aage ki taraf jhukaayein.",
+            "mr": "त्यांच्या थोडे मागे उभे राहा, एका हाताने त्यांच्या छातीला आधार द्या आणि त्यांना पुढे वाकवा."
           },
           "source": {
             "doc": "G1",
@@ -95,8 +95,8 @@
           "text": {
             "en": "Give 5 firm back blows between the shoulder blades with the heel of your hand.",
             "hi": "अपनी हथेली के निचले हिस्से से दोनों कंधों की हड्डियों के बीच 5 बार ज़ोर से थपकी मारें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Apni hatheli ke nichle hisse se dono kandhon ki haddiyon ke beech 5 baar zor se thapki maarein.",
+            "mr": "तळहाताच्या खालच्या भागाने दोन्ही खांद्यांच्या हाडांमध्ये पाठीवर 5 वेळा जोरात थाप मारा."
           },
           "source": {
             "doc": "G3",
@@ -121,8 +121,8 @@
           "text": {
             "en": "Then give 5 abdominal thrusts: stand behind them, place a fist just above the belly button, hold it with your other hand, and pull sharply inwards and upwards.",
             "hi": "फिर पेट पर 5 बार दबाव दें: उनके पीछे खड़े हों, मुट्ठी नाभि के ठीक ऊपर रखें, उसे दूसरे हाथ से पकड़ें, और झटके से अंदर और ऊपर की ओर खींचें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Phir pet par 5 baar dabaav dein: unke peeche khade hon, mutthi naabhi ke theek upar rakhein, use doosre haath se pakdein, aur jhatke se andar aur upar ki taraf kheenchein.",
+            "mr": "मग पोटावर 5 वेळा दाब द्या: त्यांच्या मागे उभे राहा, बेंबीच्या थोडे वर मूठ ठेवा, ती दुसऱ्या हाताने धरा, आणि झटक्याने आत आणि वर ओढा."
           },
           "source": {
             "doc": "G3",
@@ -147,8 +147,8 @@
           "text": {
             "en": "Keep repeating 5 back blows and 5 abdominal thrusts until the object comes out or they become unresponsive.",
             "hi": "जब तक चीज़ बाहर न निकल जाए या वे प्रतिक्रिया देना बंद न कर दें, तब तक 5 बार पीठ पर थपकी और 5 बार पेट पर दबाव दोहराते रहें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Jab tak cheez bahar na nikal jaaye ya woh response dena band na kar dein, tab tak 5 baar peeth par thapki aur 5 baar pet par dabaav dohraate rahein.",
+            "mr": "वस्तू बाहेर येईपर्यंत किंवा ते प्रतिसाद देणे थांबवेपर्यंत, पाठीवर 5 थापा आणि पोटावर 5 दाब पुन्हा पुन्हा देत राहा."
           },
           "source": {
             "doc": "G3",
@@ -167,8 +167,8 @@
           "text": {
             "en": "If they become unresponsive, start CPR, beginning with chest pushes (Situation 9.1, Path A).",
             "hi": "अगर वे प्रतिक्रिया देना बंद कर दें, तो छाती दबाने से CPR शुरू करें (स्थिति 9.1, पथ A)।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Agar woh response dena band kar dein, to chhaati dabaane se CPR shuru karein (Situation 9.1, Path A).",
+            "mr": "ते प्रतिसाद देणे थांबवले, तर छाती दाबण्यापासून CPR सुरू करा (परिस्थिती 9.1, मार्ग A)."
           },
           "source": {
             "doc": "G3",
@@ -191,8 +191,8 @@
           "text": {
             "en": "After abdominal thrusts, they should see a doctor, even if they feel fine.",
             "hi": "पेट पर दबाव देने के बाद, उन्हें डॉक्टर को दिखाना चाहिए, भले ही वे ठीक महसूस करें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Pet par dabaav dene ke baad, unhe doctor ko dikhaana chahiye, chahe woh theek mehsoos karein.",
+            "mr": "पोटावर दाब दिल्यानंतर, त्यांना बरे वाटत असले तरी डॉक्टरांना दाखवावे."
           },
           "source": {
             "doc": "G1",
@@ -212,8 +212,8 @@
           "text": {
             "en": "Do not sweep inside the mouth with your finger unless you can clearly see the object.",
             "hi": "जब तक चीज़ साफ़ दिखाई न दे, उँगली से मुँह के अंदर टटोलकर न निकालें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Jab tak cheez saaf dikhaayi na de, ungli se munh ke andar tatolkar na nikaalein.",
+            "mr": "वस्तू स्पष्ट दिसत नसेल तर बोटाने तोंडात चाचपून काढू नका."
           },
           "reason": {
             "en": "",
@@ -227,14 +227,14 @@
           "text": {
             "en": "Do not give water or food.",
             "hi": "पानी या खाना न दें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Paani ya khaana na dein.",
+            "mr": "पाणी किंवा अन्न देऊ नका."
           },
           "reason": {
             "en": "It can block the airway further.",
             "hi": "इससे साँस की नली और ज़्यादा बंद हो सकती है।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Isse saans ki nali aur zyada band ho sakti hai.",
+            "mr": "यामुळे श्वासनलिका आणखी बंद होऊ शकते."
           },
           "step": "ch_s2"
         },
@@ -242,8 +242,8 @@
           "text": {
             "en": "Do not hit their back while they are still coughing strongly.",
             "hi": "जब तक वे ज़ोर से खाँस रहे हैं, उनकी पीठ पर न मारें।",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Jab tak woh zor se khaans rahe hain, unki peeth par na maarein.",
+            "mr": "ते जोरात खोकत असताना त्यांच्या पाठीवर मारू नका."
           },
           "reason": {
             "en": "",
@@ -259,8 +259,8 @@
   "out_of_scope_note": {
     "en": "For pregnant people or people too large to reach around, this case is not covered. Call 112.",
     "hi": "गर्भवती व्यक्ति या जिनके चारों ओर हाथ न पहुँचें, उनके लिए यह जानकारी उपलब्ध नहीं है। 112 पर कॉल करें।",
-    "hinglish": "",
-    "mr": ""
+    "hinglish": "Pregnant vyakti ya jinke chaaron taraf haath na pahunche, unke liye yeh jaankaari uplabdh nahi hai. 112 par call karein.",
+    "mr": "गरोदर व्यक्ती किंवा ज्यांच्याभोवती हात पोहोचत नाहीत, त्यांच्यासाठी ही माहिती उपलब्ध नाही. 112 वर कॉल करा."
   },
   "source_differences": [
     {

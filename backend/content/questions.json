@@ -7,8 +7,8 @@
       "text": {
         "en": "Does the person respond when you tap their shoulders and speak loudly?",
         "hi": "कंधे थपथपाने और ज़ोर से बोलने पर क्या व्यक्ति कोई प्रतिक्रिया देता है?",
-        "hinglish": "",
-        "mr": ""
+        "hinglish": "Kandhe thapthapaane aur zor se bolne par kya vyakti koi response deta hai?",
+        "mr": "खांद्यावर थोपटून मोठ्याने बोलल्यावर ती व्यक्ती प्रतिसाद देते का?"
       },
       "options": [
         {
@@ -85,8 +85,8 @@
           "label": {
             "en": "No, or only gasping",
             "hi": "नहीं, या सिर्फ़ हाँफ रहे हैं",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Nahi, ya sirf haanf rahe hain",
+            "mr": "नाही, किंवा फक्त धाप लागते आहे"
           },
           "set": {
             "breathing": "abnormal"
@@ -118,8 +118,8 @@
       "text": {
         "en": "Do they have pain, pressure or tightness in the chest?",
         "hi": "क्या उनकी छाती में दर्द, दबाव या जकड़न है?",
-        "hinglish": "",
-        "mr": ""
+        "hinglish": "Kya unki chhaati mein dard, dabaav ya jakdan hai?",
+        "mr": "त्यांच्या छातीत दुखणे, दाब किंवा घट्टपणा आहे का?"
       },
       "options": [
         {
@@ -163,8 +163,8 @@
       "text": {
         "en": "Can the person cough, speak or breathe?",
         "hi": "क्या व्यक्ति खाँस, बोल या साँस ले पा रहा है?",
-        "hinglish": "",
-        "mr": ""
+        "hinglish": "Kya vyakti khaans, bol ya saans le pa raha hai?",
+        "mr": "ती व्यक्ती खोकू, बोलू किंवा श्वास घेऊ शकते का?"
       },
       "options": [
         {
@@ -172,8 +172,8 @@
           "label": {
             "en": "Yes, coughing strongly",
             "hi": "हाँ, ज़ोर से खाँस रहे हैं",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Haan, zor se khaans rahe hain",
+            "mr": "हो, जोरात खोकत आहेत"
           },
           "set": {
             "choking_signs": "coughing_strongly"
@@ -184,8 +184,8 @@
           "label": {
             "en": "No, or very weakly",
             "hi": "नहीं, या बहुत कमज़ोर",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Nahi, ya bahut kamzor",
+            "mr": "नाही, किंवा खूप कमजोर"
           },
           "set": {
             "choking_signs": "weak_or_silent"
@@ -206,8 +206,8 @@
       "text": {
         "en": "What bit or stung them?",
         "hi": "उन्हें किसने काटा या डंक मारा?",
-        "hinglish": "",
-        "mr": ""
+        "hinglish": "Unhe kisne kaata ya dank maara?",
+        "mr": "त्यांना कशाने चावले किंवा डंख मारला?"
       },
       "options": [
         {
@@ -215,8 +215,8 @@
           "label": {
             "en": "Snake",
             "hi": "साँप",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Saanp",
+            "mr": "साप"
           },
           "set": {
             "bite_type": "snake"
@@ -227,8 +227,8 @@
           "label": {
             "en": "Insect or bee",
             "hi": "कीड़ा या मधुमक्खी",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Keeda ya madhumakkhi",
+            "mr": "कीटक किंवा मधमाशी"
           },
           "set": {
             "bite_type": "insect_sting"
@@ -239,8 +239,8 @@
           "label": {
             "en": "Scorpion",
             "hi": "बिच्छू",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Bichhoo",
+            "mr": "विंचू"
           },
           "set": {
             "bite_type": "scorpion"
@@ -251,8 +251,8 @@
           "label": {
             "en": "Dog or other animal",
             "hi": "कुत्ता या कोई और जानवर",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Kutta ya koi aur jaanwar",
+            "mr": "कुत्रा किंवा इतर प्राणी"
           },
           "set": {
             "bite_type": "dog"
@@ -285,8 +285,8 @@
       "text": {
         "en": "Is there swelling of the face or throat, trouble breathing, or a rash spreading over the body?",
         "hi": "क्या चेहरे या गले में सूजन, साँस लेने में तकलीफ़, या शरीर पर फैलते चकत्ते हैं?",
-        "hinglish": "",
-        "mr": ""
+        "hinglish": "Kya chehre ya gale mein soojan, saans lene mein takleef, ya shareer par failte chakatte hain?",
+        "mr": "चेहरा किंवा घसा सुजला आहे का, श्वास घेण्यास त्रास होतो आहे का, किंवा अंगावर पुरळ पसरत आहे का?"
       },
       "options": [
         {
@@ -323,8 +323,8 @@
       "text": {
         "en": "What caused the burn?",
         "hi": "जलने की वजह क्या थी?",
-        "hinglish": "",
-        "mr": ""
+        "hinglish": "Jalne ki wajah kya thi?",
+        "mr": "कशामुळे भाजले?"
       },
       "options": [
         {
@@ -332,8 +332,8 @@
           "label": {
             "en": "Fire or hot object",
             "hi": "आग या गर्म चीज़",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Aag ya garam cheez",
+            "mr": "आग किंवा गरम वस्तू"
           },
           "set": {
             "burn_cause": "fire_heat"
@@ -344,8 +344,8 @@
           "label": {
             "en": "Hot liquid or steam",
             "hi": "गर्म तरल या भाप",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Garam liquid ya bhaap",
+            "mr": "गरम द्रव किंवा वाफ"
           },
           "set": {
             "burn_cause": "hot_liquid_steam"
@@ -356,8 +356,8 @@
           "label": {
             "en": "Chemical or acid",
             "hi": "केमिकल या तेज़ाब",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Chemical ya acid",
+            "mr": "रसायन किंवा ॲसिड"
           },
           "set": {
             "burn_cause": "chemical_acid"
@@ -368,8 +368,8 @@
           "label": {
             "en": "Electricity",
             "hi": "बिजली",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Bijli",
+            "mr": "वीज"
           },
           "set": {
             "burn_cause": "electrical"
@@ -390,8 +390,8 @@
       "text": {
         "en": "Is the electricity switched off, or is the person clear of the source?",
         "hi": "क्या बिजली बंद कर दी गई है, या व्यक्ति बिजली के स्रोत से दूर है?",
-        "hinglish": "",
-        "mr": ""
+        "hinglish": "Kya bijli band kar di gayi hai, ya vyakti bijli ke source se door hai?",
+        "mr": "वीज बंद केली आहे का, किंवा व्यक्ती विजेच्या स्रोतापासून दूर आहे का?"
       },
       "options": [
         {
@@ -440,8 +440,8 @@
       "text": {
         "en": "Is the person an adult, a child or a baby?",
         "hi": "व्यक्ति वयस्क है, बच्चा है या शिशु?",
-        "hinglish": "",
-        "mr": ""
+        "hinglish": "Vyakti adult hai, bachcha hai ya baby?",
+        "mr": "ती व्यक्ती प्रौढ आहे, मूल आहे की बाळ?"
       },
       "options": [
         {
@@ -449,8 +449,8 @@
           "label": {
             "en": "Adult",
             "hi": "वयस्क",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Adult",
+            "mr": "प्रौढ"
           },
           "set": {
             "age_group": "adult"
@@ -461,8 +461,8 @@
           "label": {
             "en": "Child",
             "hi": "बच्चा",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Bachcha",
+            "mr": "मूल"
           },
           "set": {
             "age_group": "child"
@@ -473,8 +473,8 @@
           "label": {
             "en": "Baby",
             "hi": "शिशु",
-            "hinglish": "",
-            "mr": ""
+            "hinglish": "Baby",
+            "mr": "बाळ"
           },
           "set": {
             "age_group": "infant"

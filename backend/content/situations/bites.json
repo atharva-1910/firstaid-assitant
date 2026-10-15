@@ -1,0 +1,727 @@
+{
+  "id": "bites",
+  "owner": "Siddhi Karhekar",
+  "age_scope": "adult",
+  "names": {
+    "en": "Bites and stings",
+    "hi": "",
+    "hinglish": "",
+    "mr": ""
+  },
+  "recognition": [
+    {
+      "en": "Bitten or stung by a snake, insect, scorpion, dog or other animal.",
+      "hi": "",
+      "hinglish": "",
+      "mr": ""
+    }
+  ],
+  "branch_on": "bite_type",
+  "branch_map": {
+    "snake": "snake",
+    "insect_sting": "insect_sting",
+    "scorpion": "scorpion",
+    "dog": "dog",
+    "other_mammal": "dog",
+    "unknown": "snake"
+  },
+  "branches": {
+    "snake": {
+      "urgency_rules": [
+        {
+          "if": {},
+          "urgency": "emergency"
+        }
+      ],
+      "steps": [
+        {
+          "id": "bite_snake_s1",
+          "order": 1,
+          "text": {
+            "en": "Call 112 or get them to the nearest hospital immediately.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G2",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [
+            {
+              "doc": "G1",
+              "page": 340
+            }
+          ],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_snake_s2",
+          "verified": false
+        },
+        {
+          "id": "bite_snake_s2",
+          "order": 2,
+          "text": {
+            "en": "Move away from the snake. Do not try to catch or kill it.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 340,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_snake_s3",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "bite_snake_s3",
+          "order": 3,
+          "text": {
+            "en": "Keep the person calm and as still as possible.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 340,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_snake_s4",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "bite_snake_s4",
+          "order": 4,
+          "text": {
+            "en": "Keep the bitten arm or leg still, as you would a broken limb.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 340,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_snake_s5",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "bite_snake_s5",
+          "order": 5,
+          "text": {
+            "en": "Remove rings, bangles, watches and tight clothing near the bite before swelling starts.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 340,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_snake_s6",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "bite_snake_s6",
+          "order": 6,
+          "text": {
+            "en": "Note the time of the bite.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 340,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": null,
+          "verified": false,
+          "verify_note": "VERIFY"
+        }
+      ],
+      "do_not": [
+        {
+          "text": {
+            "en": "Do not tie a tourniquet.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "Named as a harmful practice by the Health Ministry (G5).",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "bite_snake_s4"
+        },
+        {
+          "text": {
+            "en": "Do not cut or suck the wound.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "Named as a harmful practice by the Health Ministry (G5).",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "bite_snake_s3"
+        },
+        {
+          "text": {
+            "en": "Do not use herbal remedies.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "Delays the anti-venom treatment that saves lives (G5).",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "bite_snake_s1"
+        },
+        {
+          "text": {
+            "en": "Do not apply ice.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "bite_snake_s5"
+        },
+        {
+          "text": {
+            "en": "Do not wait for symptoms before going to hospital.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "bite_snake_s6"
+        }
+      ]
+    },
+    "insect_sting": {
+      "urgency_rules": [
+        {
+          "if": {
+            "allergy_signs": "yes"
+          },
+          "urgency": "emergency"
+        },
+        {
+          "if": {
+            "flag": "many_stings"
+          },
+          "urgency": "emergency"
+        },
+        {
+          "if": {},
+          "urgency": "home"
+        }
+      ],
+      "steps": [
+        {
+          "id": "bite_insect_s1",
+          "order": 1,
+          "text": {
+            "en": "Watch for a severe allergic reaction: trouble breathing, swelling of the face, lips or throat, a spreading rash, or feeling faint. If any appear, call 112.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G2",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [
+            {
+              "doc": "G1",
+              "page": 326
+            }
+          ],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_insect_s2",
+          "verified": false
+        },
+        {
+          "id": "bite_insect_s2",
+          "order": 2,
+          "text": {
+            "en": "If a sting is left in the skin, remove it quickly.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 326,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_insect_s3",
+          "verified": false,
+          "verify_note": "VERIFY method"
+        },
+        {
+          "id": "bite_insect_s3",
+          "order": 3,
+          "text": {
+            "en": "Wash the area with soap and water.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 326,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_insect_s4",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "bite_insect_s4",
+          "order": 4,
+          "text": {
+            "en": "Apply a cold pack wrapped in cloth to ease pain and swelling.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 326,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_insect_s5",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "bite_insect_s5",
+          "order": 5,
+          "text": {
+            "en": "For a scorpion sting, take them to a clinic or hospital.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G2",
+            "page": null,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": null,
+          "verified": false,
+          "verify_note": "VERIFY"
+        }
+      ],
+      "do_not": [
+        {
+          "text": {
+            "en": "Do not squeeze or scratch the area.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "bite_insect_s2"
+        },
+        {
+          "text": {
+            "en": "Do not apply mud, lime or other home remedies.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "bite_insect_s3"
+        }
+      ]
+    },
+    "scorpion": {
+      "urgency_rules": [
+        {
+          "if": {
+            "allergy_signs": "yes"
+          },
+          "urgency": "emergency"
+        },
+        {
+          "if": {},
+          "urgency": "clinic"
+        }
+      ],
+      "steps": [
+        {
+          "id": "bite_insect_s1",
+          "order": 1,
+          "text": {
+            "en": "Watch for a severe allergic reaction: trouble breathing, swelling of the face, lips or throat, a spreading rash, or feeling faint. If any appear, call 112.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G2",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [
+            {
+              "doc": "G1",
+              "page": 326
+            }
+          ],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_insect_s2",
+          "verified": false
+        },
+        {
+          "id": "bite_insect_s2",
+          "order": 2,
+          "text": {
+            "en": "If a sting is left in the skin, remove it quickly.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 326,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_insect_s3",
+          "verified": false,
+          "verify_note": "VERIFY method"
+        },
+        {
+          "id": "bite_insect_s3",
+          "order": 3,
+          "text": {
+            "en": "Wash the area with soap and water.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 326,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_insect_s4",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "bite_insect_s4",
+          "order": 4,
+          "text": {
+            "en": "Apply a cold pack wrapped in cloth to ease pain and swelling.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 326,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_insect_s5",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "bite_insect_s5",
+          "order": 5,
+          "text": {
+            "en": "For a scorpion sting, take them to a clinic or hospital.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G2",
+            "page": null,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": null,
+          "verified": false,
+          "verify_note": "VERIFY"
+        }
+      ],
+      "do_not": [
+        {
+          "text": {
+            "en": "Do not squeeze or scratch the area.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "bite_insect_s2"
+        },
+        {
+          "text": {
+            "en": "Do not apply mud, lime or other home remedies.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "bite_insect_s3"
+        }
+      ]
+    },
+    "dog": {
+      "urgency_rules": [
+        {
+          "if": {
+            "flag": "severe_bite"
+          },
+          "urgency": "emergency"
+        },
+        {
+          "if": {},
+          "urgency": "clinic"
+        }
+      ],
+      "steps": [
+        {
+          "id": "bite_dog_s1",
+          "order": 1,
+          "text": {
+            "en": "Move away from the animal to a safe place.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 323,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_dog_s2",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "bite_dog_s2",
+          "order": 2,
+          "text": {
+            "en": "Wash the wound right away with plenty of running water and soap for about 15 minutes.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 323,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_dog_s3",
+          "verified": false,
+          "verify_note": "VERIFY duration"
+        },
+        {
+          "id": "bite_dog_s3",
+          "order": 3,
+          "text": {
+            "en": "If it is bleeding, press on it with a clean cloth.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 323,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_dog_s4",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "bite_dog_s4",
+          "order": 4,
+          "text": {
+            "en": "Cover it with a clean dressing.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 323,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "bite_dog_s5",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "bite_dog_s5",
+          "order": 5,
+          "text": {
+            "en": "Go to a clinic or hospital today, even for a small bite or scratch, to ask about rabies vaccination.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 323,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": null,
+          "verified": false,
+          "verify_note": "VERIFY"
+        }
+      ],
+      "do_not": [
+        {
+          "text": {
+            "en": "Do not put chilli powder, turmeric, oil, lime or other home remedies on the wound.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "Does not clean the wound; washing with soap and water does.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "bite_dog_s2"
+        },
+        {
+          "text": {
+            "en": "Do not ignore a small bite or scratch.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "Even small bites can transmit rabies.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "bite_dog_s5"
+        }
+      ]
+    }
+  },
+  "source_differences": [
+    {
+      "topic": "pressure bandage for snakebite",
+      "notes": ""
+    }
+  ],
+  "review_status": "draft"
+}

@@ -1,0 +1,624 @@
+{
+  "id": "burns",
+  "owner": "Soham Ghodake",
+  "age_scope": "adult",
+  "names": {
+    "en": "Burns",
+    "hi": "",
+    "hinglish": "",
+    "mr": ""
+  },
+  "recognition": [
+    {
+      "en": "Red, painful, blistered, white or charred skin after heat, chemicals or electricity",
+      "hi": "",
+      "hinglish": "",
+      "mr": ""
+    }
+  ],
+  "branch_on": "burn_cause",
+  "branch_map": {
+    "fire_heat": "fire_heat",
+    "hot_liquid_steam": "fire_heat",
+    "chemical_acid": "chemical_acid",
+    "electrical": "electrical"
+  },
+  "branches": {
+    "fire_heat": {
+      "urgency_rules": [
+        {
+          "if": {
+            "burn_area": "large"
+          },
+          "urgency": "emergency"
+        },
+        {
+          "if": {
+            "burn_area": "eyes_or_face"
+          },
+          "urgency": "emergency"
+        },
+        {
+          "if": {
+            "burn_area": "sensitive_area"
+          },
+          "urgency": "emergency"
+        },
+        {
+          "if": {
+            "flag": "distress"
+          },
+          "urgency": "emergency"
+        },
+        {
+          "if": {
+            "flag": "blister"
+          },
+          "urgency": "clinic"
+        },
+        {
+          "if": {
+            "burn_area": "small"
+          },
+          "urgency": "home"
+        },
+        {
+          "if": {},
+          "urgency": "clinic"
+        }
+      ],
+      "steps": [
+        {
+          "id": "burns_fire_s1",
+          "order": 1,
+          "text": {
+            "en": "Stop the burning: move away from the heat; if clothes are on fire, stop, drop and roll.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 288,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_fire_s2",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "burns_fire_s2",
+          "order": 2,
+          "text": {
+            "en": "Cool the burn under clean, cool running water as soon as possible, for at least 20 minutes.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 288,
+            "quote_checked": false
+          },
+          "also_in": [
+            {
+              "doc": "G2",
+              "page": null
+            },
+            {
+              "doc": "G4",
+              "page": null
+            }
+          ],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_fire_s3",
+          "verified": false,
+          "verify_note": "VERIFY duration in each source"
+        },
+        {
+          "id": "burns_fire_s3",
+          "order": 3,
+          "text": {
+            "en": "Remove jewellery, belts and other tight items from the burned area.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G2",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [
+            {
+              "doc": "G1",
+              "page": 288
+            }
+          ],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_fire_s4",
+          "verified": false
+        },
+        {
+          "id": "burns_fire_s4",
+          "order": 4,
+          "text": {
+            "en": "Do not remove clothing that is stuck to the burn.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 288,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_fire_s5",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "burns_fire_s5",
+          "order": 5,
+          "text": {
+            "en": "Cover the burn loosely with cling film or a clean cloth that does not leave fibres.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 288,
+            "quote_checked": false
+          },
+          "also_in": [
+            {
+              "doc": "G2",
+              "page": null
+            }
+          ],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_fire_s6",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "burns_fire_s6",
+          "order": 6,
+          "text": {
+            "en": "Keep the person warm: cool the burn, not the whole person.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 288,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_fire_s7",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "burns_fire_s7",
+          "order": 7,
+          "text": {
+            "en": "Call 112 or go to a clinic based on the urgency shown on screen.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 288,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": null,
+          "verified": false,
+          "verify_note": "VERIFY"
+        }
+      ],
+      "do_not": [
+        {
+          "text": {
+            "en": "Do not use ice or ice water.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "It can damage the skin further.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "burns_fire_s2"
+        },
+        {
+          "text": {
+            "en": "Do not apply butter, oil, ghee, toothpaste or other home remedies.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "It traps heat and raises the risk of infection.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "burns_fire_s5"
+        },
+        {
+          "text": {
+            "en": "Do not burst blisters.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "burns_fire_s4"
+        }
+      ]
+    },
+    "chemical_acid": {
+      "urgency_rules": [
+        {
+          "if": {
+            "burn_area": "eyes_or_face"
+          },
+          "urgency": "emergency"
+        },
+        {
+          "if": {
+            "burn_area": "large"
+          },
+          "urgency": "emergency"
+        },
+        {
+          "if": {
+            "flag": "acid_attack"
+          },
+          "urgency": "emergency"
+        },
+        {
+          "if": {
+            "flag": "distress"
+          },
+          "urgency": "emergency"
+        },
+        {
+          "if": {},
+          "urgency": "clinic"
+        }
+      ],
+      "steps": [
+        {
+          "id": "burns_chem_s1",
+          "order": 1,
+          "text": {
+            "en": "Protect yourself: avoid touching the chemical; use gloves or a plastic bag if you can.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 288,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_chem_s2",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "burns_chem_s2",
+          "order": 2,
+          "text": {
+            "en": "Call 112.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 288,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_chem_s3",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "burns_chem_s3",
+          "order": 3,
+          "text": {
+            "en": "Brush off any dry powder, then remove clothing and jewellery that the chemical touched.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G2",
+            "page": null,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_chem_s4",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "burns_chem_s4",
+          "order": 4,
+          "text": {
+            "en": "Rinse the skin with large amounts of running water for at least 20 minutes.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G2",
+            "page": null,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_chem_s5",
+          "verified": false,
+          "verify_note": "VERIFY duration"
+        },
+        {
+          "id": "burns_chem_s5",
+          "order": 5,
+          "text": {
+            "en": "If it is in the eye, rinse the eye with running water, holding the eyelids open, and keep rinsing until help arrives.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G2",
+            "page": null,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_chem_s6",
+          "verified": false,
+          "verify_note": "VERIFY duration"
+        },
+        {
+          "id": "burns_chem_s6",
+          "order": 6,
+          "text": {
+            "en": "Cover the area loosely with a clean cloth.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 288,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": null,
+          "verified": false,
+          "verify_note": "VERIFY"
+        }
+      ],
+      "do_not": [
+        {
+          "text": {
+            "en": "Do not try to neutralise the chemical with anything else (such as baking soda, vinegar or milk).",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "It can cause more damage; rinse with water instead.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "burns_chem_s4"
+        },
+        {
+          "text": {
+            "en": "Do not rub the area or the eye.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "burns_chem_s5"
+        }
+      ]
+    },
+    "electrical": {
+      "urgency_rules": [
+        {
+          "if": {},
+          "urgency": "emergency"
+        }
+      ],
+      "steps": [
+        {
+          "id": "burns_elec_s1",
+          "order": 1,
+          "text": {
+            "en": "Do not touch the person until the power is switched off at the main switch or plug, or they are clear of the source.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": null,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_elec_s2",
+          "verified": false,
+          "verify_note": "VERIFY (G1 scene safety)"
+        },
+        {
+          "id": "burns_elec_s2",
+          "order": 2,
+          "text": {
+            "en": "Stay well away from high-voltage lines; wait for the power company or emergency services.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "UNSOURCED",
+            "page": null,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_elec_s3",
+          "verified": false,
+          "verify_note": "VERIFY: source needed"
+        },
+        {
+          "id": "burns_elec_s3",
+          "order": 3,
+          "text": {
+            "en": "Call 112.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "UNSOURCED",
+            "page": null,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_elec_s4",
+          "verified": false,
+          "verify_note": "VERIFY: source needed"
+        },
+        {
+          "id": "burns_elec_s4",
+          "order": 4,
+          "text": {
+            "en": "If they are unresponsive and not breathing normally, start CPR (Situation 9.1, Path A).",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G3",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "burns_elec_s5",
+          "verified": false,
+          "link": {
+            "situation": "unresponsive",
+            "branch": "path_a"
+          }
+        },
+        {
+          "id": "burns_elec_s5",
+          "order": 5,
+          "text": {
+            "en": "Once it is safe, cool any visible burns under running water and cover them loosely.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 288,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": null,
+          "verified": false,
+          "verify_note": "VERIFY"
+        }
+      ],
+      "do_not": [
+        {
+          "text": {
+            "en": "Do not touch them with bare hands or anything wet or metal while the power may be on.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "You can be electrocuted too.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "burns_elec_s1"
+        }
+      ]
+    }
+  },
+  "source_differences": [
+    {
+      "topic": "cooling duration",
+      "notes": ""
+    },
+    {
+      "topic": "electrical injury source gap (Section 4.1)",
+      "notes": ""
+    }
+  ],
+  "review_status": "draft"
+}

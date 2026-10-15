@@ -1,0 +1,260 @@
+{
+  "id": "heart_attack",
+  "owner": "Taneesha Badhe",
+  "age_scope": "adult",
+  "names": {
+    "en": "Heart attack",
+    "hi": "",
+    "hinglish": "",
+    "mr": ""
+  },
+  "recognition": [
+    {
+      "en": "Pain, pressure, squeezing or tightness in the chest, which may spread to the arm, jaw, neck or back; may come with breathlessness, sweating, nausea or feeling faint. Symptoms can be mild.",
+      "hi": "",
+      "hinglish": "",
+      "mr": ""
+    }
+  ],
+  "branch_on": null,
+  "branches": {
+    "default": {
+      "urgency_rules": [
+        {
+          "if": {},
+          "urgency": "emergency"
+        }
+      ],
+      "steps": [
+        {
+          "id": "ha_s1",
+          "order": 1,
+          "text": {
+            "en": "Call 112 now. Do not wait to see if the pain passes.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 358,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ha_s2",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "ha_s2",
+          "order": 2,
+          "text": {
+            "en": "Help them sit in the position they find most comfortable, and keep them still and calm.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 358,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ha_s3",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "ha_s3",
+          "order": 3,
+          "text": {
+            "en": "Loosen tight clothing.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 358,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ha_s4",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "ha_s4",
+          "order": 4,
+          "text": {
+            "en": "If they are not allergic to aspirin and have not been told not to take it, give aspirin to chew.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 358,
+            "quote_checked": false
+          },
+          "also_in": [
+            {
+              "doc": "G2",
+              "page": null
+            },
+            {
+              "doc": "G4",
+              "page": null
+            }
+          ],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ha_s5",
+          "verified": false,
+          "verify_note": "VERIFY dose: record each source's dose; the app shows the dose only after it is confirmed"
+        },
+        {
+          "id": "ha_s5",
+          "order": 5,
+          "text": {
+            "en": "If they have their own prescribed medicine for chest pain, help them take it.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 358,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ha_s6",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "ha_s6",
+          "order": 6,
+          "text": {
+            "en": "Ask someone to find an AED if one is nearby.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 358,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ha_s7",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "ha_s7",
+          "order": 7,
+          "text": {
+            "en": "Stay with them. If they become unresponsive and are not breathing normally, start CPR (Situation 9.1, Path A).",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G3",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": null,
+          "verified": false,
+          "link": {
+            "situation": "unresponsive",
+            "branch": "path_a"
+          }
+        }
+      ],
+      "do_not": [
+        {
+          "text": {
+            "en": "Do not let them walk around or exert themselves.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "ha_s2"
+        },
+        {
+          "text": {
+            "en": "Do not give food or drink.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "ha_s3"
+        },
+        {
+          "text": {
+            "en": "Do not treat it as gas or acidity and wait.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "Delay can cost a life; call 112.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "ha_s1"
+        },
+        {
+          "text": {
+            "en": "Do not give aspirin if they are allergic to it.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "ha_s4"
+        }
+      ]
+    }
+  },
+  "source_differences": [
+    {
+      "topic": "aspirin dose",
+      "notes": ""
+    }
+  ],
+  "review_status": "draft"
+}

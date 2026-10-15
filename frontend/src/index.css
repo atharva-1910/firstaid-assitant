@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Section 14.3: 1.5 line height, 1.6 for Devanagari. Fonts are bundled locally (no runtime CDN). */
+html {
+  font-family: "Noto Sans", "Noto Sans Devanagari", system-ui, sans-serif;
+  line-height: 1.5;
+  background: #f5f8fa;
+}
+html[data-script="devanagari"] body {
+  font-family: "Noto Sans Devanagari", "Noto Sans", system-ui, sans-serif;
+  line-height: 1.6;
+}
+html[data-script="devanagari"] .text-step,
+html[data-script="devanagari"] .text-question,
+html[data-script="devanagari"] .text-body,
+html[data-script="devanagari"] .text-note {
+  line-height: 1.6;
+}
+
+/* Section 14.6: screen changes fade over 150 ms; nothing else animates. */
+.screen-fade {
+  animation: fade-in 150ms ease-out;
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* CPR rhythm guide: a soft circle that grows and shrinks at 110 beats per minute. */
+.cpr-circle {
+  animation-name: cpr-pulse;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes cpr-pulse {
+  0%, 100% { transform: scale(0.75); }
+  50% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screen-fade, .cpr-circle { animation: none; }
+  * { transition: none !important; }
+}

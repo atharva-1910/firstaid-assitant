@@ -1,0 +1,10 @@
+# Extra packages for MODEL_MODE=real (install on a machine with enough RAM / a GPU)
+-r requirements.txt
+torch>=2.2
+transformers>=4.44
+FlagEmbedding>=1.2
+transformers-interpret>=0.10
+numpy>=1.26
+# IndicLID and IndicXlit: install from AI4Bharat (see docs/REAL_MODE.md)
+ai4bharat-transliteration
+# Optional generation: Gemma 3 4B runs through a local Ollama server (no Python package needed)

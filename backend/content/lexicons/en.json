@@ -1,0 +1,1180 @@
+{
+ "lang": "en",
+ "owner": "Taneesha Badhe",
+ "cue_direction": "before",
+ "negation_cues": [
+  "not",
+  "no",
+  "isn't",
+  "isnt",
+  "can't",
+  "cant",
+  "cannot",
+  "unable",
+  "without",
+  "never",
+  "doesn't",
+  "doesnt",
+  "don't",
+  "dont",
+  "won't",
+  "wont",
+  "wasn't",
+  "wasnt",
+  "aren't",
+  "arent",
+  "couldn't",
+  "couldnt",
+  "didn't",
+  "didnt",
+  "hasn't",
+  "hasnt",
+  "stopped",
+  "nor"
+ ],
+ "uncertainty_cues": [
+  "maybe",
+  "might",
+  "i think",
+  "not sure",
+  "probably",
+  "perhaps",
+  "possibly",
+  "i guess",
+  "don't know",
+  "dont know",
+  "unsure",
+  "may be",
+  "seems",
+  "not certain"
+ ],
+ "scope_breakers": [
+  "but",
+  "however",
+  "although",
+  "though"
+ ],
+ "entries": [
+  {
+   "terms": [
+    "unconscious",
+    "unresponsive",
+    "passed out",
+    "not waking up",
+    "not waking",
+    "won't wake up",
+    "wont wake up",
+    "won't wake",
+    "blacked out",
+    "knocked out",
+    "lifeless",
+    "senseless",
+    "out cold"
+   ],
+   "set": {
+    "responsive": "no"
+   },
+   "neg": {
+    "responsive": "yes"
+   },
+   "sit": [
+    "unresponsive"
+   ]
+  },
+  {
+   "terms": [
+    "responding",
+    "responsive",
+    "respond",
+    "responds",
+    "conscious",
+    "awake",
+    "answering",
+    "reacting",
+    "alert"
+   ],
+   "set": {
+    "responsive": "yes"
+   },
+   "neg": {
+    "responsive": "no"
+   },
+   "neg_sit": [
+    "unresponsive"
+   ]
+  },
+  {
+   "terms": [
+    "collapsed",
+    "collapse",
+    "collapses",
+    "fell down",
+    "fainted",
+    "fell",
+    "fallen",
+    "dropped down",
+    "black out",
+    "keeled over"
+   ],
+   "set": {},
+   "flags": [
+    "collapse"
+   ],
+   "sit": [
+    "unresponsive"
+   ],
+   "w": 0.6
+  },
+  {
+   "terms": [
+    "no pulse",
+    "cardiac arrest",
+    "heart stopped",
+    "heart has stopped"
+   ],
+   "set": {
+    "responsive": "no",
+    "breathing": "absent"
+   },
+   "sit": [
+    "unresponsive"
+   ]
+  },
+  {
+   "terms": [
+    "stopped breathing",
+    "no breathing",
+    "no breath"
+   ],
+   "set": {
+    "breathing": "absent"
+   },
+   "sit": [
+    "unresponsive"
+   ]
+  },
+  {
+   "terms": [
+    "breathing normally",
+    "breathing fine",
+    "breathing okay",
+    "breathing ok",
+    "breathing normal",
+    "breathes normally"
+   ],
+   "set": {
+    "breathing": "normal"
+   },
+   "neg": {
+    "breathing": "abnormal"
+   },
+   "neg_sit": [
+    "unresponsive"
+   ]
+  },
+  {
+   "terms": [
+    "breathing",
+    "breathe",
+    "breath",
+    "breathes",
+    "breaths"
+   ],
+   "set": {
+    "breathing": "normal"
+   },
+   "neg": {
+    "breathing": "absent"
+   },
+   "neg_sit": [
+    "unresponsive"
+   ]
+  },
+  {
+   "terms": [
+    "gasping",
+    "gasp",
+    "gasps",
+    "gurgling",
+    "agonal",
+    "snoring sounds",
+    "breathing strangely",
+    "breathing weirdly",
+    "strange breathing"
+   ],
+   "set": {
+    "breathing": "abnormal"
+   }
+  },
+  {
+   "terms": [
+    "trouble breathing",
+    "difficulty breathing",
+    "difficulty in breathing",
+    "hard to breathe",
+    "short of breath",
+    "shortness of breath",
+    "breathless",
+    "breathlessness",
+    "struggling to breathe",
+    "breathing difficulty",
+    "breathing problem",
+    "breathing trouble",
+    "can hardly breathe",
+    "wheezing"
+   ],
+   "set": {
+    "allergy_signs": "yes"
+   },
+   "flags": [
+    "distress"
+   ]
+  },
+  {
+   "terms": [
+    "chest pain",
+    "chest pressure",
+    "chest tightness",
+    "tight chest",
+    "chest is tight",
+    "pain in chest",
+    "pain in the chest",
+    "pain in his chest",
+    "pain in her chest",
+    "pain in my chest",
+    "chest hurts",
+    "chest is hurting",
+    "chest hurting",
+    "chest ache",
+    "pressure in chest",
+    "pressure in the chest",
+    "pressure in his chest",
+    "pressure in her chest",
+    "heart pain",
+    "squeezing in the chest",
+    "squeezing chest",
+    "heavy chest",
+    "heaviness in chest",
+    "heaviness in the chest",
+    "chest heaviness",
+    "chest discomfort",
+    "pain in the heart",
+    "burning in chest",
+    "burning in the chest",
+    "chest burning",
+    "burning chest",
+    "burning sensation in chest",
+    "burning sensation in the chest",
+    "tightness in the chest",
+    "tightness in chest",
+    "tightness in his chest",
+    "tightness in her chest",
+    "tightness in my chest",
+    "pressure on the chest",
+    "pain in his heart",
+    "crushing chest pain",
+    "chest is paining",
+    "chest paining"
+   ],
+   "set": {
+    "chest_pain": "yes"
+   },
+   "neg": {
+    "chest_pain": "no"
+   },
+   "sit": [
+    "heart_attack"
+   ]
+  },
+  {
+   "terms": [
+    "heart attack",
+    "heartattack",
+    "heart problem",
+    "cardiac"
+   ],
+   "set": {},
+   "flags": [
+    "stated_heart_attack"
+   ],
+   "sit": [
+    "heart_attack"
+   ]
+  },
+  {
+   "terms": [
+    "choking",
+    "choke",
+    "choked",
+    "chokes",
+    "something stuck in throat",
+    "something stuck in his throat",
+    "something stuck in her throat",
+    "stuck in his throat",
+    "stuck in her throat",
+    "stuck in throat",
+    "stuck in the throat",
+    "food stuck",
+    "bone stuck",
+    "went down the wrong way",
+    "throat blocked",
+    "airway blocked",
+    "clutching his throat",
+    "clutching her throat",
+    "clutching throat",
+    "holding his throat",
+    "holding her throat",
+    "swallowed a coin",
+    "swallowed something"
+   ],
+   "set": {},
+   "flags": [
+    "choking_ctx"
+   ],
+   "sit": [
+    "choking"
+   ]
+  },
+  {
+   "terms": [
+    "coughing hard",
+    "coughing strongly",
+    "coughing loudly",
+    "coughing a lot",
+    "strong cough",
+    "can cough",
+    "is coughing well",
+    "coughing forcefully"
+   ],
+   "set": {
+    "choking_signs": "coughing_strongly"
+   },
+   "neg": {
+    "choking_signs": "weak_or_silent"
+   }
+  },
+  {
+   "terms": [
+    "coughing",
+    "cough",
+    "coughs"
+   ],
+   "set": {},
+   "neg": {
+    "choking_signs": "weak_or_silent"
+   }
+  },
+  {
+   "terms": [
+    "weak cough",
+    "weakly coughing",
+    "coughing weakly",
+    "no sound",
+    "silent",
+    "can't speak",
+    "cannot speak",
+    "can't talk",
+    "cannot talk",
+    "unable to speak",
+    "unable to talk",
+    "turning blue",
+    "going blue",
+    "lips blue",
+    "lips are blue",
+    "blue lips",
+    "no air"
+   ],
+   "set": {
+    "choking_signs": "weak_or_silent"
+   }
+  },
+  {
+   "terms": [
+    "pregnant",
+    "too big to reach around",
+    "too large to reach around",
+    "can't reach around",
+    "cannot reach around"
+   ],
+   "set": {},
+   "flags": [
+    "pregnant_or_large"
+   ]
+  },
+  {
+   "terms": [
+    "snake",
+    "snakes",
+    "snakebite",
+    "snake bite",
+    "cobra",
+    "krait",
+    "viper",
+    "russell's viper",
+    "python",
+    "serpent",
+    "saw scaled viper"
+   ],
+   "set": {
+    "bite_type": "snake"
+   },
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "scorpion",
+    "scorpions",
+    "scorpion sting"
+   ],
+   "set": {
+    "bite_type": "scorpion"
+   },
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "street dog",
+    "stray dog",
+    "dog",
+    "dogs",
+    "puppy",
+    "pup",
+    "dog bite"
+   ],
+   "set": {
+    "bite_type": "dog"
+   },
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "cat",
+    "monkey",
+    "rat",
+    "bat",
+    "cow",
+    "horse",
+    "pig",
+    "mongoose",
+    "squirrel",
+    "rabbit",
+    "human bite",
+    "jackal",
+    "fox"
+   ],
+   "set": {
+    "bite_type": "other_mammal"
+   },
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "bee",
+    "bees",
+    "honeybee",
+    "wasp",
+    "wasps",
+    "hornet",
+    "hornets",
+    "ant",
+    "ants",
+    "insect",
+    "insects",
+    "bug",
+    "spider",
+    "centipede",
+    "caterpillar",
+    "mosquito"
+   ],
+   "set": {
+    "bite_type": "insect_sting"
+   },
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "bite",
+    "bitten",
+    "bites",
+    "biting",
+    "bit him",
+    "bit her",
+    "bit me",
+    "bit my",
+    "bit them",
+    "bit his",
+    "bit on",
+    "has bit",
+    "got bit"
+   ],
+   "set": {},
+   "flags": [
+    "bite_word"
+   ],
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "sting",
+    "stung",
+    "stings",
+    "stinging"
+   ],
+   "set": {},
+   "flags": [
+    "sting_word"
+   ],
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "many stings",
+    "lots of stings",
+    "stung many times",
+    "multiple stings",
+    "swarm",
+    "attacked by bees",
+    "bees attacked",
+    "stung all over",
+    "many bees"
+   ],
+   "set": {},
+   "flags": [
+    "many_stings"
+   ],
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "won't stop bleeding",
+    "wont stop bleeding",
+    "bleeding won't stop",
+    "bleeding wont stop",
+    "bleeding not stopping",
+    "bleeding is not stopping",
+    "not stopping bleeding",
+    "heavy bleeding",
+    "bleeding heavily",
+    "bleeding a lot",
+    "lot of blood",
+    "lots of blood",
+    "bleeding badly",
+    "deep bite",
+    "deep wound",
+    "deep",
+    "many bites",
+    "several bites",
+    "multiple bites"
+   ],
+   "set": {},
+   "flags": [
+    "severe_bite"
+   ]
+  },
+  {
+   "terms": [
+    "bleeding",
+    "blood"
+   ],
+   "set": {},
+   "flags": [
+    "bleeding"
+   ],
+   "sit": [
+    "out_of_scope"
+   ],
+   "w": 0.3
+  },
+  {
+   "terms": [
+    "face swelling",
+    "swollen face",
+    "face is swollen",
+    "face swollen",
+    "face is swelling",
+    "lips swelling",
+    "swollen lips",
+    "lips are swollen",
+    "lips swollen",
+    "throat swelling",
+    "swollen throat",
+    "throat is swelling",
+    "throat swollen",
+    "tongue swelling",
+    "swollen tongue",
+    "rash all over",
+    "rash spreading",
+    "spreading rash",
+    "rash over the body",
+    "rash over his body",
+    "rash over her body",
+    "hives",
+    "feeling faint",
+    "feels faint",
+    "dizzy",
+    "dizziness",
+    "throat closing",
+    "can't swallow",
+    "cannot swallow"
+   ],
+   "set": {
+    "allergy_signs": "yes"
+   },
+   "neg": {
+    "allergy_signs": "no"
+   }
+  },
+  {
+   "terms": [
+    "allergic reaction",
+    "allergy",
+    "anaphylaxis"
+   ],
+   "set": {
+    "allergy_signs": "yes"
+   },
+   "neg": {
+    "allergy_signs": "no"
+   }
+  },
+  {
+   "terms": [
+    "burn",
+    "burns",
+    "burned",
+    "burnt",
+    "burning",
+    "scald",
+    "scalded",
+    "scalding",
+    "scalds"
+   ],
+   "set": {},
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "blister",
+    "blisters",
+    "blistered",
+    "blistering"
+   ],
+   "set": {},
+   "flags": [
+    "blister"
+   ],
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "fire",
+    "flame",
+    "flames",
+    "caught fire",
+    "on fire",
+    "hot iron",
+    "iron",
+    "stove",
+    "gas stove",
+    "tawa",
+    "hot pan",
+    "pan",
+    "cooker",
+    "candle",
+    "hot object",
+    "oven",
+    "firecracker",
+    "firecrackers",
+    "cracker",
+    "crackers",
+    "diya",
+    "matchstick",
+    "lighter",
+    "hot metal",
+    "bonfire",
+    "barbecue"
+   ],
+   "set": {
+    "burn_cause": "fire_heat"
+   },
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "hot water",
+    "boiling water",
+    "hot oil",
+    "boiling oil",
+    "hot tea",
+    "tea",
+    "chai",
+    "coffee",
+    "hot milk",
+    "steam",
+    "soup",
+    "hot liquid",
+    "boiling",
+    "hot dal"
+   ],
+   "set": {
+    "burn_cause": "hot_liquid_steam"
+   },
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "acid attack",
+    "acid thrown",
+    "threw acid",
+    "thrown acid"
+   ],
+   "set": {
+    "burn_cause": "chemical_acid"
+   },
+   "flags": [
+    "acid_attack"
+   ],
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "acid",
+    "chemical",
+    "chemicals",
+    "bleach",
+    "toilet cleaner",
+    "harpic",
+    "phenyl",
+    "caustic",
+    "lye",
+    "drain cleaner",
+    "battery acid",
+    "cement"
+   ],
+   "set": {
+    "burn_cause": "chemical_acid"
+   },
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "electric shock",
+    "electrical shock",
+    "electrocuted",
+    "electrocution",
+    "electric",
+    "electrical",
+    "electricity",
+    "current",
+    "got a shock",
+    "got shock",
+    "live wire",
+    "wire",
+    "socket",
+    "power line",
+    "high voltage",
+    "transformer",
+    "electric pole"
+   ],
+   "set": {
+    "burn_cause": "electrical"
+   },
+   "flags": [
+    "electrical_ctx"
+   ],
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "power is off",
+    "power off",
+    "power is switched off",
+    "switched off",
+    "turned off",
+    "unplugged",
+    "mains off",
+    "switched it off",
+    "turned it off",
+    "cut the power",
+    "power cut off",
+    "clear of the wire",
+    "away from the wire",
+    "away from the source"
+   ],
+   "set": {
+    "power_off": "yes"
+   },
+   "neg": {
+    "power_off": "no"
+   }
+  },
+  {
+   "terms": [
+    "still touching",
+    "still holding",
+    "still stuck",
+    "still on",
+    "power is on",
+    "power still on",
+    "still connected",
+    "holding the wire",
+    "stuck to the wire",
+    "still in contact"
+   ],
+   "set": {
+    "power_off": "no"
+   }
+  },
+  {
+   "terms": [
+    "face",
+    "eye",
+    "eyes",
+    "lips",
+    "mouth",
+    "on the face",
+    "on his face",
+    "on her face",
+    "in the eye",
+    "in his eye",
+    "in her eye",
+    "in the eyes"
+   ],
+   "set": {
+    "burn_area": "eyes_or_face"
+   },
+   "flags": [
+    "face_or_neck"
+   ]
+  },
+  {
+   "terms": [
+    "neck"
+   ],
+   "set": {
+    "burn_area": "sensitive_area"
+   },
+   "flags": [
+    "face_or_neck"
+   ]
+  },
+  {
+   "terms": [
+    "hand",
+    "hands",
+    "palm",
+    "finger",
+    "fingers",
+    "foot",
+    "feet",
+    "toe",
+    "toes",
+    "genitals",
+    "private parts",
+    "groin",
+    "joint",
+    "knee",
+    "elbow",
+    "wrist",
+    "ankle"
+   ],
+   "set": {
+    "burn_area": "sensitive_area"
+   }
+  },
+  {
+   "terms": [
+    "large",
+    "big",
+    "huge",
+    "whole arm",
+    "whole leg",
+    "entire arm",
+    "entire leg",
+    "whole body",
+    "most of his body",
+    "most of her body",
+    "large area",
+    "big area",
+    "all over",
+    "bigger than his palm",
+    "bigger than her palm",
+    "bigger than the palm",
+    "larger than the palm",
+    "bigger than a palm",
+    "widespread"
+   ],
+   "set": {
+    "burn_area": "large"
+   }
+  },
+  {
+   "terms": [
+    "small",
+    "tiny",
+    "little",
+    "minor",
+    "smaller than the palm",
+    "smaller than his palm",
+    "smaller than her palm"
+   ],
+   "set": {
+    "burn_area": "small"
+   }
+  },
+  {
+   "terms": [
+    "child",
+    "children",
+    "kid",
+    "kids",
+    "toddler",
+    "little boy",
+    "little girl",
+    "small boy",
+    "small girl",
+    "schoolboy",
+    "schoolgirl",
+    "teenager",
+    "teen",
+    "my little"
+   ],
+   "set": {
+    "age_group": "child"
+   }
+  },
+  {
+   "terms": [
+    "baby",
+    "infant",
+    "newborn",
+    "new born",
+    "babies"
+   ],
+   "set": {
+    "age_group": "infant"
+   }
+  },
+  {
+   "terms": [
+    "man",
+    "woman",
+    "father",
+    "mother",
+    "dad",
+    "mom",
+    "mum",
+    "papa",
+    "mummy",
+    "grandfather",
+    "grandmother",
+    "grandpa",
+    "grandma",
+    "uncle",
+    "aunt",
+    "aunty",
+    "husband",
+    "wife",
+    "colleague",
+    "old man",
+    "old woman",
+    "elderly",
+    "adult",
+    "guy",
+    "lady",
+    "boss",
+    "coworker",
+    "neighbour",
+    "neighbor",
+    "gentleman",
+    "worker",
+    "farmer"
+   ],
+   "set": {
+    "age_group": "adult"
+   }
+  },
+  {
+   "terms": [
+    "stroke",
+    "fracture",
+    "fractured",
+    "broken bone",
+    "broken leg",
+    "broken arm",
+    "fever",
+    "poison",
+    "poisoning",
+    "poisoned",
+    "seizure",
+    "seizures",
+    "fit",
+    "fits",
+    "convulsion",
+    "convulsions",
+    "epilepsy",
+    "cut",
+    "wound",
+    "accident",
+    "sprain",
+    "drowning",
+    "drowned",
+    "overdose",
+    "asthma",
+    "diabetes",
+    "low sugar",
+    "sugar low",
+    "vomiting",
+    "diarrhea",
+    "diarrhoea",
+    "headache",
+    "paralysis",
+    "face drooping",
+    "slurred speech",
+    "heat stroke",
+    "heatstroke",
+    "sunstroke",
+    "nosebleed",
+    "labour pain",
+    "food poisoning",
+    "head injury",
+    "dengue",
+    "malaria",
+    "stomach pain"
+   ],
+   "set": {},
+   "sit": [
+    "out_of_scope"
+   ]
+  }
+ ],
+ "actions": [
+  {
+   "terms": [
+    "called 112",
+    "called an ambulance",
+    "called ambulance",
+    "ambulance is coming",
+    "ambulance on the way",
+    "dialled 112",
+    "dialed 112"
+   ],
+   "action": "Called 112"
+  },
+  {
+   "terms": [
+    "started cpr",
+    "doing cpr",
+    "gave cpr",
+    "giving cpr",
+    "doing chest compressions",
+    "pushing on the chest"
+   ],
+   "action": "CPR started"
+  },
+  {
+   "terms": [
+    "under running water",
+    "under cold water",
+    "cooled with water",
+    "cooling with water",
+    "poured water on the burn",
+    "under the tap"
+   ],
+   "action": "Burn cooled with water"
+  },
+  {
+   "terms": [
+    "washed the wound",
+    "washed with soap",
+    "washed it with soap"
+   ],
+   "action": "Wound washed"
+  },
+  {
+   "terms": [
+    "kept the leg still",
+    "kept the arm still",
+    "kept him still",
+    "kept her still"
+   ],
+   "action": "Kept still"
+  },
+  {
+   "terms": [
+    "gave aspirin",
+    "given aspirin",
+    "took aspirin"
+   ],
+   "action": "Aspirin given"
+  },
+  {
+   "terms": [
+    "back blows",
+    "abdominal thrusts",
+    "heimlich"
+   ],
+   "action": "Back blows or abdominal thrusts given"
+  }
+ ],
+ "age_units": {
+  "years": [
+   "years",
+   "year",
+   "yrs",
+   "yr",
+   "year-old",
+   "years-old",
+   "y/o",
+   "yo"
+  ],
+  "months": [
+   "months",
+   "month",
+   "mths",
+   "mo"
+  ]
+ },
+ "time_units": [
+  "minutes",
+  "minute",
+  "mins",
+  "min",
+  "hours",
+  "hour",
+  "hrs",
+  "hr",
+  "seconds",
+  "secs"
+ ]
+}

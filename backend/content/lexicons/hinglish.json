@@ -1,0 +1,1205 @@
+{
+ "lang": "hinglish",
+ "owner": "Soham Ghodake",
+ "include": [
+  "en"
+ ],
+ "cue_direction": "after",
+ "negation_cues": [
+  "nahi",
+  "nahin",
+  "nhi",
+  "nai",
+  "nahee",
+  "nahi hai",
+  "na",
+  "mat",
+  "bina",
+  "bilkul nahi"
+ ],
+ "uncertainty_cues": [
+  "shayad",
+  "shaayad",
+  "lagta hai",
+  "lag raha hai",
+  "pata nahi",
+  "pata nhi",
+  "pta nahi",
+  "pta nhi",
+  "maloom nahi",
+  "malum nahi",
+  "sure nahi",
+  "pakka nahi",
+  "ho sakta hai"
+ ],
+ "scope_breakers": [
+  "lekin",
+  "magar",
+  "parantu",
+  "aur phir"
+ ],
+ "markers": [
+  "hai",
+  "hain",
+  "nahi",
+  "nahin",
+  "nhi",
+  "kya",
+  "kaise",
+  "saans",
+  "sans",
+  "gaya",
+  "gayi",
+  "gaye",
+  "raha",
+  "rahi",
+  "rahe",
+  "mein",
+  "karu",
+  "karun",
+  "karein",
+  "kare",
+  "liya",
+  "liye",
+  "diya",
+  "abhi",
+  "bahut",
+  "jaldi",
+  "behosh",
+  "saap",
+  "saanp",
+  "kutta",
+  "kutte",
+  "bachcha",
+  "jal",
+  "aag",
+  "kaat",
+  "hua",
+  "hui",
+  "ho",
+  "ne",
+  "ko",
+  "se",
+  "ka",
+  "ki",
+  "ke",
+  "pe",
+  "aur",
+  "bhi",
+  "tha",
+  "thi",
+  "papa",
+  "mummy",
+  "madad",
+  "seene",
+  "chhati",
+  "gale",
+  "bichhu",
+  "tezaab",
+  "karant",
+  "bijli"
+ ],
+ "strong_markers": [
+  "hai",
+  "hain",
+  "nahi",
+  "nahin",
+  "nhi",
+  "kya",
+  "saans",
+  "gaya",
+  "gayi",
+  "gaye",
+  "raha",
+  "rahi",
+  "rahe",
+  "mein",
+  "karu",
+  "karun",
+  "liya",
+  "diya",
+  "behosh",
+  "saap",
+  "saanp",
+  "kutta",
+  "kutte",
+  "bachcha",
+  "kaat",
+  "hua",
+  "hui",
+  "seene",
+  "chhati",
+  "gale",
+  "bichhu",
+  "tezaab",
+  "karant",
+  "bijli",
+  "madad",
+  "jaldi"
+ ],
+ "entries": [
+  {
+   "terms": [
+    "behosh",
+    "behos",
+    "behoshi",
+    "behosh ho gaye",
+    "behosh ho gaya",
+    "behosh ho gayi",
+    "behosh pade",
+    "behosh pada",
+    "hosh nahi",
+    "hosh mein nahi",
+    "hosh me nahi",
+    "hosh nahi aa raha",
+    "uth nahi raha",
+    "uth nahi rahe",
+    "uth nahi rahi",
+    "uth nhi raha",
+    "jawab nahi de raha",
+    "jawab nahi de rahe",
+    "jawab nahi de rahi",
+    "koi response nahi",
+    "koi reaction nahi",
+    "hil nahi raha",
+    "hil nahi rahe",
+    "hil nahi rahi"
+   ],
+   "set": {
+    "responsive": "no"
+   },
+   "neg": {
+    "responsive": "yes"
+   },
+   "sit": [
+    "unresponsive"
+   ]
+  },
+  {
+   "terms": [
+    "hosh",
+    "hosh mein",
+    "hosh me",
+    "jawab",
+    "react"
+   ],
+   "set": {
+    "responsive": "yes"
+   },
+   "neg": {
+    "responsive": "no"
+   },
+   "neg_sit": [
+    "unresponsive"
+   ]
+  },
+  {
+   "terms": [
+    "gir gaye",
+    "gir gaya",
+    "gir gayi",
+    "gir gai",
+    "gir pade",
+    "gir pada",
+    "gir padi",
+    "gire",
+    "gira",
+    "giri",
+    "chakkar aake gir",
+    "chakkar khake gir"
+   ],
+   "set": {},
+   "flags": [
+    "collapse"
+   ],
+   "sit": [
+    "unresponsive"
+   ],
+   "w": 0.6
+  },
+  {
+   "terms": [
+    "dhadkan nahi",
+    "dil band",
+    "nabz nahi",
+    "pulse nahi"
+   ],
+   "set": {
+    "responsive": "no",
+    "breathing": "absent"
+   },
+   "sit": [
+    "unresponsive"
+   ]
+  },
+  {
+   "terms": [
+    "saans lene mein dikkat",
+    "saans lene me dikkat",
+    "saans lene mein takleef",
+    "saans lene me takleef",
+    "saans lene me taklif",
+    "saans lene mein pareshani",
+    "saans phool rahi",
+    "saans phool raha",
+    "saans phool rahi hai",
+    "saans ki dikkat",
+    "saans ki takleef",
+    "saans fool rahi",
+    "saans chadh rahi",
+    "dam ghut",
+    "dam ghut raha"
+   ],
+   "set": {
+    "allergy_signs": "yes"
+   },
+   "flags": [
+    "distress"
+   ]
+  },
+  {
+   "terms": [
+    "haanf",
+    "haanf rahe",
+    "haanf raha",
+    "hanf",
+    "hanf raha",
+    "haanp",
+    "ukhdi saans",
+    "ukhadti saans",
+    "atak atak ke saans",
+    "ruk ruk ke saans",
+    "kharrate"
+   ],
+   "set": {
+    "breathing": "abnormal"
+   }
+  },
+  {
+   "terms": [
+    "saans normal",
+    "saans theek",
+    "saans thik",
+    "saans sahi",
+    "theek se saans",
+    "thik se saans",
+    "normal saans"
+   ],
+   "set": {
+    "breathing": "normal"
+   },
+   "neg": {
+    "breathing": "abnormal"
+   },
+   "neg_sit": [
+    "unresponsive"
+   ]
+  },
+  {
+   "terms": [
+    "saans",
+    "sans",
+    "saas",
+    "swas",
+    "shwas",
+    "saans le",
+    "sans le",
+    "saans le rahe",
+    "saans le raha",
+    "saans le rahi",
+    "saans aa rahi",
+    "saans chal rahi"
+   ],
+   "set": {
+    "breathing": "normal"
+   },
+   "neg": {
+    "breathing": "absent"
+   },
+   "neg_sit": [
+    "unresponsive"
+   ]
+  },
+  {
+   "terms": [
+    "seene mein dard",
+    "seene me dard",
+    "sine me dard",
+    "sine mein dard",
+    "seene mai dard",
+    "chhati mein dard",
+    "chhati me dard",
+    "chati me dard",
+    "chati mein dard",
+    "chest mein dard",
+    "chest me dard",
+    "seena dard",
+    "seene mein dabav",
+    "seene me dabav",
+    "seene mein dabaav",
+    "chhati mein dabav",
+    "seene mein bhaaripan",
+    "seene me bhari",
+    "chhati mein bhaari",
+    "chhati me jakdan",
+    "seene mein jakdan",
+    "seene me jakdan",
+    "dil mein dard",
+    "dil me dard",
+    "chhati dard",
+    "seene mein jalan",
+    "seene me jalan",
+    "chhati mein jalan",
+    "chhati me jalan"
+   ],
+   "set": {
+    "chest_pain": "yes"
+   },
+   "neg": {
+    "chest_pain": "no"
+   },
+   "sit": [
+    "heart_attack"
+   ]
+  },
+  {
+   "terms": [
+    "heart attack",
+    "dil ka daura",
+    "attack aaya",
+    "attack aa gaya",
+    "attack pada",
+    "hart attack"
+   ],
+   "set": {},
+   "flags": [
+    "stated_heart_attack"
+   ],
+   "sit": [
+    "heart_attack"
+   ]
+  },
+  {
+   "terms": [
+    "gale mein atak",
+    "gale me atak",
+    "gale mein atka",
+    "gale me atka",
+    "gale mein atki",
+    "gale me atki",
+    "gale mein phas",
+    "gale me phas",
+    "gale mein phans",
+    "gale me phans",
+    "gale mein fas",
+    "gale me fas",
+    "gale mein fasa",
+    "gale me fasa",
+    "atak gaya",
+    "atak gayi",
+    "atak gai",
+    "atka hai",
+    "phas gaya",
+    "phans gaya",
+    "khana atak",
+    "khana atak gaya",
+    "haddi atak",
+    "haddi phas",
+    "sikka nigal",
+    "gala band",
+    "khana atak*",
+    "atakne",
+    "atak*",
+    "khana atka",
+    "khana atki",
+    "atka",
+    "atki",
+    "atke"
+   ],
+   "set": {},
+   "flags": [
+    "choking_ctx"
+   ],
+   "sit": [
+    "choking"
+   ]
+  },
+  {
+   "terms": [
+    "zor se khaans",
+    "zor se khans",
+    "zor zor se khaans",
+    "zor se khaansi",
+    "zor se khasi",
+    "achhe se khaans",
+    "khaans pa raha",
+    "khaans pa rahi"
+   ],
+   "set": {
+    "choking_signs": "coughing_strongly"
+   },
+   "neg": {
+    "choking_signs": "weak_or_silent"
+   }
+  },
+  {
+   "terms": [
+    "khaans",
+    "khans",
+    "khasi",
+    "khaansi",
+    "khansi",
+    "khaas",
+    "khaans raha",
+    "khaans rahi",
+    "khaans rahe"
+   ],
+   "set": {},
+   "neg": {
+    "choking_signs": "weak_or_silent"
+   }
+  },
+  {
+   "terms": [
+    "bol nahi pa raha",
+    "bol nahi pa rahi",
+    "bol nahi paa raha",
+    "bol nahi paa rahi",
+    "bol nahi pa rahe",
+    "awaaz nahi",
+    "aawaz nahi",
+    "awaz nahi",
+    "awaaz nahi nikal",
+    "neela pad",
+    "neela pad raha",
+    "neeli pad",
+    "nila pad",
+    "hont neele",
+    "kamzor khaansi"
+   ],
+   "set": {
+    "choking_signs": "weak_or_silent"
+   }
+  },
+  {
+   "terms": [
+    "pregnant",
+    "garbhvati"
+   ],
+   "set": {},
+   "flags": [
+    "pregnant_or_large"
+   ]
+  },
+  {
+   "terms": [
+    "saap",
+    "saanp",
+    "sanp",
+    "saamp",
+    "samp",
+    "sap ne",
+    "saap ne",
+    "saanp ne",
+    "cobra",
+    "kobra",
+    "karait",
+    "naag",
+    "sarp"
+   ],
+   "set": {
+    "bite_type": "snake"
+   },
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "bichhu",
+    "bichu",
+    "bichoo",
+    "bichchu",
+    "bicchu",
+    "bichhoo",
+    "bichoo ne"
+   ],
+   "set": {
+    "bite_type": "scorpion"
+   },
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "kutta",
+    "kutte",
+    "kutiya",
+    "kuttey",
+    "kuttaa",
+    "kutte ne",
+    "kutta ne",
+    "awara kutta",
+    "gali ka kutta"
+   ],
+   "set": {
+    "bite_type": "dog"
+   },
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "billi",
+    "bandar",
+    "chuha",
+    "chooha",
+    "gaay",
+    "bhains",
+    "suar",
+    "nevla"
+   ],
+   "set": {
+    "bite_type": "other_mammal"
+   },
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "madhumakkhi",
+    "madhu makhi",
+    "madhumakhi",
+    "makhi",
+    "makkhi",
+    "bhavra",
+    "bhanwra",
+    "tatiya",
+    "tataiya",
+    "bhirad",
+    "keeda",
+    "kida",
+    "keede",
+    "kide",
+    "cheenti",
+    "chinti",
+    "machhar",
+    "makdi"
+   ],
+   "set": {
+    "bite_type": "insect_sting"
+   },
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "kaat",
+    "kata",
+    "kaata",
+    "kaat liya",
+    "kaat li",
+    "kat liya",
+    "kaat diya",
+    "kaat gaya",
+    "kaata hai",
+    "dasa",
+    "das liya",
+    "das gaya",
+    "dans liya"
+   ],
+   "set": {},
+   "flags": [
+    "bite_word"
+   ],
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "dank",
+    "dank mara",
+    "dank maar diya",
+    "dank mar diya",
+    "dang",
+    "dang mara",
+    "dank laga"
+   ],
+   "set": {},
+   "flags": [
+    "sting_word"
+   ],
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "bahut saari madhumakkhi",
+    "bahut sari madhumakkhi",
+    "madhumakkhiyon ne",
+    "jhund",
+    "chhatta",
+    "bahut jagah dank",
+    "kai baar dank"
+   ],
+   "set": {},
+   "flags": [
+    "many_stings"
+   ],
+   "sit": [
+    "bites"
+   ]
+  },
+  {
+   "terms": [
+    "khoon ruk nahi",
+    "khoon ruk nahi raha",
+    "khoon band nahi",
+    "khoon band nahi ho raha",
+    "khoon nahi ruk",
+    "khoon nahi ruk raha",
+    "bahut khoon",
+    "gehra",
+    "gehra ghaav",
+    "gehra zakhm",
+    "kai jagah kaata"
+   ],
+   "set": {},
+   "flags": [
+    "severe_bite"
+   ]
+  },
+  {
+   "terms": [
+    "khoon",
+    "khoon beh",
+    "khoon nikal"
+   ],
+   "set": {},
+   "flags": [
+    "bleeding"
+   ],
+   "sit": [
+    "out_of_scope"
+   ],
+   "w": 0.3
+  },
+  {
+   "terms": [
+    "chehra suj",
+    "chehra sooj",
+    "chehre pe sujan",
+    "chehre par sujan",
+    "munh suj",
+    "muh suj",
+    "honth suj",
+    "hont suj",
+    "hoth suj",
+    "gala suj",
+    "gale mein sujan",
+    "gale me sujan",
+    "jeebh suj",
+    "pure sharir pe daane",
+    "poore sharir pe daane",
+    "pure body pe daane",
+    "poori body pe rash",
+    "pure body pe rash",
+    "daane pure",
+    "chakkar",
+    "chakkar aa raha",
+    "chakkar aa rahe",
+    "behoshi jaisa"
+   ],
+   "set": {
+    "allergy_signs": "yes"
+   },
+   "neg": {
+    "allergy_signs": "no"
+   }
+  },
+  {
+   "terms": [
+    "jal",
+    "jala",
+    "jali",
+    "jale",
+    "jal gaya",
+    "jal gayi",
+    "jal gai",
+    "jal gaye",
+    "jala hua",
+    "jal gya",
+    "jhulas",
+    "jhulsa",
+    "jhulas gaya",
+    "jhulas gayi",
+    "bhaap se jal",
+    "garam se jal"
+   ],
+   "set": {},
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "chhala",
+    "chhale",
+    "phaphola",
+    "phapole",
+    "phaphole"
+   ],
+   "set": {},
+   "flags": [
+    "blister"
+   ],
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "aag",
+    "aag lag",
+    "aag lagi",
+    "aag lag gayi",
+    "garam tawa",
+    "tawa",
+    "istri",
+    "press",
+    "chulha",
+    "diya",
+    "patakha",
+    "patake",
+    "pataka",
+    "lau",
+    "garam bartan",
+    "angithi"
+   ],
+   "set": {
+    "burn_cause": "fire_heat"
+   },
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "garam paani",
+    "garam pani",
+    "ubalta paani",
+    "ubalta pani",
+    "khaulta paani",
+    "khaulta pani",
+    "khaulta",
+    "garam tel",
+    "ubalta tel",
+    "garam chai",
+    "garam doodh",
+    "bhaap",
+    "garam daal",
+    "garam dal"
+   ],
+   "set": {
+    "burn_cause": "hot_liquid_steam"
+   },
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "tezaab phenka",
+    "tezab phenka",
+    "tejab phenka",
+    "tezaab phek",
+    "tezab dala",
+    "acid phenka",
+    "acid dala"
+   ],
+   "set": {
+    "burn_cause": "chemical_acid"
+   },
+   "flags": [
+    "acid_attack"
+   ],
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "tezaab",
+    "tezab",
+    "tejab",
+    "tejaab"
+   ],
+   "set": {
+    "burn_cause": "chemical_acid"
+   },
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "current laga",
+    "current lag gaya",
+    "current lagi",
+    "karant",
+    "karent",
+    "karant laga",
+    "bijli",
+    "bijli ka jhatka",
+    "jhatka laga",
+    "jhatka",
+    "shock laga",
+    "taar",
+    "bijli ka taar",
+    "nangi taar",
+    "switch board"
+   ],
+   "set": {
+    "burn_cause": "electrical"
+   },
+   "flags": [
+    "electrical_ctx"
+   ],
+   "sit": [
+    "burns"
+   ]
+  },
+  {
+   "terms": [
+    "light band",
+    "bijli band",
+    "power band",
+    "main switch band",
+    "switch band",
+    "current band",
+    "mains band",
+    "band kar di",
+    "band kar diya",
+    "off kar di",
+    "off kar diya",
+    "plug nikal",
+    "plug nikal diya",
+    "taar se door",
+    "taar se alag"
+   ],
+   "set": {
+    "power_off": "yes"
+   },
+   "neg": {
+    "power_off": "no"
+   }
+  },
+  {
+   "terms": [
+    "abhi bhi current",
+    "abhi bhi pakde",
+    "abhi bhi pakda",
+    "abhi bhi taar",
+    "current chalu",
+    "chalu hai",
+    "bijli chalu",
+    "abhi bhi chipka",
+    "chipka hua",
+    "chipke hue"
+   ],
+   "set": {
+    "power_off": "no"
+   }
+  },
+  {
+   "terms": [
+    "aankh",
+    "ankh",
+    "aankhon",
+    "aankhein",
+    "aankh mein",
+    "chehra",
+    "chehre",
+    "chehre pe",
+    "chehre par",
+    "munh",
+    "muh",
+    "munh pe",
+    "honth"
+   ],
+   "set": {
+    "burn_area": "eyes_or_face"
+   },
+   "flags": [
+    "face_or_neck"
+   ]
+  },
+  {
+   "terms": [
+    "gardan",
+    "gardan pe"
+   ],
+   "set": {
+    "burn_area": "sensitive_area"
+   },
+   "flags": [
+    "face_or_neck"
+   ]
+  },
+  {
+   "terms": [
+    "haath",
+    "hath",
+    "hatheli",
+    "pair",
+    "paon",
+    "pao",
+    "pair pe",
+    "haath pe",
+    "ungli",
+    "ungliyan",
+    "ghutna",
+    "ghutne",
+    "kohni",
+    "kalai",
+    "takhna"
+   ],
+   "set": {
+    "burn_area": "sensitive_area"
+   }
+  },
+  {
+   "terms": [
+    "bahut bada",
+    "bada",
+    "badi",
+    "poora haath",
+    "pura haath",
+    "poori baah",
+    "pura pair",
+    "poora pair",
+    "poora sharir",
+    "pura sharir",
+    "pura body",
+    "peeth",
+    "bahut jagah",
+    "zyada jagah",
+    "hatheli se bada",
+    "hatheli se zyada"
+   ],
+   "set": {
+    "burn_area": "large"
+   }
+  },
+  {
+   "terms": [
+    "chhota",
+    "chota",
+    "chhoti",
+    "choti",
+    "thoda sa",
+    "thoda",
+    "halka"
+   ],
+   "set": {
+    "burn_area": "small"
+   }
+  },
+  {
+   "terms": [
+    "bachcha",
+    "bacha",
+    "baccha",
+    "bachche",
+    "bacche",
+    "bachchi",
+    "bachi",
+    "bacchi",
+    "chhota bachcha",
+    "chhoti bachchi",
+    "chhota ladka",
+    "chhoti ladki"
+   ],
+   "set": {
+    "age_group": "child"
+   }
+  },
+  {
+   "terms": [
+    "navjaat",
+    "shishu",
+    "nanha",
+    "chhota baby",
+    "baby"
+   ],
+   "set": {
+    "age_group": "infant"
+   }
+  },
+  {
+   "terms": [
+    "papa",
+    "pitaji",
+    "mummy",
+    "maa",
+    "mammi",
+    "dadaji",
+    "dadi",
+    "dada",
+    "nana",
+    "nani",
+    "chacha",
+    "chachi",
+    "mama",
+    "mami",
+    "pati",
+    "patni",
+    "aadmi",
+    "aurat",
+    "buzurg",
+    "bhaiya",
+    "didi",
+    "bhabhi",
+    "sasur",
+    "saas ji"
+   ],
+   "set": {
+    "age_group": "adult"
+   }
+  },
+  {
+   "terms": [
+    "stroke",
+    "lakwa",
+    "paralysis",
+    "haddi toot",
+    "haddi tooti",
+    "haddi tut",
+    "fracture",
+    "bukhar",
+    "bukhaar",
+    "zeher",
+    "jehar",
+    "zahar",
+    "mirgi",
+    "daura pad",
+    "daura pada",
+    "daure",
+    "fit aa",
+    "fit aaya",
+    "accident",
+    "chot",
+    "chot lagi",
+    "dengue",
+    "ulti",
+    "dast",
+    "sar dard",
+    "sir dard",
+    "pet dard",
+    "sugar kam",
+    "bp",
+    "doob",
+    "doob gaya",
+    "loo lag",
+    "loo lagi"
+   ],
+   "set": {},
+   "sit": [
+    "out_of_scope"
+   ]
+  }
+ ],
+ "actions": [
+  {
+   "terms": [
+    "112 ko call",
+    "112 pe call",
+    "112 par call",
+    "ambulance bulaya",
+    "ambulance bula li",
+    "ambulance aa rahi",
+    "ambulance ko call"
+   ],
+   "action": "Called 112"
+  },
+  {
+   "terms": [
+    "cpr de rahe",
+    "cpr de raha",
+    "cpr diya",
+    "cpr shuru"
+   ],
+   "action": "CPR started"
+  },
+  {
+   "terms": [
+    "thande paani mein",
+    "paani ke neeche",
+    "nal ke neeche",
+    "paani daala jale",
+    "thanda paani dala"
+   ],
+   "action": "Burn cooled with water"
+  },
+  {
+   "terms": [
+    "sabun se dhoya",
+    "sabun se dho",
+    "ghaav dhoya"
+   ],
+   "action": "Wound washed"
+  },
+  {
+   "terms": [
+    "pair hilne nahi diya",
+    "seedha rakha",
+    "hilne nahi diya"
+   ],
+   "action": "Kept still"
+  },
+  {
+   "terms": [
+    "aspirin di",
+    "aspirin diya",
+    "aspirin khilayi"
+   ],
+   "action": "Aspirin given"
+  },
+  {
+   "terms": [
+    "peeth pe mara",
+    "peeth thapthapayi",
+    "pet dabaya"
+   ],
+   "action": "Back blows or abdominal thrusts given"
+  }
+ ],
+ "age_units": {
+  "years": [
+   "saal",
+   "sal",
+   "varsh",
+   "baras"
+  ],
+  "months": [
+   "mahine",
+   "mahina",
+   "mahinay"
+  ]
+ },
+ "time_units": [
+  "minute",
+  "minat",
+  "min",
+  "ghante",
+  "ghanta",
+  "ghanton",
+  "second"
+ ]
+}

@@ -1,0 +1,50 @@
+{
+  "_note": "Backend-built text. English is the source; language owners fill hi, hinglish and mr. Empty values fall back to English with a 'Translation pending' label.",
+  "disclaimer": {
+    "en": "Research demo, not medical advice. In an emergency, call 112.",
+    "hi": "यह एक शोध डेमो है, चिकित्सा सलाह नहीं। आपात स्थिति में 112 पर कॉल करें।",
+    "hinglish": "Yeh ek research demo hai, medical advice nahi. Emergency mein 112 par call karein.",
+    "mr": "हा संशोधन डेमो आहे, वैद्यकीय सल्ला नाही. आणीबाणीत 112 वर कॉल करा."
+  },
+  "summary": {
+    "age.adult": {"en": "Adult.", "hi": "", "hinglish": "", "mr": ""},
+    "age.child": {"en": "Child.", "hi": "", "hinglish": "", "mr": ""},
+    "age.infant": {"en": "Baby.", "hi": "", "hinglish": "", "mr": ""},
+    "event.unresponsive": {"en": "Found unresponsive.", "hi": "", "hinglish": "", "mr": ""},
+    "event.heart_attack": {"en": "Pain or pressure in the chest.", "hi": "", "hinglish": "", "mr": ""},
+    "event.choking": {"en": "Choking.", "hi": "", "hinglish": "", "mr": ""},
+    "event.bites.snake": {"en": "Bitten by a snake.", "hi": "", "hinglish": "", "mr": ""},
+    "event.bites.insect_sting": {"en": "Bitten or stung by an insect.", "hi": "", "hinglish": "", "mr": ""},
+    "event.bites.scorpion": {"en": "Stung by a scorpion.", "hi": "", "hinglish": "", "mr": ""},
+    "event.bites.dog": {"en": "Bitten by a dog.", "hi": "", "hinglish": "", "mr": ""},
+    "event.bites.other_mammal": {"en": "Bitten by an animal.", "hi": "", "hinglish": "", "mr": ""},
+    "event.bites.unknown": {"en": "Bitten or stung; the animal is not known.", "hi": "", "hinglish": "", "mr": ""},
+    "event.burns.fire_heat": {"en": "Burned by fire or a hot object.", "hi": "", "hinglish": "", "mr": ""},
+    "event.burns.hot_liquid_steam": {"en": "Burned by hot liquid or steam.", "hi": "", "hinglish": "", "mr": ""},
+    "event.burns.chemical_acid": {"en": "Chemical or acid burn.", "hi": "", "hinglish": "", "mr": ""},
+    "event.burns.electrical": {"en": "Electrical injury.", "hi": "", "hinglish": "", "mr": ""},
+    "event.burns.unknown": {"en": "Burned; the cause is not known.", "hi": "", "hinglish": "", "mr": ""},
+    "area.eyes_or_face": {"en": "Affects the eyes or face.", "hi": "", "hinglish": "", "mr": ""},
+    "area.large": {"en": "Large area.", "hi": "", "hinglish": "", "mr": ""},
+    "area.sensitive_area": {"en": "On the hands, feet, neck, joints or genitals.", "hi": "", "hinglish": "", "mr": ""},
+    "area.small": {"en": "Small area.", "hi": "", "hinglish": "", "mr": ""},
+    "time": {"en": "Happened about {time} ago.", "hi": "", "hinglish": "", "mr": ""},
+    "responsive.yes": {"en": "Responds to voice.", "hi": "", "hinglish": "", "mr": ""},
+    "responsive.no": {"en": "Does not respond.", "hi": "", "hinglish": "", "mr": ""},
+    "breathing.normal": {"en": "Breathing normally.", "hi": "", "hinglish": "", "mr": ""},
+    "breathing.abnormal": {"en": "Breathing is not normal, or only gasping.", "hi": "", "hinglish": "", "mr": ""},
+    "breathing.absent": {"en": "Not breathing.", "hi": "", "hinglish": "", "mr": ""},
+    "choking.weak_or_silent": {"en": "Cannot cough, speak or breathe well.", "hi": "", "hinglish": "", "mr": ""},
+    "choking.coughing_strongly": {"en": "Coughing strongly.", "hi": "", "hinglish": "", "mr": ""},
+    "allergy.yes": {"en": "Signs of a severe allergic reaction.", "hi": "", "hinglish": "", "mr": ""},
+    "power.no": {"en": "Power may still be on.", "hi": "", "hinglish": "", "mr": ""},
+    "actions": {"en": "Already done: {actions}.", "hi": "", "hinglish": "", "mr": ""},
+    "reported": {"en": "Reported before help: {items}.", "hi": "", "hinglish": "", "mr": ""},
+    "steps_done": {"en": "Followed {n} first aid steps in the app.", "hi": "", "hinglish": "", "mr": ""},
+    "nothing": {"en": "No details recorded yet.", "hi": "", "hinglish": "", "mr": ""}
+  },
+  "fallback_explanation": {
+    "en": "We could not be sure what happened. Calling 112 is the safest choice.",
+    "hi": "", "hinglish": "", "mr": ""
+  }
+}

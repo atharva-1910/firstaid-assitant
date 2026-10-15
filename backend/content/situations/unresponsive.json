@@ -1,0 +1,434 @@
+{
+  "id": "unresponsive",
+  "owner": "Taneesha Badhe",
+  "age_scope": "adult",
+  "names": {
+    "en": "Unresponsive or unconscious",
+    "hi": "",
+    "hinglish": "",
+    "mr": ""
+  },
+  "recognition": [
+    {
+      "en": "Does not respond to a loud voice or a tap on the shoulders.",
+      "hi": "",
+      "hinglish": "",
+      "mr": ""
+    }
+  ],
+  "branch_on": null,
+  "path_on": "breathing",
+  "paths": {
+    "path_a": "Not breathing, or only gasping",
+    "path_b": "Breathing normally"
+  },
+  "branches": {
+    "default": {
+      "urgency_rules": [
+        {
+          "if": {},
+          "urgency": "emergency"
+        }
+      ],
+      "steps": [
+        {
+          "id": "unr_s1",
+          "order": 1,
+          "text": {
+            "en": "Make sure the area is safe for you. If electricity may be involved, do not touch them until the power is off.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 152,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "unr_s2",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "unr_s2",
+          "order": 2,
+          "text": {
+            "en": "Tap their shoulders and ask loudly, \"Are you all right?\"",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 152,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "unr_s3",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "unr_s3",
+          "order": 3,
+          "text": {
+            "en": "Look at the chest for up to 10 seconds. Are they breathing normally?",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 158,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": {
+            "on": "breathing",
+            "cases": {
+              "normal": "unr_b1",
+              "abnormal": "unr_a1",
+              "absent": "unr_a1"
+            },
+            "default": "unr_a1"
+          },
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "unr_a1",
+          "order": 4,
+          "text": {
+            "en": "Call 112 now and put the phone on speaker.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G3",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "unr_a2",
+          "verified": false
+        },
+        {
+          "id": "unr_a2",
+          "order": 5,
+          "text": {
+            "en": "Ask someone to bring an AED (defibrillator) if one is nearby.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 196,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "unr_a3",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "unr_a3",
+          "order": 6,
+          "text": {
+            "en": "Put the heel of one hand in the centre of the chest, the other hand on top, arms straight.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 158,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "unr_a4",
+          "verified": false,
+          "verify_note": "VERIFY",
+          "cpr_rhythm": true
+        },
+        {
+          "id": "unr_a4",
+          "order": 7,
+          "text": {
+            "en": "Push hard and fast: at least 5 cm deep but not more than 6 cm, 100 to 120 times a minute. Let the chest rise fully each time.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G3",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "unr_a5",
+          "verified": false,
+          "cpr_rhythm": true
+        },
+        {
+          "id": "unr_a5",
+          "order": 8,
+          "text": {
+            "en": "If you are trained and willing, give 2 breaths after every 30 pushes. If not, keep pushing without stopping.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G3",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "unr_a6",
+          "verified": false,
+          "verify_note": "VERIFY 30:2 ratio (compression-only for untrained rescuers is checked)",
+          "cpr_rhythm": true
+        },
+        {
+          "id": "unr_a6",
+          "order": 9,
+          "text": {
+            "en": "When the AED arrives, switch it on and follow its voice instructions.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 196,
+            "quote_checked": true
+          },
+          "also_in": [
+            {
+              "doc": "G3",
+              "page": null
+            }
+          ],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "unr_a7",
+          "verified": false,
+          "cpr_rhythm": true
+        },
+        {
+          "id": "unr_a7",
+          "order": 10,
+          "text": {
+            "en": "Keep going until help takes over, they start breathing normally, or you cannot continue.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 158,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": null,
+          "verified": false,
+          "verify_note": "VERIFY",
+          "cpr_rhythm": true
+        },
+        {
+          "id": "unr_b1",
+          "order": 4,
+          "text": {
+            "en": "Call 112.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 152,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "unr_b2",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "unr_b2",
+          "order": 5,
+          "text": {
+            "en": "Roll them onto their side (recovery position) so their airway stays open, unless you think they have a neck or back injury.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 152,
+            "quote_checked": false
+          },
+          "also_in": [
+            {
+              "doc": "G4",
+              "page": null
+            }
+          ],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "unr_b3",
+          "verified": false,
+          "verify_note": "VERIFY injury exception"
+        },
+        {
+          "id": "unr_b3",
+          "order": 6,
+          "text": {
+            "en": "Keep checking their breathing. If it stops or becomes gasping, go to Path A.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 152,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "unr_b4",
+          "verified": false,
+          "verify_note": "VERIFY",
+          "link": {
+            "situation": "unresponsive",
+            "branch": "path_a"
+          }
+        },
+        {
+          "id": "unr_b4",
+          "order": 7,
+          "text": {
+            "en": "Stay with them until help arrives.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 152,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": null,
+          "verified": false,
+          "verify_note": "VERIFY"
+        }
+      ],
+      "do_not": [
+        {
+          "text": {
+            "en": "Do not mistake occasional gasps for normal breathing.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "unr_s3"
+        },
+        {
+          "text": {
+            "en": "Do not give food, water or medicine by mouth.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "They cannot swallow safely.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "unr_b4"
+        },
+        {
+          "text": {
+            "en": "Do not throw water on the face or make them sit up.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "unr_b2"
+        },
+        {
+          "text": {
+            "en": "Do not make them smell onions or shoes.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "It does not help and wastes time.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "unr_s2"
+        },
+        {
+          "text": {
+            "en": "Do not leave them alone.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "unr_a7"
+        }
+      ]
+    }
+  },
+  "source_differences": [],
+  "review_status": "draft"
+}

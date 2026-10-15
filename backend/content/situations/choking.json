@@ -1,0 +1,272 @@
+{
+  "id": "choking",
+  "owner": "Atharva Hemade",
+  "age_scope": "adult",
+  "names": {
+    "en": "Choking",
+    "hi": "",
+    "hinglish": "",
+    "mr": ""
+  },
+  "recognition": [
+    {
+      "en": "Suddenly cannot speak, breathe or cough, often while eating; may clutch the throat.",
+      "hi": "",
+      "hinglish": "",
+      "mr": ""
+    }
+  ],
+  "branch_on": null,
+  "branches": {
+    "default": {
+      "urgency_rules": [
+        {
+          "if": {
+            "choking_signs": "weak_or_silent"
+          },
+          "urgency": "emergency"
+        }
+      ],
+      "steps": [
+        {
+          "id": "ch_s1",
+          "order": 1,
+          "text": {
+            "en": "Ask, \"Are you choking?\" If they can cough strongly, let them keep coughing and watch them closely.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G3",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ch_s2",
+          "verified": false
+        },
+        {
+          "id": "ch_s2",
+          "order": 2,
+          "text": {
+            "en": "If the cough is weak or they cannot breathe or speak, call 112, or ask someone to call.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G3",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ch_s3",
+          "verified": false
+        },
+        {
+          "id": "ch_s3",
+          "order": 3,
+          "text": {
+            "en": "Stand slightly behind them, support their chest with one hand and lean them forward.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 238,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ch_s4",
+          "verified": false,
+          "verify_note": "VERIFY"
+        },
+        {
+          "id": "ch_s4",
+          "order": 4,
+          "text": {
+            "en": "Give 5 firm back blows between the shoulder blades with the heel of your hand.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G3",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [
+            {
+              "doc": "G1",
+              "page": 238
+            }
+          ],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ch_s5",
+          "verified": false,
+          "verify_note": "VERIFY technique in G1 p. 238"
+        },
+        {
+          "id": "ch_s5",
+          "order": 5,
+          "text": {
+            "en": "Then give 5 abdominal thrusts: stand behind them, place a fist just above the belly button, hold it with your other hand, and pull sharply inwards and upwards.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G3",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [
+            {
+              "doc": "G1",
+              "page": 238
+            }
+          ],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ch_s6",
+          "verified": false,
+          "verify_note": "VERIFY technique in G1 p. 238"
+        },
+        {
+          "id": "ch_s6",
+          "order": 6,
+          "text": {
+            "en": "Keep repeating 5 back blows and 5 abdominal thrusts until the object comes out or they become unresponsive.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G3",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ch_s7",
+          "verified": false
+        },
+        {
+          "id": "ch_s7",
+          "order": 7,
+          "text": {
+            "en": "If they become unresponsive, start CPR, beginning with chest pushes (Situation 9.1, Path A).",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G3",
+            "page": null,
+            "quote_checked": true
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": "ch_s8",
+          "verified": false,
+          "link": {
+            "situation": "unresponsive",
+            "branch": "path_a"
+          }
+        },
+        {
+          "id": "ch_s8",
+          "order": 8,
+          "text": {
+            "en": "After abdominal thrusts, they should see a doctor, even if they feel fine.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "source": {
+            "doc": "G1",
+            "page": 238,
+            "quote_checked": false
+          },
+          "also_in": [],
+          "agreement": "unchecked",
+          "evidence": "unchecked",
+          "next": null,
+          "verified": false,
+          "verify_note": "VERIFY"
+        }
+      ],
+      "do_not": [
+        {
+          "text": {
+            "en": "Do not sweep inside the mouth with your finger unless you can clearly see the object.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "ch_s6"
+        },
+        {
+          "text": {
+            "en": "Do not give water or food.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "It can block the airway further.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "ch_s2"
+        },
+        {
+          "text": {
+            "en": "Do not hit their back while they are still coughing strongly.",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "reason": {
+            "en": "",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "step": "ch_s1"
+        }
+      ]
+    }
+  },
+  "out_of_scope_note": {
+    "en": "For pregnant people or people too large to reach around, this case is not covered. Call 112.",
+    "hi": "",
+    "hinglish": "",
+    "mr": ""
+  },
+  "source_differences": [
+    {
+      "topic": "chest thrusts for pregnant or large people",
+      "notes": ""
+    }
+  ],
+  "review_status": "draft"
+}

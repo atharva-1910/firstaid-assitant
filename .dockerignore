@@ -1,0 +1,14 @@
+**/node_modules
+**/.venv
+**/venv
+**/__pycache__
+**/.pytest_cache
+**/*.pyc
+frontend/dist
+frontend/tsconfig.tsbuildinfo
+training
+docs
+.env
+**/.DS_Store
+*.zip
+.git

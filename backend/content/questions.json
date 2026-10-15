@@ -1,0 +1,487 @@
+{
+  "questions": [
+    {
+      "id": "q_responsive",
+      "safety_slot": "responsive",
+      "use_in_gain": true,
+      "text": {
+        "en": "Does the person respond when you tap their shoulders and speak loudly?",
+        "hi": "",
+        "hinglish": "",
+        "mr": ""
+      },
+      "options": [
+        {
+          "id": "yes",
+          "label": {
+            "en": "Yes",
+            "hi": "हाँ",
+            "hinglish": "Haan",
+            "mr": "हो"
+          },
+          "set": {
+            "responsive": "yes"
+          }
+        },
+        {
+          "id": "no",
+          "label": {
+            "en": "No",
+            "hi": "नहीं",
+            "hinglish": "Nahi",
+            "mr": "नाही"
+          },
+          "set": {
+            "responsive": "no"
+          }
+        },
+        {
+          "id": "not_sure",
+          "label": {
+            "en": "Not sure",
+            "hi": "पता नहीं",
+            "hinglish": "Pata nahi",
+            "mr": "माहीत नाही"
+          },
+          "set": {},
+          "flags": [
+            "responsive_unsure"
+          ]
+        }
+      ],
+      "expects": {
+        "unresponsive": "no",
+        "heart_attack": "yes",
+        "choking": "yes",
+        "bites:*": "yes",
+        "burns:*": "yes"
+      }
+    },
+    {
+      "id": "q_breathing",
+      "safety_slot": "breathing",
+      "use_in_gain": true,
+      "text": {
+        "en": "Is the person breathing normally?",
+        "hi": "क्या व्यक्ति सामान्य रूप से साँस ले रहा है?",
+        "hinglish": "Kya vyakti normal saans le raha hai?",
+        "mr": "ती व्यक्ती नीट श्वास घेत आहे का?"
+      },
+      "options": [
+        {
+          "id": "yes",
+          "label": {
+            "en": "Yes",
+            "hi": "हाँ",
+            "hinglish": "Haan",
+            "mr": "हो"
+          },
+          "set": {
+            "breathing": "normal"
+          }
+        },
+        {
+          "id": "no",
+          "label": {
+            "en": "No, or only gasping",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "breathing": "abnormal"
+          }
+        },
+        {
+          "id": "not_sure",
+          "label": {
+            "en": "Not sure",
+            "hi": "पता नहीं",
+            "hinglish": "Pata nahi",
+            "mr": "माहीत नाही"
+          },
+          "set": {},
+          "flags": [
+            "breathing_unsure"
+          ]
+        }
+      ],
+      "expects": {
+        "heart_attack": "yes",
+        "bites:*": "yes",
+        "burns:*": "yes"
+      }
+    },
+    {
+      "id": "q_chest_pain",
+      "use_in_gain": true,
+      "text": {
+        "en": "Do they have pain, pressure or tightness in the chest?",
+        "hi": "",
+        "hinglish": "",
+        "mr": ""
+      },
+      "options": [
+        {
+          "id": "yes",
+          "label": {
+            "en": "Yes",
+            "hi": "हाँ",
+            "hinglish": "Haan",
+            "mr": "हो"
+          },
+          "set": {
+            "chest_pain": "yes"
+          }
+        },
+        {
+          "id": "no",
+          "label": {
+            "en": "No",
+            "hi": "नहीं",
+            "hinglish": "Nahi",
+            "mr": "नाही"
+          },
+          "set": {
+            "chest_pain": "no"
+          }
+        }
+      ],
+      "expects": {
+        "heart_attack": "yes",
+        "unresponsive": "no",
+        "choking": "no",
+        "bites:*": "no",
+        "burns:*": "no",
+        "out_of_scope": "no"
+      }
+    },
+    {
+      "id": "q_can_cough",
+      "critical_for": "choking",
+      "use_in_gain": true,
+      "text": {
+        "en": "Can the person cough, speak or breathe?",
+        "hi": "",
+        "hinglish": "",
+        "mr": ""
+      },
+      "options": [
+        {
+          "id": "strong",
+          "label": {
+            "en": "Yes, coughing strongly",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "choking_signs": "coughing_strongly"
+          }
+        },
+        {
+          "id": "weak",
+          "label": {
+            "en": "No, or very weakly",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "choking_signs": "weak_or_silent"
+          }
+        }
+      ],
+      "expects": {
+        "unresponsive": "weak",
+        "heart_attack": "strong",
+        "bites:*": "strong",
+        "burns:*": "strong"
+      }
+    },
+    {
+      "id": "q_bite_type",
+      "subtype_for": "bites",
+      "use_in_gain": true,
+      "text": {
+        "en": "What bit or stung them?",
+        "hi": "",
+        "hinglish": "",
+        "mr": ""
+      },
+      "options": [
+        {
+          "id": "snake",
+          "label": {
+            "en": "Snake",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "bite_type": "snake"
+          }
+        },
+        {
+          "id": "insect",
+          "label": {
+            "en": "Insect or bee",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "bite_type": "insect_sting"
+          }
+        },
+        {
+          "id": "scorpion",
+          "label": {
+            "en": "Scorpion",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "bite_type": "scorpion"
+          }
+        },
+        {
+          "id": "dog",
+          "label": {
+            "en": "Dog or other animal",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "bite_type": "dog"
+          }
+        },
+        {
+          "id": "not_sure",
+          "label": {
+            "en": "Not sure",
+            "hi": "पता नहीं",
+            "hinglish": "Pata nahi",
+            "mr": "माहीत नाही"
+          },
+          "set": {},
+          "flags": [
+            "bite_unsure"
+          ]
+        }
+      ],
+      "expects": {
+        "bites:snake": "snake",
+        "bites:insect_sting": "insect",
+        "bites:scorpion": "scorpion",
+        "bites:dog": "dog"
+      }
+    },
+    {
+      "id": "q_allergy",
+      "use_in_gain": false,
+      "text": {
+        "en": "Is there swelling of the face or throat, trouble breathing, or a rash spreading over the body?",
+        "hi": "",
+        "hinglish": "",
+        "mr": ""
+      },
+      "options": [
+        {
+          "id": "yes",
+          "label": {
+            "en": "Yes",
+            "hi": "हाँ",
+            "hinglish": "Haan",
+            "mr": "हो"
+          },
+          "set": {
+            "allergy_signs": "yes"
+          }
+        },
+        {
+          "id": "no",
+          "label": {
+            "en": "No",
+            "hi": "नहीं",
+            "hinglish": "Nahi",
+            "mr": "नाही"
+          },
+          "set": {
+            "allergy_signs": "no"
+          }
+        }
+      ],
+      "expects": {}
+    },
+    {
+      "id": "q_burn_cause",
+      "subtype_for": "burns",
+      "use_in_gain": true,
+      "text": {
+        "en": "What caused the burn?",
+        "hi": "",
+        "hinglish": "",
+        "mr": ""
+      },
+      "options": [
+        {
+          "id": "fire",
+          "label": {
+            "en": "Fire or hot object",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "burn_cause": "fire_heat"
+          }
+        },
+        {
+          "id": "hot_liquid",
+          "label": {
+            "en": "Hot liquid or steam",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "burn_cause": "hot_liquid_steam"
+          }
+        },
+        {
+          "id": "chemical",
+          "label": {
+            "en": "Chemical or acid",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "burn_cause": "chemical_acid"
+          }
+        },
+        {
+          "id": "electricity",
+          "label": {
+            "en": "Electricity",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "burn_cause": "electrical"
+          }
+        }
+      ],
+      "expects": {
+        "burns:fire_heat": "fire",
+        "burns:hot_liquid_steam": "hot_liquid",
+        "burns:chemical_acid": "chemical",
+        "burns:electrical": "electricity"
+      }
+    },
+    {
+      "id": "q_power_off",
+      "safety_slot": "power_off",
+      "use_in_gain": false,
+      "text": {
+        "en": "Is the electricity switched off, or is the person clear of the source?",
+        "hi": "",
+        "hinglish": "",
+        "mr": ""
+      },
+      "options": [
+        {
+          "id": "yes",
+          "label": {
+            "en": "Yes",
+            "hi": "हाँ",
+            "hinglish": "Haan",
+            "mr": "हो"
+          },
+          "set": {
+            "power_off": "yes"
+          }
+        },
+        {
+          "id": "no",
+          "label": {
+            "en": "No",
+            "hi": "नहीं",
+            "hinglish": "Nahi",
+            "mr": "नाही"
+          },
+          "set": {
+            "power_off": "no"
+          }
+        },
+        {
+          "id": "not_sure",
+          "label": {
+            "en": "Not sure",
+            "hi": "पता नहीं",
+            "hinglish": "Pata nahi",
+            "mr": "माहीत नाही"
+          },
+          "set": {},
+          "flags": [
+            "power_unsure"
+          ]
+        }
+      ],
+      "expects": {}
+    },
+    {
+      "id": "q_age",
+      "use_in_gain": false,
+      "text": {
+        "en": "Is the person an adult, a child or a baby?",
+        "hi": "",
+        "hinglish": "",
+        "mr": ""
+      },
+      "options": [
+        {
+          "id": "adult",
+          "label": {
+            "en": "Adult",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "age_group": "adult"
+          }
+        },
+        {
+          "id": "child",
+          "label": {
+            "en": "Child",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "age_group": "child"
+          }
+        },
+        {
+          "id": "baby",
+          "label": {
+            "en": "Baby",
+            "hi": "",
+            "hinglish": "",
+            "mr": ""
+          },
+          "set": {
+            "age_group": "infant"
+          }
+        }
+      ],
+      "expects": {}
+    }
+  ]
+}

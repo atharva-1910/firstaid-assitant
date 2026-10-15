@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "situation.schema.json",
+  "title": "First aid situation record",
+  "type": "object",
+  "required": ["id", "owner", "age_scope", "names", "recognition", "branch_on", "branches", "review_status"],
+  "properties": {
+    "id": {"enum": ["unresponsive", "heart_attack", "choking", "bites", "burns"]},
+    "owner": {"type": "string", "minLength": 1},
+    "age_scope": {"const": "adult"},
+    "names": {"$ref": "#/$defs/localized"},
+    "recognition": {"type": "array", "items": {"$ref": "#/$defs/localized"}, "minItems": 1},
+    "branch_on": {"type": ["string", "null"]},
+    "branch_map": {"type": "object", "additionalProperties": {"type": "string"}},
+    "branches": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"$ref": "#/$defs/branch"}
+    },
+    "source_differences": {
+      "type": "array",
+      "items": {"type": "object", "required": ["topic"], "properties": {"topic": {"type": "string"}, "notes": {"type": "string"}}}
+    },
+    "review_status": {"enum": ["draft", "team_checked", "expert_verified"]}
+  },
+  "$defs": {
+    "localized": {
+      "type": "object",
+      "required": ["en", "hi", "hinglish", "mr"],
+      "properties": {
+        "en": {"type": "string", "minLength": 1},
+        "hi": {"type": "string"},
+        "hinglish": {"type": "string"},
+        "mr": {"type": "string"}
+      }
+    },
+    "localizedOptional": {
+      "type": "object",
+      "required": ["en"],
+      "properties": {"en": {"type": "string"}, "hi": {"type": "string"}, "hinglish": {"type": "string"}, "mr": {"type": "string"}}
+    },
+    "source": {
+      "type": "object",
+      "required": ["doc"],
+      "properties": {
+        "doc": {"enum": ["G1", "G2", "G3", "G4", "G5", "UNSOURCED"]},
+        "page": {"type": ["integer", "null"]},
+        "quote_checked": {"type": "boolean"}
+      }
+    },
+    "step": {
+      "type": "object",
+      "required": ["id", "order", "text", "source", "agreement", "evidence", "verified"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+        "order": {"type": "integer", "minimum": 1},
+        "text": {"$ref": "#/$defs/localized"},
+        "source": {"$ref": "#/$defs/source"},
+        "also_in": {"type": "array", "items": {"$ref": "#/$defs/source"}},
+        "agreement": {"enum": ["agree", "differ", "single_source", "unchecked"]},
+        "evidence": {"enum": ["strong", "weak", "good_practice", "unchecked"]},
+        "next": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string"},
+            {
+              "type": "object",
+              "required": ["on", "cases", "default"],
+              "properties": {"on": {"type": "string"}, "cases": {"type": "object"}, "default": {"type": "string"}}
+            }
+          ]
+        },
+        "verified": {"type": "boolean"},
+        "verify_note": {"type": "string"},
+        "link": {"type": "object", "required": ["situation"]},
+        "cpr_rhythm": {"type": "boolean"}
+      }
+    },
+    "branch": {
+      "type": "object",
+      "required": ["steps", "do_not"],
+      "properties": {
+        "urgency_rules": {
+          "type": "array",
+          "items": {"type": "object", "required": ["if", "urgency"], "properties": {"urgency": {"enum": ["emergency", "clinic", "home"]}}}
+        },
+        "steps": {"type": "array", "items": {"$ref": "#/$defs/step"}, "minItems": 1},
+        "do_not": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["text", "reason"],
+            "properties": {"text": {"$ref": "#/$defs/localized"}, "reason": {"$ref": "#/$defs/localizedOptional"}, "step": {"type": "string"}}
+          }
+        }
+      }
+    }
+  }
+}

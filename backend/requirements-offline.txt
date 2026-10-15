@@ -1,0 +1,9 @@
+# Offline data and training tools (Section 11)
+-r requirements.txt
+PyMuPDF>=1.24
+scikit-learn>=1.4
+rank-bm25>=0.2.2
+datasets>=2.19
+peft>=0.11
+spacy>=3.7
+negspacy>=1.0

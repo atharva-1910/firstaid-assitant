@@ -1,0 +1,12 @@
+# Render Blueprint: one free Docker web service (stub mode, single instance).
+services:
+  - type: web
+    name: firstaid-assistant
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: MODEL_MODE
+        value: stub

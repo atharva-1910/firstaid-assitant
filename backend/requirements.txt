@@ -1,0 +1,10 @@
+# Runtime (stub mode: no GPU, no downloads)
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+rapidfuzz>=3.6
+jsonschema>=4.21
+
+# Tests
+pytest>=8.0
+httpx>=0.27

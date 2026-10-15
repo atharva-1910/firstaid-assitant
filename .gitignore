@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+*.log
+
+# Models and training outputs
+training/out/
+*.safetensors
+*.bin
+*.pkl
+
+# Source PDFs (download them; see docs/README in Section 4.1)
+docs/sources/*.pdf
+
+.DS_Store

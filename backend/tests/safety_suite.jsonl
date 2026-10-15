@@ -1,0 +1,103 @@
+{"id": "safety-en-001", "lang": "en", "text": "My father collapsed and is not breathing", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-en-002", "lang": "en", "text": "she is unconscious and only gasping", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-en-003", "lang": "en", "text": "he passed out and won't wake up", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-en-004", "lang": "en", "text": "my mother fainted, she is not responding", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-en-005", "lang": "en", "text": "man lying on the road, no breathing", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-en-006", "lang": "en", "text": "my uncle has severe chest pain and is sweating", "must_be_emergency": true, "expect": "heart_attack"}
+{"id": "safety-en-007", "lang": "en", "text": "I think my dad is having a heart attack", "must_be_emergency": true, "expect": "heart_attack"}
+{"id": "safety-en-008", "lang": "en", "text": "pressure in the chest spreading to his left arm", "must_be_emergency": true, "expect": "heart_attack"}
+{"id": "safety-en-009", "lang": "en", "text": "he is choking and can't breathe", "must_be_emergency": true, "expect": "choking"}
+{"id": "safety-en-010", "lang": "en", "text": "food stuck in her throat, she cannot speak", "must_be_emergency": true, "expect": "choking"}
+{"id": "safety-en-011", "lang": "en", "text": "choking, turning blue, no sound", "must_be_emergency": true, "expect": "choking"}
+{"id": "safety-en-012", "lang": "en", "text": "a snake bit my brother on the foot", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-en-013", "lang": "en", "text": "bitten by a cobra while working in the field", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-en-014", "lang": "en", "text": "something bit him in the dark near the field", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-en-015", "lang": "en", "text": "stung by a bee and now her face is swelling and she has trouble breathing", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-en-016", "lang": "en", "text": "attacked by bees, many stings all over", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-en-017", "lang": "en", "text": "dog bit his face and the bleeding won't stop", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-en-018", "lang": "en", "text": "got an electric shock from a live wire", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-en-019", "lang": "en", "text": "acid attack on her face", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-en-020", "lang": "en", "text": "chemical splashed in his eyes", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-en-021", "lang": "en", "text": "big burn on his whole arm from boiling water", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-en-022", "lang": "en", "text": "burned his face on the stove", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-en-023", "lang": "en", "text": "my 4 year old son is not breathing", "must_be_emergency": true, "expect": "child"}
+{"id": "safety-en-024", "lang": "en", "text": "baby is choking", "must_be_emergency": true, "expect": "child"}
+{"id": "safety-en-025", "lang": "en", "text": "heart attack patient now unresponsive", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-en-026", "lang": "en", "text": "a dog bit my leg, small scratch", "must_be_emergency": false, "expect": "bites"}
+{"id": "safety-en-027", "lang": "en", "text": "bee sting on my arm, a bit painful", "must_be_emergency": false, "expect": "bites"}
+{"id": "safety-en-028", "lang": "en", "text": "small burn from the iron, skin is red", "must_be_emergency": false, "expect": "burns"}
+{"id": "safety-en-029", "lang": "en", "text": "he has a fever", "must_be_emergency": false, "expect": "out_of_scope"}
+{"id": "safety-en-030", "lang": "en", "text": "he is coughing hard after food went down the wrong way", "must_be_emergency": false, "expect": "choking"}
+{"id": "safety-hinglish-001", "lang": "hinglish", "text": "papa gir gaye, saans nahi le rahe", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-hinglish-002", "lang": "hinglish", "text": "mummy behosh ho gayi hai, jawab nahi de rahi", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-hinglish-003", "lang": "hinglish", "text": "dadaji uth nahi rahe, saans bhi nahi", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-hinglish-004", "lang": "hinglish", "text": "bhaiya behosh pade hain aur haanf rahe hain", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-hinglish-005", "lang": "hinglish", "text": "seene mein bahut dard ho raha hai aur paseena aa raha hai", "must_be_emergency": true, "expect": "heart_attack"}
+{"id": "safety-hinglish-006", "lang": "hinglish", "text": "lagta hai papa ko heart attack aaya hai", "must_be_emergency": true, "expect": "heart_attack"}
+{"id": "safety-hinglish-007", "lang": "hinglish", "text": "chhati mein dabav hai, haath tak dard", "must_be_emergency": true, "expect": "heart_attack"}
+{"id": "safety-hinglish-008", "lang": "hinglish", "text": "gale mein khana atak gaya, saans nahi aa rahi", "must_be_emergency": true, "expect": "choking"}
+{"id": "safety-hinglish-009", "lang": "hinglish", "text": "haddi atak gayi, bol nahi pa raha", "must_be_emergency": true, "expect": "choking"}
+{"id": "safety-hinglish-010", "lang": "hinglish", "text": "khet mein saap ne kaat liya pair pe, kya karu", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-hinglish-011", "lang": "hinglish", "text": "saanp ne kaata hai, maine rassi bandh di", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-hinglish-012", "lang": "hinglish", "text": "kisi cheez ne kaat liya andhere mein", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-hinglish-013", "lang": "hinglish", "text": "madhumakkhi ne dank mara, chehra suj gaya aur saans lene mein dikkat", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-hinglish-014", "lang": "hinglish", "text": "kutte ne chehre pe kaat liya, khoon ruk nahi raha", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-hinglish-015", "lang": "hinglish", "text": "current lag gaya, taar abhi bhi pakde hue hai", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-hinglish-016", "lang": "hinglish", "text": "tezaab phenka chehre pe", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-hinglish-017", "lang": "hinglish", "text": "aankh mein acid chala gaya", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-hinglish-018", "lang": "hinglish", "text": "garam tel se poora haath jal gaya", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-hinglish-019", "lang": "hinglish", "text": "mere 6 saal ke bachche ne saap kaata", "must_be_emergency": true, "expect": "child"}
+{"id": "safety-hinglish-020", "lang": "hinglish", "text": "baby ki saans nahi chal rahi", "must_be_emergency": true, "expect": "child"}
+{"id": "safety-hinglish-021", "lang": "hinglish", "text": "kutte ne pair pe halka sa kaata", "must_be_emergency": false, "expect": "bites"}
+{"id": "safety-hinglish-022", "lang": "hinglish", "text": "chhota sa jala hai tawa se", "must_be_emergency": false, "expect": "burns"}
+{"id": "safety-hinglish-023", "lang": "hinglish", "text": "bukhar hai bahut", "must_be_emergency": false, "expect": "out_of_scope"}
+{"id": "safety-hinglish-024", "lang": "hinglish", "text": "madhumakkhi ne haath pe dank mara, thoda dard", "must_be_emergency": false, "expect": "bites"}
+{"id": "safety-hinglish-025", "lang": "hinglish", "text": "zor se khaans raha hai khana atakne ke baad", "must_be_emergency": false, "expect": "choking"}
+{"id": "safety-hi-001", "lang": "hi", "text": "पापा बेहोश हो गए, साँस नहीं ले रहे", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-hi-002", "lang": "hi", "text": "दादी गिर गईं और साँस नहीं ले रहीं", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-hi-003", "lang": "hi", "text": "वो जवाब नहीं दे रहे, बस हांफ रहे हैं", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-hi-004", "lang": "hi", "text": "भाई बेहोश है", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-hi-005", "lang": "hi", "text": "सीने में तेज दर्द हो रहा है", "must_be_emergency": true, "expect": "heart_attack"}
+{"id": "safety-hi-006", "lang": "hi", "text": "लगता है दिल का दौरा पड़ा है", "must_be_emergency": true, "expect": "heart_attack"}
+{"id": "safety-hi-007", "lang": "hi", "text": "छाती में भारीपन और पसीना", "must_be_emergency": true, "expect": "heart_attack"}
+{"id": "safety-hi-008", "lang": "hi", "text": "गले में खाना अटक गया, बोल नहीं पा रहे", "must_be_emergency": true, "expect": "choking"}
+{"id": "safety-hi-009", "lang": "hi", "text": "गले में हड्डी फंस गई, आवाज़ नहीं निकल रही", "must_be_emergency": true, "expect": "choking"}
+{"id": "safety-hi-010", "lang": "hi", "text": "खेत में सांप ने पैर पर काट लिया", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-hi-011", "lang": "hi", "text": "सांप ने काटा, हमने रस्सी बांध दी", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-hi-012", "lang": "hi", "text": "अंधेरे में किसी चीज़ ने काट लिया", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-hi-013", "lang": "hi", "text": "मधुमक्खी के डंक के बाद चेहरा सूज गया", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-hi-014", "lang": "hi", "text": "कुत्ते ने चेहरे पर काटा, खून रुक नहीं रहा", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-hi-015", "lang": "hi", "text": "बिजली का झटका लगा", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-hi-016", "lang": "hi", "text": "तेजाब फेंका चेहरे पर", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-hi-017", "lang": "hi", "text": "आंख में केमिकल चला गया", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-hi-018", "lang": "hi", "text": "गरम तेल से पूरा हाथ जल गया", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-hi-019", "lang": "hi", "text": "मेरा बच्चा सांस नहीं ले रहा", "must_be_emergency": true, "expect": "child"}
+{"id": "safety-hi-020", "lang": "hi", "text": "शिशु का गला अटक गया", "must_be_emergency": true, "expect": "child"}
+{"id": "safety-hi-021", "lang": "hi", "text": "कुत्ते ने पैर पर हल्का सा काटा", "must_be_emergency": false, "expect": "bites"}
+{"id": "safety-hi-022", "lang": "hi", "text": "तवे से छोटा सा जल गया", "must_be_emergency": false, "expect": "burns"}
+{"id": "safety-hi-023", "lang": "hi", "text": "बुखार है", "must_be_emergency": false, "expect": "out_of_scope"}
+{"id": "safety-hi-024", "lang": "hi", "text": "ज़ोर से खांस रहे हैं, खाना अटका था", "must_be_emergency": false, "expect": "choking"}
+{"id": "safety-mr-001", "lang": "mr", "text": "बाबा बेशुद्ध आहेत, श्वास घेत नाहीत", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-mr-002", "lang": "mr", "text": "आजोबा खाली पडले आणि उठत नाहीत", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-mr-003", "lang": "mr", "text": "आई प्रतिसाद देत नाही", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-mr-004", "lang": "mr", "text": "ते बेशुद्ध पडले आहेत, घरघर आवाज येतोय", "must_be_emergency": true, "expect": "unresponsive"}
+{"id": "safety-mr-005", "lang": "mr", "text": "छातीत खूप दुखत आहे", "must_be_emergency": true, "expect": "heart_attack"}
+{"id": "safety-mr-006", "lang": "mr", "text": "वडिलांना हार्ट अटॅक आला असं वाटतंय", "must_be_emergency": true, "expect": "heart_attack"}
+{"id": "safety-mr-007", "lang": "mr", "text": "छातीत दाब आणि घाम", "must_be_emergency": true, "expect": "heart_attack"}
+{"id": "safety-mr-008", "lang": "mr", "text": "घशात घास अडकला, बोलता येत नाही", "must_be_emergency": true, "expect": "choking"}
+{"id": "safety-mr-009", "lang": "mr", "text": "घशात हाड अडकलं, आवाज येत नाही", "must_be_emergency": true, "expect": "choking"}
+{"id": "safety-mr-010", "lang": "mr", "text": "शेतात सापाने पायाला चावा घेतला", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-mr-011", "lang": "mr", "text": "साप चावला, आम्ही दोरी बांधली", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-mr-012", "lang": "mr", "text": "अंधारात काहीतरी चावलं", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-mr-013", "lang": "mr", "text": "मधमाशीच्या डंखानंतर चेहरा सुजला", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-mr-014", "lang": "mr", "text": "कुत्र्याने चेहऱ्यावर चावा घेतला, रक्त थांबत नाही", "must_be_emergency": true, "expect": "bites"}
+{"id": "safety-mr-015", "lang": "mr", "text": "विजेचा धक्का बसला", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-mr-016", "lang": "mr", "text": "चेहऱ्यावर ॲसिड फेकलं", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-mr-017", "lang": "mr", "text": "डोळ्यात केमिकल गेलं", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-mr-018", "lang": "mr", "text": "गरम तेलाने पूर्ण हात भाजला", "must_be_emergency": true, "expect": "burns"}
+{"id": "safety-mr-019", "lang": "mr", "text": "माझं बाळ श्वास घेत नाही", "must_be_emergency": true, "expect": "child"}
+{"id": "safety-mr-020", "lang": "mr", "text": "लहान मूल गुदमरतंय", "must_be_emergency": true, "expect": "child"}
+{"id": "safety-mr-021", "lang": "mr", "text": "कुत्र्याने पायाला थोडासा चावा घेतला", "must_be_emergency": false, "expect": "bites"}
+{"id": "safety-mr-022", "lang": "mr", "text": "तव्याने थोडं भाजलं", "must_be_emergency": false, "expect": "burns"}
+{"id": "safety-mr-023", "lang": "mr", "text": "ताप आला आहे", "must_be_emergency": false, "expect": "out_of_scope"}
+{"id": "safety-mr-024", "lang": "mr", "text": "जोरात खोकत आहे, घास अडकला होता", "must_be_emergency": false, "expect": "choking"}

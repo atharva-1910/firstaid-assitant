@@ -274,7 +274,10 @@
     "pain in his heart",
     "crushing chest pain",
     "chest is paining",
-    "chest paining"
+    "chest paining",
+    "chest feels tight",
+    "chest is heavy",
+    "chest feels heavy"
    ],
    "set": {
     "chest_pain": "yes"
@@ -1075,6 +1078,20 @@
    "set": {},
    "sit": [
     "out_of_scope"
+   ]
+  },
+  {
+   "terms": [
+    "breath stopped",
+    "breathing stopped",
+    "breathing has stopped",
+    "stopped breathing completely"
+   ],
+   "set": {
+    "breathing": "absent"
+   },
+   "sit": [
+    "unresponsive"
    ]
   }
  ],

@@ -72,3 +72,17 @@ def test_evidence_keeps_original_spelling():
     e = extract("Papa Gir Gaye, SAANS nahi", "hinglish")
     words = [ev.text for ev in e.evidence]
     assert any(w.startswith("SAANS") for w in words)
+
+
+# Phrasings the hand-written probe set showed were missing (breath stopped, heavy or tight chest).
+@pytest.mark.parametrize("lang,text,slot,value", [
+    ("en", "chest feels tight and arm hurts", "chest_pain", "yes"),
+    ("hinglish", "bhai ki saans ruk gayi", "breathing", "absent"),
+    ("hinglish", "aunty ko pasina aa raha hai aur chest heavy hai", "chest_pain", "yes"),
+    ("hi", "भाई की साँस रुक गई है", "breathing", "absent"),
+    ("hi", "चाची को पसीना आ रहा है और सीना भारी है", "chest_pain", "yes"),
+    ("mr", "भावाचा श्वास थांबला आहे", "breathing", "absent"),
+    ("mr", "काकूंना घाम येतोय आणि छाती जड झालीय", "chest_pain", "yes"),
+])
+def test_probe_phrasings(lang, text, slot, value):
+    assert extract(text, lang).slots.get(slot) == value

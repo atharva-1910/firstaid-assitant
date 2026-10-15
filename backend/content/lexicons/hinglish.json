@@ -350,7 +350,20 @@
     "seene mein jalan",
     "seene me jalan",
     "chhati mein jalan",
-    "chhati me jalan"
+    "chhati me jalan",
+    "chest heavy",
+    "chest heavy hai",
+    "chest bhari",
+    "chest mein pain",
+    "chest me pain",
+    "chest pain",
+    "chest tight",
+    "chest mein jakdan",
+    "seene mein pain",
+    "seena bhari",
+    "seena bhaari",
+    "chhati bhari",
+    "chhati bhaari"
    ],
    "set": {
     "chest_pain": "yes"
@@ -1112,6 +1125,25 @@
    "set": {},
    "sit": [
     "out_of_scope"
+   ]
+  },
+  {
+   "terms": [
+    "saans ruk gayi",
+    "saans ruk gai",
+    "saans ruk gaya",
+    "sans ruk gayi",
+    "saas ruk gayi",
+    "saans thum gayi",
+    "saans tham gayi",
+    "saans band ho gayi",
+    "saans band ho gai"
+   ],
+   "set": {
+    "breathing": "absent"
+   },
+   "sit": [
+    "unresponsive"
    ]
   }
  ],

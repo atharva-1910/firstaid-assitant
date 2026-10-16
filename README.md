@@ -43,8 +43,8 @@ The app runs in **stub mode** by default (`MODEL_MODE=stub`). Every model has a 
 ## Tests
 
 ```bash
-cd backend && python -m pytest -q        # 423 tests: safety suite, negation, extraction, flows, content, API
-cd frontend && npm test                  # 35 tests: contrast (WCAG AA), red-usage rule, i18n parity, screen flow
+cd backend && python -m pytest -q        # 438 tests: safety suite, negation, extraction, flows, content, API
+cd frontend && npm test                  # 46 tests: contrast (WCAG AA), red-usage rule, i18n parity, screen flow
 ```
 
 The safety suite (`backend/tests/safety_suite.jsonl`) currently has 103 cases: 30 English, 25 Hinglish, 24 Hindi and 24 Marathi. Every `must_be_emergency: true` case must return `urgency = emergency` in every language, with the Call 112 screen first. Language owners extend the suite to 50 cases per language.
@@ -71,6 +71,25 @@ message ─► normalise ─► language id ─► F1 extraction + F3 negation �
 | Harmful-action detection (myth set) | `backend/app/harmful.py`, `content/myths.jsonl` | language owners |
 | Orchestration | `backend/app/pipeline.py` | — |
 | Stub and real models behind the Section 12 interfaces | `backend/app/models/{stub,real}` | model owners |
+
+**Visual aids on steps.** Some steps carry an `aid` that helps the user do exactly what the step says, with no new instructions:
+
+| Aid | Steps |
+|---|---|
+| CPR rhythm (110 per minute, optional click) | CPR steps in `unresponsive` Path A |
+| Countdown timer | 10 s breathing check (`unr_s3`); 20 min burn cooling (`burns_fire_s2`, `burns_chem_s4`); 15 min dog-bite wash (`bite_dog_s2`) |
+| Count-up timer | Eye rinse "until help arrives" (`burns_chem_s5`) |
+| 5 + 5 cycle counter with pictures | Choking back blows and abdominal thrusts (`ch_s6`) |
+| Note the time | Snakebite time (`bite_snake_s6`), added to the top of the handover summary |
+
+**Animations** show the movement itself for CPR compressions (`unr_a4`, at the same 110-per-minute rate as the pacer), back blows (`ch_s4`) and abdominal thrusts (`ch_s5`); the choking counter plays them too. They are SVG drawings animated with CSS (`frontend/public/steps/anim/`), with a "Show still picture" toggle, and they fall back to the still picture when the phone asks for reduced motion.
+
+Timers keep running while the user moves between steps. A backend test checks that every timer's length and every count appears in the step's own English text. Steps also show pictures: Wikimedia Commons files where available, otherwise the team's own CC0 drawings (`docs/illustrations/`). All pictures are `verified: false` until the situation owner checks them.
+
+**Voice in and out.**
+
+- *Speaking:* the mic needs no language choice. Browser speech recognition has to be told a language before it starts, so it begins in Hindi, which copes best with all four, and sends the first few words to `POST /api/langid` (the trained char n-gram model). If the model is at least 85% sure the speaker is using another language, the recogniser restarts in that language and keeps what it already heard. It switches at most twice per session, and if the check fails (offline) it keeps listening. The text always lands in the box for the user to check; nothing is sent by voice alone.
+- *Reading aloud:* a "Read steps aloud" toggle on the step screen reads each step and its warnings with the phone's own voices (`speechSynthesis`; Marathi falls back to a Hindi voice, Hinglish uses an Indian English voice). It then moves to the next step after 3 seconds, except on steps that take time (timers, CPR, the choking counter) and the last step, where it says "tap Done, next" and waits. The setting is remembered on the device.
 
 **Safety design.**
 
@@ -123,6 +142,15 @@ These choices were not fully fixed by the spec. Each one leans towards caution.
 - **Hinglish negation.** Negation runs on the romanised text with Hinglish cue words. It does not run after transliteration, because the Hinglish cue list would never match Devanagari text.
 - **Stub language id.** It adds lexicon evidence to the Marathi marker words in the spec, so short Marathi messages are not read as Hindi.
 - **UI strings.** The Section 15.1 strings are used exactly as written. Other Hindi, Hinglish and Marathi UI text is a draft that needs a native-speaker check. Step content, questions and myth reasons are **not** translated (Section 0.2 and 0.6).
+
+## Research experiments
+
+`backend/research/` holds eight experiments for the report: rules vs classical models vs the hybrid, cross-lingual
+transfer, robustness to noise, corpus statistics and code-mixing, calibration, negation scope, an adversarial test for
+the step verifier, and faithfulness of explanations. `python -m research.report` (from `backend/`) reruns all of them
+in about 9 minutes and writes [`docs/research/README.md`](docs/research/README.md) with the main table and findings.
+Transformer runs are in `training/05_research_transformers.ipynb` (Colab). Writing and labelling the hand-written
+test sets: [`docs/annotation/GUIDELINES.md`](docs/annotation/GUIDELINES.md).
 
 ## Real models
 

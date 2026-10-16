@@ -1,0 +1,589 @@
+[
+ {
+  "type": "title",
+  "text": "Multilingual First Aid Assistant"
+ },
+ {
+  "type": "subtitle",
+  "text": "CCA1 Report · CCNLP Mini Project · MIT World Peace University, Pune"
+ },
+ {
+  "type": "table",
+  "widths": [
+   1900,
+   1350,
+   1150,
+   2200,
+   2760
+  ],
+  "header": [
+   "Name",
+   "PRN",
+   "Language",
+   "Feature",
+   "Model"
+  ],
+  "rows": [
+   [
+    "Taneesha Badhe",
+    "1032232190",
+    "English",
+    "F1 detail extraction",
+    "TF-IDF situation classifiers; BGE-M3 (set up)"
+   ],
+   [
+    "Atharva Hemade",
+    "1032232249",
+    "Hindi",
+    "F2 clarifying question, memory",
+    "Character n-gram language identifier"
+   ],
+   [
+    "Siddhi Karhekar",
+    "1032232132",
+    "Marathi",
+    "F3 negation and uncertainty",
+    "Negation scope rules; mmBERT verifier (set up)"
+   ],
+   [
+    "Soham Ghodake",
+    "1032232337",
+    "Hinglish",
+    "F4 explainable alert",
+    "Hybrid TF-IDF triage; IndicBERT v2 (set up)"
+   ]
+  ]
+ },
+ {
+  "type": "p",
+  "lead": "Problem statement.",
+  "text": "Bystanders who help an injured adult before the ambulance arrives are usually untrained, describe the scene in their own language, and often follow harmful home remedies. Existing first aid datasets are English-only question–answer lists without step order or sources, and general chatbots do not cite guidelines or get tested for safety in Indian languages. There is no first aid resource that is structured, source-cited, multilingual (including code-mixed Hinglish) and tested for safety at the same time.",
+  "style": "body"
+ },
+ {
+  "type": "h",
+  "text": "1. Abstract",
+  "level": 1
+ },
+ {
+  "type": "p",
+  "text": "Bystanders who help an injured adult before an ambulance arrives describe the scene in everyday, often code-mixed language. We present a first aid assistant for English, Hindi, Hinglish and Marathi that covers five adult emergencies and never generates medical text: every step comes from a hand-checked, source-cited procedure corpus. An NLP pipeline identifies the language with a trained character n-gram model, extracts twelve safety facts with direction-aware negation, applies a rule-based urgency floor that a model may raise but never lower, and asks at most two information-gain questions when unsure. We built a 3,600-message query corpus, a 103-case safety suite and a 100-message probe set of short, misspelt messages. Before lexicon fixes the rules missed 8 of 65 probe emergencies; a TF-IDF classifier trained only on template data, placed under the rules floor, caught all of them at the cost of more false alarms. Under realistic typing noise, emergency recall of the rules fell to 0.24 while the hybrid kept 0.97. Using English negation direction for the Indian languages caused 78 dangerous errors against 9 for our direction-aware rule, and a cross-language safety net removed every missed emergency under a wrong language guess.",
+  "style": "body"
+ },
+ {
+  "type": "h",
+  "text": "2. Introduction",
+  "level": 1
+ },
+ {
+  "type": "p",
+  "text": "In India the bystander at a collapse, snakebite or burn is often the only help for several minutes, and the first minutes decide the outcome. These people search in everyday words, in their own language and frequently in Hinglish, and many have heard remedies that cause harm, such as cutting a snakebite or putting toothpaste on a burn. A useful assistant must therefore understand informal multilingual text, recognise an emergency reliably, and never invent medical instructions.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "text": "Work on code-mixed Hindi–English has mostly addressed social-media tasks such as emotion and hate-speech detection (Sasidhar et al., 2020; Sreelakshmi et al., 2020), and surveys of Indian-language processing point to the shortage of labelled data outside English (Harish & Rangan, 2020). Clinical NLP has long treated negation as a core problem (Chapman et al., 2001; Harkema et al., 2009), but its rules were designed for English, where the cue comes before the word it negates. Our approach separates what must be exact from what can be learned. The first aid content is a small, hand-checked corpus of five procedure records with a source citation on every step; NLP components only decide which verified steps to show and when to raise an alarm, and every safety decision has a rule-based floor. We evaluate each component per language, compare the rules with trained classifiers, and test robustness to the noisy, mixed-language text that people actually type in an emergency.",
+  "style": "body"
+ },
+ {
+  "type": "h",
+  "text": "2.1 Research questions",
+  "level": 2
+ },
+ {
+  "type": "table",
+  "widths": [
+   1400,
+   1200,
+   6760
+  ],
+  "header": [
+   "Student",
+   "Language",
+   "Question"
+  ],
+  "rows": [
+   [
+    "Taneesha",
+    "English",
+    "How accurately can safety-critical facts and the situation be extracted from free text, how large is the gap between English and the Indian languages, and how much target-language data closes it?"
+   ],
+   [
+    "Atharva",
+    "Hindi",
+    "Can information-gain question selection resolve ambiguous reports within two questions, does a trained character n-gram model identify the four languages more reliably than word lists, and is the confidence threshold for asking well placed?"
+   ],
+   [
+    "Siddhi",
+    "Marathi",
+    "Can a direction-aware negation rule handle Marathi's post-verbal negation, can a cross-language pass stop a wrong language guess from hiding an emergency, and can surface overlap verify a rephrased step?"
+   ],
+   [
+    "Soham",
+    "Hinglish",
+    "Does the triage layer catch every emergency in every language, including under noisy typing, and are the words shown as the reason for an alert faithful to the decision?"
+   ]
+  ]
+ },
+ {
+  "type": "h",
+  "text": "2.2 Research contributions",
+  "level": 2
+ },
+ {
+  "type": "p",
+  "lead": "Taneesha Badhe.",
+  "text": "Wrote the unresponsive and heart attack procedure records and the F1 extractor, which fills twelve slots (responsiveness, breathing, chest pain, choking signs, bite type, allergy signs, burn cause and area, power, age, time and actions taken) using per-language lexicons with typo-tolerant matching. She compared the rule-based situation identifier with TF-IDF classifiers and measured cross-lingual transfer from English to Hindi, Hinglish and Marathi.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Atharva Hemade.",
+  "text": "Wrote the choking record and F2, which chooses the question with the highest expected entropy reduction over candidate situations and keeps per-session memory. He trained the character n-gram language identifier, built speech input that detects the spoken language, translated the content into Hindi, and analysed calibration and selective prediction for the decision to ask a question.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Siddhi Karhekar.",
+  "text": "Wrote the bites record (snake, insect, scorpion, dog) and F3, which marks each fact as affirmed, negated or uncertain using cue lists and a window searched in each language's usual direction, and the cross-language safety net. She built a negation diagnostic set, compared seven cue-attachment strategies, proposed a clause-wide scope for uncertainty, and built a 1,309-pair adversarial test set for step verification.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Soham Ghodake.",
+  "text": "Wrote the burns record (fire, chemical, electrical), the safety-rules floor and F4, which shows the exact words that triggered an alert in the user's own spelling. He evaluated hybrid triage (rules plus a trained classifier), its robustness to five kinds of typing noise, and the faithfulness of explanations with a deletion test.",
+  "style": "body"
+ },
+ {
+  "type": "h",
+  "text": "2.3 Methodology",
+  "level": 2
+ },
+ {
+  "type": "p",
+  "lead": "Taneesha.",
+  "text": "Each lexicon entry maps phrases to slot values, and rapidfuzz matching (score ≥ 85) tolerates misspellings. The situation is scored by keyword overlap over the five records plus an out-of-scope class, behind the interface a fine-tuned BGE-M3 model will use. For comparison, TF-IDF classifiers (word 1–2-grams and character 2–5-grams with logistic regression, and Naive Bayes) are trained on the 2,880 template training messages; such baselines remain competitive in recent text-classification benchmarks (Reusens et al., 2024). Transfer, a central question for low-resource languages (Sindane et al., 2025), is measured by training on all English data plus 0, 5, 10, 25, 50 or 100% of one target language, averaged over three random subsamples. All intervals are 95% bootstrap intervals over 1,000 resamples.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Atharva.",
+  "text": "Each question in the bank lists the answer expected under every candidate situation; its gain is the expected drop in entropy over the candidates, so the system asks the question most likely to resolve an ambiguous report, a problem also studied for clarification in multi-turn conversation (Shao et al., 2022). Safety questions (responsiveness, breathing, power) always win when those facts are unknown. Language identification uses TF-IDF over character 1–4-grams with multinomial logistic regression: the script decides first (Devanagari or Latin) and the classifier chooses within it. Calibration is measured with a reliability diagram and expected calibration error over ten bins, and selective prediction with a risk–coverage curve, in which only the most confident share of messages is answered without a question.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Siddhi.",
+  "text": "Negation and uncertainty cues attach to the nearest symptom term within three tokens in the language's usual direction (before the word in English, after it in Hindi, Hinglish and Marathi); uncertain safety facts are dropped and trigger a question. A diagnostic set of 13 sentence frames × 5 people per language (260 sentences) covers plain and long-distance negation, uncertainty, and two facts with and without a scope breaker such as \"lekin\" or \"पण\". The same extractor is run with only the cue-attachment step changed: windows of 1, 3 and 6 tokens, an English-only direction, a ConText-style clause scope (Harkema et al., 2009), and a proposed rule in which uncertainty covers every safety fact in its clause. The safety net re-runs extraction with the sibling language of the same script and keeps only urgency-raising facts. For step verification, adversarial pairs are built from every step by removing or adding negation, changing numbers, dropping the call to 112 and swapping antonyms, with polite rewordings as safe controls.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Soham.",
+  "text": "Nineteen rules from the specification (for example unresponsive or abnormal breathing, chest pain, any snakebite, any electrical injury) force an emergency. The hybrid triage flags a message when either the rules or a TF-IDF classifier does, so a model can only raise urgency. Robustness is tested by adding dropped vowels, typos, spelling variants, code-switching and dropped words to the safety-suite and probe messages at levels 0.1 to 0.5 with three random seeds. Explanation faithfulness is measured by deleting the words with the highest attribution and comparing the drop in predicted emergency probability with deleting random words, a standard check of whether an explanation reflects what the model actually used (Ali et al., 2023).",
+  "style": "body"
+ },
+ {
+  "type": "h",
+  "text": "2.4 Description of corpora",
+  "level": 2
+ },
+ {
+  "type": "p",
+  "lead": "Procedure corpus (all).",
+  "text": "Five JSON records with 68 steps, each step citing IFRC 2025, AHA/Red Cross 2024, AHA 2025 BLS, ILCOR 2025 or NAPSE, plus 29 do-not rules and 13 harmful-remedy myths. All 205 strings are translated into Hindi, Marathi and Hinglish.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Query corpus (Taneesha, English).",
+  "text": "3,600 template messages, 720 train and 180 dev per language, balanced over six classes and labelled with situation, subtype, urgency and slots (Figure 1). English messages are the longest at 11.0 words. Templates are narrow: the 720 English training messages use only 135 distinct words, while the 30 team-written safety-suite messages use 129.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Hindi queries and the probe set (Atharva).",
+  "text": "Hindi averages 9.9 words (Figure 2). The 100-message probe set was drafted by the build tool to be short, misspelt and code-mixed, 25 per language, and labelled with situation and urgency following the specification's rules (silver labels). It is never used for training; its errors were used once to find lexicon gaps, so results are also shown for the rules before that fix.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Marathi queries and safety sets (Siddhi).",
+  "text": "Marathi is the most compact language at 7.8 words per message (Figure 3). The team wrote a 103-case safety suite (85 must-be-emergency) across the four languages. Two further sets test F3: the 260-sentence negation diagnostic set and 1,309 verifier pairs generated from the step texts in all four languages.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Hinglish queries (Soham).",
+  "text": "Hinglish averages 9.7 words and is written in natural romanised spelling (\"saans\", \"sans\", \"saas\"), not transliterated from Hindi (Figure 4). Its Code-Mixing Index, 100 × (1 − dominant-language words ÷ language words) per message, is 5.9 for templates with 43% of messages mixed, and 6.3 for the probe with 28% mixed.",
+  "style": "body"
+ },
+ {
+  "type": "h",
+  "text": "2.4.1 Corpus screenshots",
+  "level": 3
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/corpus_en.png",
+  "caption": "Figure 1. Taneesha: English rows of the query corpus (train.jsonl) and the safety suite"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/corpus_hi.png",
+  "caption": "Figure 2. Atharva: Hindi rows of the query corpus (train.jsonl) and the safety suite"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/corpus_mr.png",
+  "caption": "Figure 3. Siddhi: Marathi rows of the query corpus (train.jsonl) and the safety suite"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/corpus_hinglish.png",
+  "caption": "Figure 4. Soham: Hinglish rows of the query corpus (train.jsonl) and the safety suite"
+ },
+ {
+  "type": "h",
+  "text": "2.5 Implementation",
+  "level": 2
+ },
+ {
+  "type": "p",
+  "lead": "Taneesha.",
+  "text": "The extractor (backend/app/extract.py) runs on Unicode-normalised text with Devanagari digits mapped to 0–9 and feeds the situation classifier. The TF-IDF classifiers are scikit-learn pipelines trained in backend/research/e1_models.py, and the transfer curves come from e2_transfer.py. Fine-tuning of BGE-M3 and other BERT-family encoders (Gardazi et al., 2025) is set up in training/05_research_transformers.ipynb; those runs need a GPU and are not included in the results below.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Atharva.",
+  "text": "The language identifier (app/models/ngram_langid.py) is trained by scripts/train_langid.py on 3,907 sentences, has 9,489 features and ships as 481 KB of JSON with pure-Python inference. It is exposed as POST /api/langid, which the microphone uses to switch the browser's speech recogniser to the language being spoken when the model is at least 85% sure. F2 lives in app/clarify.py and app/memory.py, and the calibration analysis in research/e5_calibration.py.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Siddhi.",
+  "text": "Negation is in app/negation.py and the safety net is extract_safe in app/extract.py. The diagnostic set and the six cue-attachment variants are in research/negation_frames.py and e6_negation.py, which swap only the attachment step of the real extractor. The adversarial pairs are written to data/verifier/adversarial.jsonl by e7_verifier.py, which also scores word-overlap and character F-score verifiers. The mmBERT verifier fine-tuned on XNLI and IndicXNLI is set up in training/03_verifier_mmbert.ipynb; in the app every rephrasing is rejected until it is trained, so users always see verified text.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Soham.",
+  "text": "The rules floor (app/safety_rules.py) runs in both model modes, and the React frontend keeps \"Call 112\" on every screen. The hybrid triage, noise generators and faithfulness test are in research/e1_models.py, noise.py, e3_robustness.py and e8_faithfulness.py; IndicBERT v2 fine-tuning with Integrated Gradients is set up in training/04 and 05. The backend has 448 automated tests and the frontend 59, all passing; python -m research.report reproduces every result in about nine minutes.",
+  "style": "body"
+ },
+ {
+  "type": "h",
+  "text": "2.6 Results",
+  "level": 2
+ },
+ {
+  "type": "p",
+  "text": "Results are reported per language on the dev set (template messages), the team-written safety suite and the probe set. Because the lexicons were later corrected by reading the probe errors, probe results are shown for the rules both before and after that fix. Table 1 summarises the main measures; Figures 5–24 give five results per student.",
+  "style": "body"
+ },
+ {
+  "type": "table",
+  "widths": [
+   3760,
+   1400,
+   1400,
+   1400,
+   1400
+  ],
+  "header": [
+   "Measure",
+   "English",
+   "Hindi",
+   "Hinglish",
+   "Marathi"
+  ],
+  "rows": [
+   [
+    "Slot F1 (dev)",
+    "0.99",
+    "0.97",
+    "0.97",
+    "0.94"
+   ],
+   [
+    "Situation accuracy (probe): before fix → after",
+    "0.96 → 1.00",
+    "0.91 → 0.95",
+    "0.86 → 0.95",
+    "0.91 → 0.95"
+   ],
+   [
+    "Emergency recall (probe): rules before fix → hybrid",
+    "0.94 → 1.00",
+    "0.88 → 1.00",
+    "0.81 → 1.00",
+    "0.88 → 1.00"
+   ],
+   [
+    "Language ID (probe): word lists → char n-gram",
+    "1.00 → 1.00",
+    "1.00 → 1.00",
+    "0.92 → 1.00",
+    "0.96 → 1.00"
+   ],
+   [
+    "Missed emergencies, wrong language: plain → net",
+    "0/25 → 0/25",
+    "19/20 → 0/20",
+    "17/20 → 0/20",
+    "19/20 → 0/20"
+   ],
+   [
+    "Negation fact accuracy: current → proposed rule",
+    "0.90 → 1.00",
+    "0.81 → 0.94",
+    "0.81 → 0.94",
+    "0.89 → 0.94"
+   ]
+  ],
+  "small": true,
+  "caption": "Table 1. Summary of results per language"
+ },
+ {
+  "type": "h",
+  "text": "Taneesha — F1 extraction and situation identification",
+  "level": 3
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/T1_slot_f1.png",
+  "caption": "Figure 5. Taneesha: F1 slot extraction, micro-F1 per language on the dev set"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/T2_situation_sets.png",
+  "caption": "Figure 6. Taneesha: situation accuracy of the app on template, safety-suite and probe messages (95% bootstrap intervals)"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/T3_situation_models.png",
+  "caption": "Figure 7. Taneesha: situation accuracy on the probe set, rules (before the lexicon fix) vs classical text classifiers"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/T4_confusion.png",
+  "caption": "Figure 8. Taneesha: situation confusion matrices on 192 safety-suite and probe messages"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/T5_transfer.png",
+  "caption": "Figure 9. Taneesha: cross-lingual transfer from English; situation accuracy as target-language training data is added"
+ },
+ {
+  "type": "h",
+  "text": "Atharva — F2 clarifying questions and language identification",
+  "level": 3
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/A1_langid.png",
+  "caption": "Figure 10. Atharva: language identification accuracy, word-list rules vs trained character n-gram model"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/A2_langid_confusion.png",
+  "caption": "Figure 11. Atharva: language identification confusion matrices on the 100-message probe set"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/A3_clarify.png",
+  "caption": "Figure 12. Atharva: F2 clarifying questions, (a) ambiguous queries resolved within two questions, (b) share of safety-suite and probe messages that received a question"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/A4_reliability.png",
+  "caption": "Figure 13. Atharva: reliability diagram of situation confidence on safety-suite and probe messages"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/A5_risk_coverage.png",
+  "caption": "Figure 14. Atharva: risk–coverage curve; answering only above 0.75 confidence keeps the error rate low"
+ },
+ {
+  "type": "h",
+  "text": "Siddhi — F3 negation, cross-language safety net and step verification",
+  "level": 3
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/S1_negation.png",
+  "caption": "Figure 15. Siddhi: F3 negation and uncertainty accuracy per language for four cue-attachment rules"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/S2_dangerous.png",
+  "caption": "Figure 16. Siddhi: dangerous negation errors (a negated or uncertain fact read as reassuring) for each cue-attachment rule"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/S3_frames.png",
+  "caption": "Figure 17. Siddhi: accuracy of the current negation rule by sentence frame and language"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/S4_safety_net.png",
+  "caption": "Figure 18. Siddhi: emergencies missed when the language is guessed wrong, without and with the cross-language safety net"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/S5_verifier.png",
+  "caption": "Figure 19. Siddhi: adversarial test of lexical step verifiers, the baseline a trained verifier must beat"
+ },
+ {
+  "type": "h",
+  "text": "Soham — urgency triage and explainable alerts",
+  "level": 3
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/H1_recall.png",
+  "caption": "Figure 20. Soham: emergency recall on the probe set per language; the model under the rules floor catches the emergencies the rules missed"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/H2_tradeoff.png",
+  "caption": "Figure 21. Soham: probe set, missed emergencies against false alarms for each triage system"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/H3_noise.png",
+  "caption": "Figure 22. Soham: robustness of triage to realistic typing noise on safety-suite and probe messages"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/H4_noise_types.png",
+  "caption": "Figure 23. Soham: emergency recall by noise type at level 0.3"
+ },
+ {
+  "type": "figure",
+  "path": "/tmp/firstaid-assitant/docs/report/figures/H5_faithfulness.png",
+  "caption": "Figure 24. Soham: faithfulness of explanations, drop in emergency probability when the highlighted words are deleted"
+ },
+ {
+  "type": "h",
+  "text": "2.7 Discussion",
+  "level": 2
+ },
+ {
+  "type": "p",
+  "lead": "Taneesha.",
+  "text": "Figure 5 shows slot F1 above 0.94 in every language, with the largest gap for Marathi (0.94 against 0.99 for English), whose compact verb forms are harder to match. Figure 6 shows that perfect template scores do not carry over to the probe, and Figure 7 that before the lexicon fix the rules reached only 0.86 on Hinglish probe messages, where TF-IDF classifiers reached 0.95. The confusion matrices in Figure 8 show that the rules' only errors are 3 choking messages read as unresponsive, while the template-trained classifier struggles most with out-of-scope messages (4 of 12 correct). Figure 9 answers the transfer question: English data alone gives 0.45 on Hinglish, thanks to the shared script and borrowed words such as \"chest\", \"current\" and \"acid\", but nothing on Hindi or Marathi; adding only 5% of target-language data (36 messages) lifts them to 0.88 and 0.82. Even with all the data, accuracy on probe messages stays at 0.86 for Marathi against 1.00 on template dev, which shows the template-to-real gap that a hand-written test set must measure.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Atharva.",
+  "text": "Figures 10 and 11 show that word lists misread two Hinglish probe messages as English and one Marathi message as Hindi (for example \"dadaji ko current laga\" and \"लवकर सांगा\"), while the character n-gram model identifies all 100 correctly at no runtime cost. Figure 12 shows that every one of the 117 ambiguous dev queries is resolved within two questions, above the 90% target, and that on safety-suite and probe messages the app asks a question for 29% of messages. The reliability diagram in Figure 13 shows the classifier's confidence is well calibrated (ECE 0.051), and Figure 14 shows why the 0.75 threshold is sound: the 84% of messages above it are 0.96 correct, while those below it are only 0.63 correct, so asking a question there is the right decision.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Siddhi.",
+  "text": "Figures 15 and 16 show that negation direction matters: applying the English rule (cue before the word) to Hindi, Hinglish and Marathi drops fact accuracy to 0.62, 0.62 and 0.64 with 78 dangerous errors, while the direction-aware rule reaches 0.81, 0.81 and 0.89 with 9. Figure 17 locates the remaining errors: uncertainty at the start of a sentence and in \"not sure if my father is breathing\", where the cue attaches to the nearest word (\"father\") instead of the safety fact. Letting uncertainty cover every safety fact in its clause raises accuracy to 0.95 with no dangerous errors and no change on the safety suite or probe; the last misses (\"कोई दर्द या दबाव नहीं\") are lexicon gaps. Figure 18 shows the safety net cutting missed emergencies under a wrong language guess from 19/20, 17/20 and 19/20 to zero. Figure 19 shows that surface overlap cannot verify a rephrased step: word overlap tuned to accept 95% of safe rewordings rejects only 11% of steps with \"do not\" removed and 6% with a changed number, which motivates the trained mmBERT verifier.",
+  "style": "body"
+ },
+ {
+  "type": "p",
+  "lead": "Soham.",
+  "text": "Figure 20 shows that before the lexicon fix the rules missed 8 of 65 probe emergencies, and a TF-IDF classifier trained only on template data, placed under the rules floor, catches all of them without any lexicon change. Figure 21 shows the cost: the hybrid flags 50% of the 20 probe non-emergencies against none for the rules, and models alone miss 7 safety-suite emergencies, so the rules floor remains essential. Figures 22 and 23 show the strongest case for the model: with all noise types at level 0.3, emergency recall of the rules falls to 0.24, while the character model keeps 0.96 and the hybrid 0.97; dropped vowels and dropped words hurt the rules most. Figure 24 shows that the classifier's highlighted words are faithful (deleting the top three lowers emergency probability by 0.26 against 0.03 for random words), but deleting the app's own trigger words removes the rule alert in only 84% of emergencies, so F4 should show every word that fired a rule.",
+  "style": "body"
+ },
+ {
+  "type": "h",
+  "text": "2.8 Conclusion",
+  "level": 2
+ },
+ {
+  "type": "p",
+  "text": "We built a multilingual first aid assistant that never generates medical text and keeps a rule-based safety floor under every model, and we measured where its language understanding holds and where it breaks. Taneesha's extractor reaches slot F1 of 0.94–0.99 on template data, and her transfer study shows that Hindi and Marathi need a small amount of their own data while Hinglish borrows from English. Atharva's character n-gram identifier recognises all four languages on the probe set, F2 resolves every ambiguous dev query within two questions, and calibration supports the 0.75 threshold for asking. Siddhi's direction-aware negation avoids most of the dangerous errors that English rules make in the Indian languages, her proposed clause-wide uncertainty scope removes the rest on the diagnostic set, and the cross-language safety net removes wrong-language misses. Soham's evaluation shows that a learned model under the rules floor catches emergencies the word lists miss and keeps catching them under noisy typing, at the cost of more false alarms, and that alert explanations must show every trigger. The next steps are a hand-written test set with inter-annotator agreement and the transformer models already set up, whose results will replace the classical baselines reported here.",
+  "style": "body"
+ },
+ {
+  "type": "h",
+  "text": "2.9 References",
+  "level": 2
+ },
+ {
+  "type": "ref",
+  "text": "Ali, S., Abuhmed, T., El-Sappagh, S., Muhammad, K., Alonso-Moral, J. M., Confalonieri, R., Guidotti, R., Del Ser, J., Díaz-Rodríguez, N., & Herrera, F. (2023). Explainable artificial intelligence (XAI): What we know and what is left to attain trustworthy artificial intelligence. Information Fusion, 99, Article 101805. https://doi.org/10.1016/j.inffus.2023.101805"
+ },
+ {
+  "type": "ref",
+  "text": "Chapman, W. W., Bridewell, W., Hanbury, P., Cooper, G. F., & Buchanan, B. G. (2001). A simple algorithm for identifying negated findings and diseases in discharge summaries. Journal of Biomedical Informatics, 34(5), 301–310. https://doi.org/10.1006/jbin.2001.1029"
+ },
+ {
+  "type": "ref",
+  "text": "Gardazi, N. M., Daud, A., Malik, M. K., Bukhari, A., Alsahfi, T., & Alshemaimri, B. (2025). BERT applications in natural language processing: A review. Artificial Intelligence Review, 58(6), Article 166. https://doi.org/10.1007/s10462-025-11162-5"
+ },
+ {
+  "type": "ref",
+  "text": "Harish, B. S., & Rangan, R. K. (2020). A comprehensive survey on Indian regional language processing. SN Applied Sciences, 2, Article 1204. https://doi.org/10.1007/s42452-020-2983-x"
+ },
+ {
+  "type": "ref",
+  "text": "Harkema, H., Dowling, J. N., Thornblade, T., & Chapman, W. W. (2009). ConText: An algorithm for determining negation, experiencer, and temporal status from clinical reports. Journal of Biomedical Informatics, 42(5), 839–851. https://doi.org/10.1016/j.jbi.2009.05.002"
+ },
+ {
+  "type": "ref",
+  "text": "Reusens, M., Stevens, A., Tonglet, J., De Smedt, J., Verbeke, W., vanden Broucke, S., & Baesens, B. (2024). Evaluating text classification: A benchmark study. Expert Systems with Applications, 254, Article 124302. https://doi.org/10.1016/j.eswa.2024.124302"
+ },
+ {
+  "type": "ref",
+  "text": "Sasidhar, T. T., Premjith, B., & Soman, K. P. (2020). Emotion detection in Hinglish (Hindi+English) code-mixed social media text. Procedia Computer Science, 171, 1346–1352. https://doi.org/10.1016/j.procs.2020.04.144"
+ },
+ {
+  "type": "ref",
+  "text": "Shao, T., Cai, F., Chen, W., & Chen, H. (2022). Self-supervised clarification question generation for ambiguous multi-turn conversation. Information Sciences, 587, 626–641. https://doi.org/10.1016/j.ins.2021.12.040"
+ },
+ {
+  "type": "ref",
+  "text": "Sindane, T., Marivate, V., & Modupe, A. (2025). Cross-lingual embedding methods and applications: A systematic review for low-resourced scenarios. Natural Language Processing Journal, 12, Article 100157. https://doi.org/10.1016/j.nlp.2025.100157"
+ },
+ {
+  "type": "ref",
+  "text": "Sreelakshmi, K., Premjith, B., & Soman, K. P. (2020). Detection of hate speech text in Hindi-English code-mixed data. Procedia Computer Science, 171, 737–744. https://doi.org/10.1016/j.procs.2020.04.080"
+ },
+ {
+  "type": "h",
+  "text": "Corpora, guidelines and models (URLs)",
+  "level": 3
+ },
+ {
+  "type": "ref",
+  "text": "Query corpus, safety suite, probe set, verifier pairs and code: https://github.com/atharva-1910/firstaid-assitant"
+ },
+ {
+  "type": "ref",
+  "text": "IFRC (2026). International First Aid, Resuscitation and Education Guidelines 2025. https://www.ifrc.org/media/78476"
+ },
+ {
+  "type": "ref",
+  "text": "AHA & American Red Cross (2024). Guidelines for First Aid. https://www.ahajournals.org/doi/10.1161/CIR.0000000000001281"
+ },
+ {
+  "type": "ref",
+  "text": "AHA (2025). Adult Basic Life Support. https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support"
+ },
+ {
+  "type": "ref",
+  "text": "ILCOR (2025). International Consensus on First Aid Science. https://www.ilcor.org/uploads/FA-2025-COSTR-Full-Chapter.pdf"
+ },
+ {
+  "type": "ref",
+  "text": "MoHFW (2024). National Action Plan for Prevention and Control of Snakebite Envenoming. https://ncdc.mohfw.gov.in/wp-content/uploads/2024/07/NATIONAL-ACTION-PLAN-FOR-PREVENTION-AND-CONTROL-OF-SNAKEBITE-ENVENOMING-NAPSE.pdf"
+ },
+ {
+  "type": "ref",
+  "text": "IndicXNLI: https://huggingface.co/datasets/Divyanshu/indicxnli · XNLI: https://huggingface.co/datasets/facebook/xnli"
+ },
+ {
+  "type": "ref",
+  "text": "Models: https://huggingface.co/ai4bharat/IndicBERTv2-MLM-only · https://huggingface.co/BAAI/bge-m3 · https://huggingface.co/jhu-clsp/mmBERT-base · https://huggingface.co/google/muril-base-cased"
+ }
+]

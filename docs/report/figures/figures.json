@@ -1,0 +1,90 @@
+{
+ "corpus_stats": {
+  "title": "Query corpus statistics: (a) message length per language, (b) urgency labels",
+  "owner": "all"
+ },
+ "corpus_diversity": {
+  "title": "Corpus diversity: (a) vocabulary of 24 random messages per set, (b) Code-Mixing Index (Das & Gambäck, 2014)",
+  "owner": "Soham"
+ },
+ "T1_slot_f1": {
+  "title": "Taneesha: F1 slot extraction, micro-F1 per language on the dev set",
+  "owner": "Taneesha"
+ },
+ "T2_situation_sets": {
+  "title": "Taneesha: situation accuracy of the app on template, safety-suite and probe messages (95% bootstrap intervals)",
+  "owner": "Taneesha"
+ },
+ "T3_situation_models": {
+  "title": "Taneesha: situation accuracy on the probe set, rules vs classical text classifiers",
+  "owner": "Taneesha"
+ },
+ "T4_confusion": {
+  "title": "Taneesha: situation confusion matrices on 192 safety-suite and probe messages",
+  "owner": "Taneesha"
+ },
+ "T5_transfer": {
+  "title": "Taneesha: cross-lingual transfer from English, situation accuracy as target-language training data is added",
+  "owner": "Taneesha"
+ },
+ "A1_langid": {
+  "title": "Atharva: language identification accuracy, word-list rules vs trained character n-gram model",
+  "owner": "Atharva"
+ },
+ "A2_langid_confusion": {
+  "title": "Atharva: language identification confusion matrices on the 100-message probe set",
+  "owner": "Atharva"
+ },
+ "A3_clarify": {
+  "title": "Atharva: F2 clarifying questions, (a) ambiguous queries resolved within two questions, (b) share of safety-suite and probe messages that received a question",
+  "owner": "Atharva"
+ },
+ "A4_reliability": {
+  "title": "Atharva: reliability diagram of situation confidence on safety-suite and probe messages",
+  "owner": "Atharva"
+ },
+ "A5_risk_coverage": {
+  "title": "Atharva: risk–coverage curve; asking a question below 0.75 confidence keeps the error rate low",
+  "owner": "Atharva"
+ },
+ "S1_negation": {
+  "title": "Siddhi: F3 negation and uncertainty accuracy per language for four cue-attachment rules",
+  "owner": "Siddhi"
+ },
+ "S2_dangerous": {
+  "title": "Siddhi: dangerous negation errors for each cue-attachment rule",
+  "owner": "Siddhi"
+ },
+ "S3_frames": {
+  "title": "Siddhi: accuracy of the current negation rule by sentence frame and language",
+  "owner": "Siddhi"
+ },
+ "S4_safety_net": {
+  "title": "Siddhi: emergencies missed when the language is guessed wrong, without and with the cross-language safety net",
+  "owner": "Siddhi"
+ },
+ "S5_verifier": {
+  "title": "Siddhi: adversarial test of lexical step verifiers; the baseline the mmBERT verifier must beat",
+  "owner": "Siddhi"
+ },
+ "H1_recall": {
+  "title": "Soham: emergency recall on the probe set; the model under the rules floor catches the emergencies the rules missed",
+  "owner": "Soham"
+ },
+ "H2_tradeoff": {
+  "title": "Soham: probe set, missed emergencies against false alarms for each triage system",
+  "owner": "Soham"
+ },
+ "H3_noise": {
+  "title": "Soham: robustness of triage to realistic typing noise on safety-suite and probe messages",
+  "owner": "Soham"
+ },
+ "H4_noise_types": {
+  "title": "Soham: emergency recall by noise type at level 0.3",
+  "owner": "Soham"
+ },
+ "H5_faithfulness": {
+  "title": "Soham: faithfulness of explanations, drop in emergency probability when highlighted words are deleted",
+  "owner": "Soham"
+ }
+}

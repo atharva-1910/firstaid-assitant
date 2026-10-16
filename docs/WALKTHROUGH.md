@@ -183,12 +183,44 @@ Run on Google Colab with a GPU. Outputs go to `training/out/` (git-ignored) and 
 
 ---
 
-## 7. Every model, its status and where it lives
+## 7. Data description
+
+The project uses two kinds of data: **content** (what the user reads, written and checked by hand) and **NLP
+data** (messages used to build and test the language understanding). Keeping them apart is a deliberate safety
+choice: models only decide *which* verified text to show, they never write it.
+
+### 7.1 Content (what the user sees)
+
+| Data | What it is | How we made it | Why |
+|---|---|---|---|
+| Procedure corpus (`content/situations/*.json`) | 5 situations, 68 steps as branching graphs, 29 do-not rules, urgency rules | Each situation owner wrote the steps in plain words from post-2020 guidelines (IFRC 2025, AHA/Red Cross 2024, AHA BLS 2025, ILCOR 2025, India's NAPSE 2024) and cited the source and page on every step | Existing first aid datasets are English Q&A lists with no step order or sources. A step graph lets the app show one verified step at a time and branch (for example, breathing or not) |
+| Translations | All 205 strings in Hindi, Marathi and Hinglish | Drafted, then to be checked line by line by each language owner | The app must speak the user's language; machine translation at runtime is forbidden by the spec because it could change the meaning of a medical step |
+| Lexicons (`content/lexicons/*.json`) | Per-language phrases for each fact, plus negation and uncertainty cues | Written by language owners, then extended with gaps found in testing (for example "saans ruk gayi", "छाती जड") | They drive the rule-based extraction and the safety floor, which must work without any model |
+| Myth set (`content/myths.jsonl`) | 13 harmful home remedies with the reason each is harmful | From the spec and NAPSE (tourniquet, cutting a snakebite, toothpaste on a burn…) | Bystanders in India often try these; the app warns before showing steps |
+| Questions (`content/questions.json`) | 9 clarifying questions with answers in four languages | From the spec | Used by F2 when the app is unsure |
+| Pictures and animations (`frontend/public/steps/`) | 13 pictures, 3 animations | 5 from Wikimedia Commons (CC BY-SA 4.0 / CC0), 8 pictures and the animations drawn by the team (CC0) | A picture of hand placement or back blows helps a panicking person more than words; open licences let us publish them |
+
+### 7.2 NLP data (building and testing the language understanding)
+
+| Data set | Size | How we made it | Labels | Why, and how far to trust it |
+|---|---|---|---|---|
+| Train (`data/queries/train.jsonl`) | 2,880 (720 per language) | `scripts/generate_queries.py` fills templates with phrases from each language | Situation, subtype, urgency, slots, from the templates | A quick, balanced, fully labelled start in four languages. Weakness: templates are narrow (720 English messages use only 135 distinct words) |
+| Dev (`dev.jsonl`) | 720 | Same script, 20% held out | Same | For tuning only. Every method scores about 1.00 here, so it checks wiring, not real accuracy |
+| Safety suite (`tests/safety_suite.jsonl`) | 103 (85 must be emergencies) | Written by the team in all four languages | Must or must not be an emergency | The must-pass test run on every build: the app may never miss these |
+| Probe set (`langid_probe.jsonl`, `probe_labelled.jsonl`) | 100 (25 per language) | Drafted by the AI build tool to be short, misspelt and code-mixed | Language; situation and urgency as silver labels (team to check) | Tests how the app copes with real-style typing. Its errors were used once to fix the lexicons, so it is no longer an unseen test |
+| Hand-written test set (`test.jsonl`) | 0 so far (target 1,200) | To be written by people who have not seen the app, using `docs/annotation/` | By language owners, with Cohen's kappa for agreement | **The fair measure** for the report; still to do |
+| Negation diagnostic set (`research/negation_frames.py`) | 260 sentences | 13 sentence frames × 5 people × 4 languages | Each fact's correct value (affirmed, negated or uncertain) | Tests F3 on negation, uncertainty, distant cues and "but" clauses |
+| Verifier pairs (`data/verifier/adversarial.jsonl`) | 1,309 | Generated from every step: safe rewordings and dangerous edits (negation removed or added, number changed, "Call 112" dropped, antonym) | Accept or reject | Tests whether a verifier can catch a rephrasing that changes the meaning |
+| XNLI + IndicXNLI (external, Hugging Face) | up to 60,000 per language | Public entailment datasets (English, Hindi, Marathi) | Entailment / neutral / contradiction | Training data for the mmBERT verifier (notebook 03) |
+
+---
+
+## 8. Every model, its status and where it lives
 
 The app runs in **stub mode** by default: every NLP component has a light stand-in behind the same interface,
 so it runs on a laptop CPU with no downloads. Real mode swaps in the transformers once they are trained.
 
-### 7.1 Models running in the deployed app (stub mode)
+### 8.1 Models running in the deployed app (stub mode)
 
 | Component | Model | Status | Code | Weights / data |
 |---|---|---|---|---|
@@ -201,7 +233,7 @@ so it runs on a laptop CPU with no downloads. Real mode swaps in the transformer
 | Speech to text | Browser Web Speech API (Google in Chrome, Apple in Safari) | In use, in the browser | `frontend/src/speech.ts` | not ours |
 | Read-aloud | Browser `speechSynthesis` voices | In use, in the browser | `frontend/src/tts.ts` | not ours |
 
-### 7.2 Transformer models (real mode, notebooks ready, not yet trained)
+### 8.2 Transformer models (real mode, notebooks ready, not yet trained)
 
 | Component | Model | Hugging Face id | Notebook | Loaded from | Owner |
 |---|---|---|---|---|---|
@@ -216,15 +248,39 @@ so it runs on a laptop CPU with no downloads. Real mode swaps in the transformer
 
 The real-mode code is `backend/app/models/real/__init__.py`; switching is described in `docs/REAL_MODE.md`.
 
-### 7.3 Classical models in the research experiments (CPU)
+### 8.3 Classical models in the research experiments (CPU)
 
 TF-IDF words + Naive Bayes, TF-IDF words (1–2) + logistic regression, TF-IDF characters (2–5) + logistic
 regression, words + characters + logistic regression, and the rules + model hybrid (the model may only raise
 urgency). All are trained in `backend/research/common.py` on `train.jsonl`; results are in `docs/research/`.
 
+### 8.4 What we did with each model, and why we chose it
+
+**The design rule behind every choice.** In first aid, a missed emergency or an invented instruction can cost a
+life. So the rules always run and set a floor; a model may only make the app *more* cautious. No model writes the
+steps. And the whole app must run on a free CPU server, so heavy models are optional extras behind fixed
+interfaces, swapped in only once trained.
+
+| Model | What we did with it | Why this one |
+|---|---|---|
+| **Safety rules + lexicons** (in use) | Wrote 19 rules and four word lists; they decide urgency and extract facts in every mode | Fully predictable and explainable, need no training data, and catch every safety-suite emergency. Weakness: they break on unseen phrasings and heavy typos (research E3), which is why models are added under them |
+| **Character n-gram language ID** (in use, trained) | Trained TF-IDF over 1–4-character pieces + logistic regression on 3,907 sentences; the script (Devanagari or Latin) decides first, the model picks between the two languages of that script; plus a check for English spoken into the Hindi recogniser | Spelling patterns ("-iye", "nahi", "आहे") identify a language even when a message is short or misspelt. It scored 1.00 on the probe set against 0.97 for word lists, is 481 KB, runs in pure Python and needs no GPU |
+| **Cross-language safety net** (in use) | Re-runs extraction with the other language of the same script and keeps only urgency-raising facts | Hindi and Marathi share a script, as do English and Hinglish, so a wrong language guess is the likeliest error. The net cut missed emergencies under a wrong guess from 55 of 85 to 0 |
+| **Keyword situation scores, always-reject verifier, rule-word explanations** (in use) | Light stand-ins with the same interface as the transformers | Let the whole app run end to end now, and keep users on verified text until the real verifier exists |
+| **BGE-M3** (planned, Taneesha) | Notebook 01 embeds messages and trains a classifier for the situation | Puts all four languages in one shared meaning space, so a Marathi and an English description of the same event land close together |
+| **IndicBERT v2** (planned, Soham) | Notebook 04 fine-tunes it for urgency (emergency, clinic, home), weighted towards emergency recall | Pre-trained on Indian languages; it outputs a fixed label, so it cannot invent text. Research E3 showed a learned model keeps catching emergencies under noisy typing where rules fall to 24% |
+| **MuRIL** (comparison, Soham) | Compared with IndicBERT v2 on Hinglish | Trained with transliterated (romanised) Indian text, so it is the natural Hinglish baseline |
+| **mmBERT** (planned, Siddhi) | Notebook 03 fine-tunes it as an entailment model on XNLI + IndicXNLI | A modern multilingual encoder built for comparing two sentences. Research E7 showed word-overlap checks catch only 11% of steps with "do not" removed, so a trained verifier is required before any rephrasing is shown |
+| **Gemma 3 4B** (optional, Atharva) | Notebook 02 rephrases steps more simply; the app would show a rephrasing only if mmBERT confirms it means the same in both directions | Fluent in Hindi and Marathi, open weights, small enough to run locally through Ollama. Disabled until the verifier is trained, so users always see verified text |
+| **IndicLID** (planned) | Real-mode language ID, falling back to the n-gram model | AI4Bharat's identifier covers romanised Indian languages; kept as an alternative to our own model |
+| **transformers-interpret** (planned, Soham) | Word attributions from the triage model for "Why this alert?" | Shows which of the user's words drove a model alert. Research E8 found highlighted words are faithful (deleting the top 3 drops emergency probability by 0.26 vs 0.03 for random words) |
+| **LaBSE, multilingual-E5** (research) | Compared with BGE-M3 in notebook 05 | Other strong multilingual sentence encoders, to check that BGE-M3 is the right pick |
+| **TF-IDF classical models** (research) | Trained on templates and compared with the rules and the hybrid (E1–E8) | Cheap, fast baselines any transformer must beat. They showed the hybrid catches every probe emergency at the cost of more false alarms |
+| **Browser speech recognition and voices** (in use) | Mic fills the text box (never auto-submits); read-aloud speaks each step | Free, no server cost, and support Hindi, Marathi and English. Trade-off: Chrome sends audio to Google, so the app tells the user |
+
 ---
 
-## 8. What is still to do
+## 9. What is still to do
 
 1. **Hand-written test set** (`data/queries/test.jsonl`, 300 per language) written by people who have not seen the
    app, using `docs/annotation/GUIDELINES.md`. Every report number should be confirmed on it.

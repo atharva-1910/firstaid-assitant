@@ -1,0 +1,1590 @@
+{
+  "safety suite + probe": {
+    "vowel_drop": {
+      "0.0": {
+        "rules": {
+          "situation_acc": 0.984375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 0.8958333333333334,
+          "emergency_recall": 0.9266666666666666,
+          "missed": 11.0,
+          "false_alarm": 0.42105263157894735
+        },
+        "model (words)": {
+          "situation_acc": 0.9270833333333334,
+          "emergency_recall": 0.9466666666666667,
+          "missed": 8.0,
+          "false_alarm": 0.4473684210526316
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.984375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.42105263157894735
+        }
+      },
+      "0.1": {
+        "rules": {
+          "situation_acc": 0.9131944444444445,
+          "emergency_recall": 0.8666666666666667,
+          "missed": 20.0,
+          "false_alarm": 0.03508771929824561
+        },
+        "model (chars)": {
+          "situation_acc": 0.8819444444444445,
+          "emergency_recall": 0.9266666666666666,
+          "missed": 11.0,
+          "false_alarm": 0.41228070175438597
+        },
+        "model (words)": {
+          "situation_acc": 0.9010416666666666,
+          "emergency_recall": 0.9511111111111111,
+          "missed": 7.333333333333333,
+          "false_alarm": 0.4473684210526316
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9131944444444445,
+          "emergency_recall": 0.9955555555555556,
+          "missed": 0.6666666666666666,
+          "false_alarm": 0.43859649122807015
+        }
+      },
+      "0.2": {
+        "rules": {
+          "situation_acc": 0.8350694444444445,
+          "emergency_recall": 0.751111111111111,
+          "missed": 37.333333333333336,
+          "false_alarm": 0.09649122807017545
+        },
+        "model (chars)": {
+          "situation_acc": 0.8628472222222222,
+          "emergency_recall": 0.9177777777777778,
+          "missed": 12.333333333333334,
+          "false_alarm": 0.47368421052631576
+        },
+        "model (words)": {
+          "situation_acc": 0.8697916666666666,
+          "emergency_recall": 0.9511111111111111,
+          "missed": 7.333333333333333,
+          "false_alarm": 0.5087719298245613
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.8350694444444445,
+          "emergency_recall": 0.9844444444444443,
+          "missed": 2.3333333333333335,
+          "false_alarm": 0.5175438596491228
+        }
+      },
+      "0.3": {
+        "rules": {
+          "situation_acc": 0.75,
+          "emergency_recall": 0.6066666666666667,
+          "missed": 59.0,
+          "false_alarm": 0.10526315789473684
+        },
+        "model (chars)": {
+          "situation_acc": 0.8541666666666666,
+          "emergency_recall": 0.9222222222222222,
+          "missed": 11.666666666666666,
+          "false_alarm": 0.4824561403508772
+        },
+        "model (words)": {
+          "situation_acc": 0.8315972222222222,
+          "emergency_recall": 0.9577777777777778,
+          "missed": 6.333333333333333,
+          "false_alarm": 0.5263157894736842
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.75,
+          "emergency_recall": 0.9733333333333333,
+          "missed": 4.0,
+          "false_alarm": 0.5263157894736842
+        }
+      },
+      "0.5": {
+        "rules": {
+          "situation_acc": 0.625,
+          "emergency_recall": 0.38888888888888884,
+          "missed": 91.66666666666667,
+          "false_alarm": 0.17543859649122806
+        },
+        "model (chars)": {
+          "situation_acc": 0.842013888888889,
+          "emergency_recall": 0.9377777777777778,
+          "missed": 9.333333333333334,
+          "false_alarm": 0.5964912280701754
+        },
+        "model (words)": {
+          "situation_acc": 0.7743055555555555,
+          "emergency_recall": 0.96,
+          "missed": 6.0,
+          "false_alarm": 0.6491228070175439
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.625,
+          "emergency_recall": 0.9577777777777777,
+          "missed": 6.333333333333333,
+          "false_alarm": 0.6315789473684211
+        }
+      }
+    },
+    "typos": {
+      "0.0": {
+        "rules": {
+          "situation_acc": 0.984375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 0.8958333333333334,
+          "emergency_recall": 0.9266666666666666,
+          "missed": 11.0,
+          "false_alarm": 0.42105263157894735
+        },
+        "model (words)": {
+          "situation_acc": 0.9270833333333334,
+          "emergency_recall": 0.9466666666666667,
+          "missed": 8.0,
+          "false_alarm": 0.4473684210526316
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.984375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.42105263157894735
+        }
+      },
+      "0.1": {
+        "rules": {
+          "situation_acc": 0.9565972222222222,
+          "emergency_recall": 0.9400000000000001,
+          "missed": 9.0,
+          "false_alarm": 0.017543859649122806
+        },
+        "model (chars)": {
+          "situation_acc": 0.8923611111111112,
+          "emergency_recall": 0.9199999999999999,
+          "missed": 12.0,
+          "false_alarm": 0.4298245614035088
+        },
+        "model (words)": {
+          "situation_acc": 0.9201388888888888,
+          "emergency_recall": 0.9511111111111111,
+          "missed": 7.333333333333333,
+          "false_alarm": 0.456140350877193
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9565972222222222,
+          "emergency_recall": 0.991111111111111,
+          "missed": 1.3333333333333333,
+          "false_alarm": 0.4385964912280702
+        }
+      },
+      "0.2": {
+        "rules": {
+          "situation_acc": 0.9027777777777777,
+          "emergency_recall": 0.8244444444444444,
+          "missed": 26.333333333333332,
+          "false_alarm": 0.08771929824561403
+        },
+        "model (chars)": {
+          "situation_acc": 0.8940972222222223,
+          "emergency_recall": 0.9222222222222222,
+          "missed": 11.666666666666666,
+          "false_alarm": 0.4298245614035088
+        },
+        "model (words)": {
+          "situation_acc": 0.8958333333333334,
+          "emergency_recall": 0.9444444444444443,
+          "missed": 8.333333333333334,
+          "false_alarm": 0.5087719298245613
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9027777777777777,
+          "emergency_recall": 0.9933333333333333,
+          "missed": 1.0,
+          "false_alarm": 0.47368421052631576
+        }
+      },
+      "0.3": {
+        "rules": {
+          "situation_acc": 0.8697916666666666,
+          "emergency_recall": 0.7799999999999999,
+          "missed": 33.0,
+          "false_alarm": 0.043859649122807015
+        },
+        "model (chars)": {
+          "situation_acc": 0.8836805555555555,
+          "emergency_recall": 0.9266666666666666,
+          "missed": 11.0,
+          "false_alarm": 0.46491228070175433
+        },
+        "model (words)": {
+          "situation_acc": 0.888888888888889,
+          "emergency_recall": 0.9488888888888889,
+          "missed": 7.666666666666667,
+          "false_alarm": 0.5000000000000001
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.8697916666666666,
+          "emergency_recall": 0.9888888888888889,
+          "missed": 1.6666666666666667,
+          "false_alarm": 0.49122807017543857
+        }
+      },
+      "0.5": {
+        "rules": {
+          "situation_acc": 0.7743055555555555,
+          "emergency_recall": 0.648888888888889,
+          "missed": 52.666666666666664,
+          "false_alarm": 0.11403508771929823
+        },
+        "model (chars)": {
+          "situation_acc": 0.873263888888889,
+          "emergency_recall": 0.9311111111111111,
+          "missed": 10.333333333333334,
+          "false_alarm": 0.47368421052631576
+        },
+        "model (words)": {
+          "situation_acc": 0.8368055555555555,
+          "emergency_recall": 0.9533333333333333,
+          "missed": 7.0,
+          "false_alarm": 0.587719298245614
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.7743055555555555,
+          "emergency_recall": 0.9822222222222222,
+          "missed": 2.6666666666666665,
+          "false_alarm": 0.543859649122807
+        }
+      }
+    },
+    "spelling": {
+      "0.0": {
+        "rules": {
+          "situation_acc": 0.984375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 0.8958333333333334,
+          "emergency_recall": 0.9266666666666666,
+          "missed": 11.0,
+          "false_alarm": 0.42105263157894735
+        },
+        "model (words)": {
+          "situation_acc": 0.9270833333333334,
+          "emergency_recall": 0.9466666666666667,
+          "missed": 8.0,
+          "false_alarm": 0.4473684210526316
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.984375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.42105263157894735
+        }
+      },
+      "0.1": {
+        "rules": {
+          "situation_acc": 0.9704861111111112,
+          "emergency_recall": 0.9688888888888889,
+          "missed": 4.666666666666667,
+          "false_alarm": 0.02631578947368421
+        },
+        "model (chars)": {
+          "situation_acc": 0.8975694444444445,
+          "emergency_recall": 0.9333333333333332,
+          "missed": 10.0,
+          "false_alarm": 0.4298245614035088
+        },
+        "model (words)": {
+          "situation_acc": 0.9236111111111112,
+          "emergency_recall": 0.9511111111111111,
+          "missed": 7.333333333333333,
+          "false_alarm": 0.4473684210526316
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9704861111111112,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.4385964912280702
+        }
+      },
+      "0.2": {
+        "rules": {
+          "situation_acc": 0.9479166666666666,
+          "emergency_recall": 0.9333333333333332,
+          "missed": 10.0,
+          "false_alarm": 0.05263157894736842
+        },
+        "model (chars)": {
+          "situation_acc": 0.8888888888888888,
+          "emergency_recall": 0.9333333333333332,
+          "missed": 10.0,
+          "false_alarm": 0.4298245614035088
+        },
+        "model (words)": {
+          "situation_acc": 0.9166666666666666,
+          "emergency_recall": 0.9488888888888889,
+          "missed": 7.666666666666667,
+          "false_alarm": 0.456140350877193
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9479166666666666,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.46491228070175444
+        }
+      },
+      "0.3": {
+        "rules": {
+          "situation_acc": 0.9409722222222222,
+          "emergency_recall": 0.9088888888888889,
+          "missed": 13.666666666666666,
+          "false_alarm": 0.07017543859649122
+        },
+        "model (chars)": {
+          "situation_acc": 0.8993055555555555,
+          "emergency_recall": 0.9333333333333332,
+          "missed": 10.0,
+          "false_alarm": 0.41228070175438597
+        },
+        "model (words)": {
+          "situation_acc": 0.9236111111111112,
+          "emergency_recall": 0.9488888888888889,
+          "missed": 7.666666666666667,
+          "false_alarm": 0.4473684210526316
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9409722222222222,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.46491228070175444
+        }
+      },
+      "0.5": {
+        "rules": {
+          "situation_acc": 0.8958333333333334,
+          "emergency_recall": 0.8466666666666667,
+          "missed": 23.0,
+          "false_alarm": 0.14912280701754385
+        },
+        "model (chars)": {
+          "situation_acc": 0.8836805555555557,
+          "emergency_recall": 0.94,
+          "missed": 9.0,
+          "false_alarm": 0.41228070175438597
+        },
+        "model (words)": {
+          "situation_acc": 0.9114583333333334,
+          "emergency_recall": 0.9555555555555556,
+          "missed": 6.666666666666667,
+          "false_alarm": 0.47368421052631576
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.8958333333333334,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.49122807017543857
+        }
+      }
+    },
+    "code_switch": {
+      "0.0": {
+        "rules": {
+          "situation_acc": 0.984375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 0.8958333333333334,
+          "emergency_recall": 0.9266666666666666,
+          "missed": 11.0,
+          "false_alarm": 0.42105263157894735
+        },
+        "model (words)": {
+          "situation_acc": 0.9270833333333334,
+          "emergency_recall": 0.9466666666666667,
+          "missed": 8.0,
+          "false_alarm": 0.4473684210526316
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.984375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.42105263157894735
+        }
+      },
+      "0.1": {
+        "rules": {
+          "situation_acc": 0.9375,
+          "emergency_recall": 0.9266666666666667,
+          "missed": 11.0,
+          "false_alarm": 0.05263157894736842
+        },
+        "model (chars)": {
+          "situation_acc": 0.8940972222222222,
+          "emergency_recall": 0.9333333333333332,
+          "missed": 10.0,
+          "false_alarm": 0.4385964912280702
+        },
+        "model (words)": {
+          "situation_acc": 0.9010416666666666,
+          "emergency_recall": 0.9444444444444445,
+          "missed": 8.333333333333334,
+          "false_alarm": 0.46491228070175433
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9375,
+          "emergency_recall": 0.9977777777777778,
+          "missed": 0.3333333333333333,
+          "false_alarm": 0.46491228070175433
+        }
+      },
+      "0.2": {
+        "rules": {
+          "situation_acc": 0.8871527777777777,
+          "emergency_recall": 0.8466666666666667,
+          "missed": 23.0,
+          "false_alarm": 0.11403508771929823
+        },
+        "model (chars)": {
+          "situation_acc": 0.892361111111111,
+          "emergency_recall": 0.9466666666666667,
+          "missed": 8.0,
+          "false_alarm": 0.37719298245614036
+        },
+        "model (words)": {
+          "situation_acc": 0.8854166666666666,
+          "emergency_recall": 0.9511111111111111,
+          "missed": 7.333333333333333,
+          "false_alarm": 0.5
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.8871527777777777,
+          "emergency_recall": 0.991111111111111,
+          "missed": 1.3333333333333333,
+          "false_alarm": 0.456140350877193
+        }
+      },
+      "0.3": {
+        "rules": {
+          "situation_acc": 0.8315972222222223,
+          "emergency_recall": 0.748888888888889,
+          "missed": 37.666666666666664,
+          "false_alarm": 0.11403508771929823
+        },
+        "model (chars)": {
+          "situation_acc": 0.8993055555555557,
+          "emergency_recall": 0.9555555555555556,
+          "missed": 6.666666666666667,
+          "false_alarm": 0.35964912280701755
+        },
+        "model (words)": {
+          "situation_acc": 0.8784722222222222,
+          "emergency_recall": 0.9622222222222222,
+          "missed": 5.666666666666667,
+          "false_alarm": 0.5175438596491228
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.8315972222222223,
+          "emergency_recall": 0.9933333333333333,
+          "missed": 1.0,
+          "false_alarm": 0.4473684210526316
+        }
+      },
+      "0.5": {
+        "rules": {
+          "situation_acc": 0.734375,
+          "emergency_recall": 0.5933333333333334,
+          "missed": 61.0,
+          "false_alarm": 0.07894736842105263
+        },
+        "model (chars)": {
+          "situation_acc": 0.90625,
+          "emergency_recall": 0.9866666666666667,
+          "missed": 2.0,
+          "false_alarm": 0.2894736842105263
+        },
+        "model (words)": {
+          "situation_acc": 0.8697916666666666,
+          "emergency_recall": 0.98,
+          "missed": 3.0,
+          "false_alarm": 0.5789473684210527
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.734375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.34210526315789475
+        }
+      }
+    },
+    "fragment": {
+      "0.0": {
+        "rules": {
+          "situation_acc": 0.984375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 0.8958333333333334,
+          "emergency_recall": 0.9266666666666666,
+          "missed": 11.0,
+          "false_alarm": 0.42105263157894735
+        },
+        "model (words)": {
+          "situation_acc": 0.9270833333333334,
+          "emergency_recall": 0.9466666666666667,
+          "missed": 8.0,
+          "false_alarm": 0.4473684210526316
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.984375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.42105263157894735
+        }
+      },
+      "0.1": {
+        "rules": {
+          "situation_acc": 0.9045138888888888,
+          "emergency_recall": 0.86,
+          "missed": 21.0,
+          "false_alarm": 0.03508771929824561
+        },
+        "model (chars)": {
+          "situation_acc": 0.8732638888888888,
+          "emergency_recall": 0.9333333333333332,
+          "missed": 10.0,
+          "false_alarm": 0.42105263157894735
+        },
+        "model (words)": {
+          "situation_acc": 0.8888888888888888,
+          "emergency_recall": 0.9488888888888889,
+          "missed": 7.666666666666667,
+          "false_alarm": 0.46491228070175433
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9045138888888888,
+          "emergency_recall": 0.9955555555555556,
+          "missed": 0.6666666666666666,
+          "false_alarm": 0.4473684210526316
+        }
+      },
+      "0.2": {
+        "rules": {
+          "situation_acc": 0.8263888888888888,
+          "emergency_recall": 0.7377777777777778,
+          "missed": 39.333333333333336,
+          "false_alarm": 0.09649122807017545
+        },
+        "model (chars)": {
+          "situation_acc": 0.8541666666666666,
+          "emergency_recall": 0.9266666666666666,
+          "missed": 11.0,
+          "false_alarm": 0.47368421052631576
+        },
+        "model (words)": {
+          "situation_acc": 0.8489583333333334,
+          "emergency_recall": 0.9511111111111111,
+          "missed": 7.333333333333333,
+          "false_alarm": 0.5350877192982456
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.8263888888888888,
+          "emergency_recall": 0.9822222222222222,
+          "missed": 2.6666666666666665,
+          "false_alarm": 0.5175438596491228
+        }
+      },
+      "0.3": {
+        "rules": {
+          "situation_acc": 0.7413194444444445,
+          "emergency_recall": 0.5955555555555556,
+          "missed": 60.666666666666664,
+          "false_alarm": 0.10526315789473684
+        },
+        "model (chars)": {
+          "situation_acc": 0.8211805555555555,
+          "emergency_recall": 0.9288888888888889,
+          "missed": 10.666666666666666,
+          "false_alarm": 0.47368421052631576
+        },
+        "model (words)": {
+          "situation_acc": 0.8072916666666666,
+          "emergency_recall": 0.9622222222222222,
+          "missed": 5.666666666666667,
+          "false_alarm": 0.5526315789473685
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.7413194444444445,
+          "emergency_recall": 0.9733333333333333,
+          "missed": 4.0,
+          "false_alarm": 0.5175438596491228
+        }
+      },
+      "0.5": {
+        "rules": {
+          "situation_acc": 0.6006944444444445,
+          "emergency_recall": 0.35333333333333333,
+          "missed": 97.0,
+          "false_alarm": 0.17543859649122806
+        },
+        "model (chars)": {
+          "situation_acc": 0.7604166666666666,
+          "emergency_recall": 0.9400000000000001,
+          "missed": 9.0,
+          "false_alarm": 0.543859649122807
+        },
+        "model (words)": {
+          "situation_acc": 0.7170138888888888,
+          "emergency_recall": 0.96,
+          "missed": 6.0,
+          "false_alarm": 0.6403508771929824
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.6006944444444445,
+          "emergency_recall": 0.9555555555555556,
+          "missed": 6.666666666666667,
+          "false_alarm": 0.5877192982456141
+        }
+      }
+    },
+    "all combined": {
+      "0.0": {
+        "rules": {
+          "situation_acc": 0.984375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 0.8958333333333334,
+          "emergency_recall": 0.9266666666666666,
+          "missed": 11.0,
+          "false_alarm": 0.42105263157894735
+        },
+        "model (words)": {
+          "situation_acc": 0.9270833333333334,
+          "emergency_recall": 0.9466666666666667,
+          "missed": 8.0,
+          "false_alarm": 0.4473684210526316
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.984375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.42105263157894735
+        }
+      },
+      "0.1": {
+        "rules": {
+          "situation_acc": 0.7934027777777778,
+          "emergency_recall": 0.6422222222222222,
+          "missed": 53.666666666666664,
+          "false_alarm": 0.11403508771929823
+        },
+        "model (chars)": {
+          "situation_acc": 0.8732638888888888,
+          "emergency_recall": 0.9422222222222222,
+          "missed": 8.666666666666666,
+          "false_alarm": 0.46491228070175444
+        },
+        "model (words)": {
+          "situation_acc": 0.829861111111111,
+          "emergency_recall": 0.9533333333333335,
+          "missed": 7.0,
+          "false_alarm": 0.5350877192982456
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.7934027777777778,
+          "emergency_recall": 0.9822222222222221,
+          "missed": 2.6666666666666665,
+          "false_alarm": 0.49122807017543857
+        }
+      },
+      "0.2": {
+        "rules": {
+          "situation_acc": 0.6076388888888888,
+          "emergency_recall": 0.4155555555555555,
+          "missed": 87.66666666666667,
+          "false_alarm": 0.14912280701754385
+        },
+        "model (chars)": {
+          "situation_acc": 0.8038194444444443,
+          "emergency_recall": 0.9622222222222222,
+          "missed": 5.666666666666667,
+          "false_alarm": 0.5350877192982456
+        },
+        "model (words)": {
+          "situation_acc": 0.7708333333333334,
+          "emergency_recall": 0.96,
+          "missed": 6.0,
+          "false_alarm": 0.6578947368421053
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.6076388888888888,
+          "emergency_recall": 0.9755555555555556,
+          "missed": 3.6666666666666665,
+          "false_alarm": 0.6315789473684211
+        }
+      },
+      "0.3": {
+        "rules": {
+          "situation_acc": 0.501736111111111,
+          "emergency_recall": 0.23777777777777778,
+          "missed": 114.33333333333333,
+          "false_alarm": 0.13157894736842105
+        },
+        "model (chars)": {
+          "situation_acc": 0.7638888888888888,
+          "emergency_recall": 0.9577777777777778,
+          "missed": 6.333333333333333,
+          "false_alarm": 0.5614035087719298
+        },
+        "model (words)": {
+          "situation_acc": 0.6545138888888888,
+          "emergency_recall": 0.971111111111111,
+          "missed": 4.333333333333333,
+          "false_alarm": 0.7280701754385964
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.501736111111111,
+          "emergency_recall": 0.9666666666666667,
+          "missed": 5.0,
+          "false_alarm": 0.6228070175438597
+        }
+      },
+      "0.5": {
+        "rules": {
+          "situation_acc": 0.34548611111111116,
+          "emergency_recall": 0.09777777777777778,
+          "missed": 135.33333333333334,
+          "false_alarm": 0.10526315789473684
+        },
+        "model (chars)": {
+          "situation_acc": 0.65625,
+          "emergency_recall": 0.9888888888888888,
+          "missed": 1.6666666666666667,
+          "false_alarm": 0.6754385964912281
+        },
+        "model (words)": {
+          "situation_acc": 0.5156250000000001,
+          "emergency_recall": 0.9755555555555556,
+          "missed": 3.6666666666666665,
+          "false_alarm": 0.8771929824561404
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.34548611111111116,
+          "emergency_recall": 0.9933333333333333,
+          "missed": 1.0,
+          "false_alarm": 0.7280701754385964
+        }
+      }
+    }
+  },
+  "dev sample (template)": {
+    "vowel_drop": {
+      "0.0": {
+        "rules": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        }
+      },
+      "0.1": {
+        "rules": {
+          "situation_acc": 0.9375,
+          "emergency_recall": 0.8741258741258742,
+          "missed": 18.0,
+          "false_alarm": 0.05
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.05
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 0.986013986013986,
+          "missed": 2.0,
+          "false_alarm": 0.0
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.05
+        }
+      },
+      "0.2": {
+        "rules": {
+          "situation_acc": 0.8791666666666667,
+          "emergency_recall": 0.7482517482517482,
+          "missed": 36.0,
+          "false_alarm": 0.05
+        },
+        "model (chars)": {
+          "situation_acc": 0.9958333333333333,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.075
+        },
+        "model (words)": {
+          "situation_acc": 0.9916666666666667,
+          "emergency_recall": 0.986013986013986,
+          "missed": 2.0,
+          "false_alarm": 0.025
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.8791666666666667,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.075
+        }
+      },
+      "0.3": {
+        "rules": {
+          "situation_acc": 0.7916666666666666,
+          "emergency_recall": 0.6013986013986014,
+          "missed": 57.0,
+          "false_alarm": 0.1
+        },
+        "model (chars)": {
+          "situation_acc": 0.9916666666666667,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.075
+        },
+        "model (words)": {
+          "situation_acc": 0.9833333333333333,
+          "emergency_recall": 0.986013986013986,
+          "missed": 2.0,
+          "false_alarm": 0.05
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.7916666666666666,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.125
+        }
+      },
+      "0.5": {
+        "rules": {
+          "situation_acc": 0.6125,
+          "emergency_recall": 0.35664335664335667,
+          "missed": 92.0,
+          "false_alarm": 0.175
+        },
+        "model (chars)": {
+          "situation_acc": 0.9833333333333333,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.175
+        },
+        "model (words)": {
+          "situation_acc": 0.95,
+          "emergency_recall": 0.986013986013986,
+          "missed": 2.0,
+          "false_alarm": 0.2
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.6125,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.3
+        }
+      }
+    },
+    "typos": {
+      "0.0": {
+        "rules": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        }
+      },
+      "0.1": {
+        "rules": {
+          "situation_acc": 0.9625,
+          "emergency_recall": 0.916083916083916,
+          "missed": 12.0,
+          "false_alarm": 0.125
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.025
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9625,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.125
+        }
+      },
+      "0.2": {
+        "rules": {
+          "situation_acc": 0.8958333333333334,
+          "emergency_recall": 0.7972027972027972,
+          "missed": 29.0,
+          "false_alarm": 0.1
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 0.9916666666666667,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.15
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.8958333333333334,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.1
+        }
+      },
+      "0.3": {
+        "rules": {
+          "situation_acc": 0.875,
+          "emergency_recall": 0.7762237762237763,
+          "missed": 32.0,
+          "false_alarm": 0.025
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 0.9916666666666667,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.025
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.875,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.025
+        }
+      },
+      "0.5": {
+        "rules": {
+          "situation_acc": 0.7375,
+          "emergency_recall": 0.5174825174825175,
+          "missed": 69.0,
+          "false_alarm": 0.2
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.075
+        },
+        "model (words)": {
+          "situation_acc": 0.9708333333333333,
+          "emergency_recall": 0.993006993006993,
+          "missed": 1.0,
+          "false_alarm": 0.1
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.7375,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.25
+        }
+      }
+    },
+    "spelling": {
+      "0.0": {
+        "rules": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        }
+      },
+      "0.1": {
+        "rules": {
+          "situation_acc": 0.9791666666666666,
+          "emergency_recall": 0.965034965034965,
+          "missed": 5.0,
+          "false_alarm": 0.05
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9791666666666666,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.05
+        }
+      },
+      "0.2": {
+        "rules": {
+          "situation_acc": 0.975,
+          "emergency_recall": 0.951048951048951,
+          "missed": 7.0,
+          "false_alarm": 0.1
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.975,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.1
+        }
+      },
+      "0.3": {
+        "rules": {
+          "situation_acc": 0.95,
+          "emergency_recall": 0.8461538461538461,
+          "missed": 22.0,
+          "false_alarm": 0.15
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.95,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.15
+        }
+      },
+      "0.5": {
+        "rules": {
+          "situation_acc": 0.9,
+          "emergency_recall": 0.7972027972027972,
+          "missed": 29.0,
+          "false_alarm": 0.1
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.025
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.1
+        }
+      }
+    },
+    "code_switch": {
+      "0.0": {
+        "rules": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        }
+      },
+      "0.1": {
+        "rules": {
+          "situation_acc": 0.9458333333333333,
+          "emergency_recall": 0.9090909090909091,
+          "missed": 13.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.025
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9458333333333333,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        }
+      },
+      "0.2": {
+        "rules": {
+          "situation_acc": 0.8708333333333333,
+          "emergency_recall": 0.8461538461538461,
+          "missed": 22.0,
+          "false_alarm": 0.05
+        },
+        "model (chars)": {
+          "situation_acc": 0.9875,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.025
+        },
+        "model (words)": {
+          "situation_acc": 0.9958333333333333,
+          "emergency_recall": 0.993006993006993,
+          "missed": 1.0,
+          "false_alarm": 0.075
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.8708333333333333,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.05
+        }
+      },
+      "0.3": {
+        "rules": {
+          "situation_acc": 0.8,
+          "emergency_recall": 0.7622377622377622,
+          "missed": 34.0,
+          "false_alarm": 0.15
+        },
+        "model (chars)": {
+          "situation_acc": 0.9833333333333333,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.025
+        },
+        "model (words)": {
+          "situation_acc": 0.9958333333333333,
+          "emergency_recall": 0.993006993006993,
+          "missed": 1.0,
+          "false_alarm": 0.075
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.8,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.15
+        }
+      },
+      "0.5": {
+        "rules": {
+          "situation_acc": 0.7083333333333334,
+          "emergency_recall": 0.6363636363636364,
+          "missed": 52.0,
+          "false_alarm": 0.275
+        },
+        "model (chars)": {
+          "situation_acc": 0.9791666666666666,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.075
+        },
+        "model (words)": {
+          "situation_acc": 0.9958333333333333,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.175
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.7083333333333334,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.275
+        }
+      }
+    },
+    "fragment": {
+      "0.0": {
+        "rules": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        }
+      },
+      "0.1": {
+        "rules": {
+          "situation_acc": 0.9333333333333333,
+          "emergency_recall": 0.8671328671328671,
+          "missed": 19.0,
+          "false_alarm": 0.05
+        },
+        "model (chars)": {
+          "situation_acc": 0.9916666666666667,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.05
+        },
+        "model (words)": {
+          "situation_acc": 0.9958333333333333,
+          "emergency_recall": 0.986013986013986,
+          "missed": 2.0,
+          "false_alarm": 0.075
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.9333333333333333,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.05
+        }
+      },
+      "0.2": {
+        "rules": {
+          "situation_acc": 0.8458333333333333,
+          "emergency_recall": 0.7202797202797203,
+          "missed": 40.0,
+          "false_alarm": 0.025
+        },
+        "model (chars)": {
+          "situation_acc": 0.9875,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.075
+        },
+        "model (words)": {
+          "situation_acc": 0.9875,
+          "emergency_recall": 0.986013986013986,
+          "missed": 2.0,
+          "false_alarm": 0.125
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.8458333333333333,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.075
+        }
+      },
+      "0.3": {
+        "rules": {
+          "situation_acc": 0.7583333333333333,
+          "emergency_recall": 0.5734265734265734,
+          "missed": 61.0,
+          "false_alarm": 0.075
+        },
+        "model (chars)": {
+          "situation_acc": 0.9791666666666666,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.15
+        },
+        "model (words)": {
+          "situation_acc": 0.975,
+          "emergency_recall": 0.986013986013986,
+          "missed": 2.0,
+          "false_alarm": 0.25
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.7583333333333333,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.175
+        }
+      },
+      "0.5": {
+        "rules": {
+          "situation_acc": 0.575,
+          "emergency_recall": 0.3146853146853147,
+          "missed": 98.0,
+          "false_alarm": 0.15
+        },
+        "model (chars)": {
+          "situation_acc": 0.8916666666666667,
+          "emergency_recall": 0.993006993006993,
+          "missed": 1.0,
+          "false_alarm": 0.3
+        },
+        "model (words)": {
+          "situation_acc": 0.8875,
+          "emergency_recall": 0.9790209790209791,
+          "missed": 3.0,
+          "false_alarm": 0.4
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.575,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.4
+        }
+      }
+    },
+    "all combined": {
+      "0.0": {
+        "rules": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (chars)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "model (words)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 1.0,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.0
+        }
+      },
+      "0.1": {
+        "rules": {
+          "situation_acc": 0.7833333333333333,
+          "emergency_recall": 0.6293706293706294,
+          "missed": 53.0,
+          "false_alarm": 0.2
+        },
+        "model (chars)": {
+          "situation_acc": 0.9875,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.15
+        },
+        "model (words)": {
+          "situation_acc": 0.9916666666666667,
+          "emergency_recall": 0.993006993006993,
+          "missed": 1.0,
+          "false_alarm": 0.175
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.7833333333333333,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.275
+        }
+      },
+      "0.2": {
+        "rules": {
+          "situation_acc": 0.5916666666666667,
+          "emergency_recall": 0.35664335664335667,
+          "missed": 92.0,
+          "false_alarm": 0.125
+        },
+        "model (chars)": {
+          "situation_acc": 0.9791666666666666,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.075
+        },
+        "model (words)": {
+          "situation_acc": 0.9375,
+          "emergency_recall": 0.993006993006993,
+          "missed": 1.0,
+          "false_alarm": 0.275
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.5916666666666667,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.175
+        }
+      },
+      "0.3": {
+        "rules": {
+          "situation_acc": 0.3875,
+          "emergency_recall": 0.16783216783216784,
+          "missed": 119.0,
+          "false_alarm": 0.175
+        },
+        "model (chars)": {
+          "situation_acc": 0.9041666666666667,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.425
+        },
+        "model (words)": {
+          "situation_acc": 0.8166666666666667,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.525
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.3875,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.525
+        }
+      },
+      "0.5": {
+        "rules": {
+          "situation_acc": 0.2791666666666667,
+          "emergency_recall": 0.06993006993006994,
+          "missed": 133.0,
+          "false_alarm": 0.15
+        },
+        "model (chars)": {
+          "situation_acc": 0.7458333333333333,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.6
+        },
+        "model (words)": {
+          "situation_acc": 0.5958333333333333,
+          "emergency_recall": 0.993006993006993,
+          "missed": 1.0,
+          "false_alarm": 0.775
+        },
+        "hybrid (rules + chars model)": {
+          "situation_acc": 0.2791666666666667,
+          "emergency_recall": 1.0,
+          "missed": 0.0,
+          "false_alarm": 0.75
+        }
+      }
+    }
+  }
+}

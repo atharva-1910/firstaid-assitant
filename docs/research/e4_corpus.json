@@ -1,0 +1,202 @@
+{
+  "train (template)": {
+    "en": {
+      "vocab_per_24_messages": 86.68,
+      "messages": 720,
+      "distinct_messages": 720,
+      "mean_words": 10.959722222222222,
+      "vocabulary": 135,
+      "type_token_ratio": 0.017108097832974276,
+      "distinct_bigram_ratio": 0.0638683586668526,
+      "cmi_mean": 0.0,
+      "cmi_mixed_only": 0.0,
+      "share_code_mixed": 0.0
+    },
+    "hi": {
+      "vocab_per_24_messages": 79.84,
+      "messages": 720,
+      "distinct_messages": 720,
+      "mean_words": 9.92361111111111,
+      "vocabulary": 107,
+      "type_token_ratio": 0.014975507347795661,
+      "distinct_bigram_ratio": 0.04404669260700389,
+      "cmi_mean": 0.0,
+      "cmi_mixed_only": 0.0,
+      "share_code_mixed": 0.0
+    },
+    "hinglish": {
+      "vocab_per_24_messages": 81.68,
+      "messages": 720,
+      "distinct_messages": 720,
+      "mean_words": 9.708333333333334,
+      "vocabulary": 112,
+      "type_token_ratio": 0.01602288984263233,
+      "distinct_bigram_ratio": 0.04992025518341308,
+      "cmi_mean": 5.850906809240143,
+      "cmi_mixed_only": 13.458954960552406,
+      "share_code_mixed": 0.43472222222222223
+    },
+    "mr": {
+      "vocab_per_24_messages": 68.44,
+      "messages": 720,
+      "distinct_messages": 720,
+      "mean_words": 7.847222222222222,
+      "vocabulary": 90,
+      "type_token_ratio": 0.01592920353982301,
+      "distinct_bigram_ratio": 0.04685598377281947,
+      "cmi_mean": 0.0,
+      "cmi_mixed_only": 0.0,
+      "share_code_mixed": 0.0
+    }
+  },
+  "dev (template)": {
+    "en": {
+      "vocab_per_24_messages": 87.5,
+      "messages": 180,
+      "distinct_messages": 180,
+      "mean_words": 11.372222222222222,
+      "vocabulary": 135,
+      "type_token_ratio": 0.06595017098192477,
+      "distinct_bigram_ratio": 0.19550080342795928,
+      "cmi_mean": 0.0,
+      "cmi_mixed_only": 0.0,
+      "share_code_mixed": 0.0
+    },
+    "hi": {
+      "vocab_per_24_messages": 82.34,
+      "messages": 180,
+      "distinct_messages": 180,
+      "mean_words": 9.916666666666666,
+      "vocabulary": 106,
+      "type_token_ratio": 0.05938375350140056,
+      "distinct_bigram_ratio": 0.15514018691588785,
+      "cmi_mean": 0.0,
+      "cmi_mixed_only": 0.0,
+      "share_code_mixed": 0.0
+    },
+    "hinglish": {
+      "vocab_per_24_messages": 83.74,
+      "messages": 180,
+      "distinct_messages": 180,
+      "mean_words": 9.655555555555555,
+      "vocabulary": 112,
+      "type_token_ratio": 0.06444188722669736,
+      "distinct_bigram_ratio": 0.17201540436456997,
+      "cmi_mean": 6.039253955920623,
+      "cmi_mixed_only": 13.097177253803759,
+      "share_code_mixed": 0.46111111111111114
+    },
+    "mr": {
+      "vocab_per_24_messages": 69.88,
+      "messages": 180,
+      "distinct_messages": 180,
+      "mean_words": 7.8277777777777775,
+      "vocabulary": 90,
+      "type_token_ratio": 0.063875088715401,
+      "distinct_bigram_ratio": 0.16517493897477625,
+      "cmi_mean": 0.0,
+      "cmi_mixed_only": 0.0,
+      "share_code_mixed": 0.0
+    }
+  },
+  "safety suite": {
+    "en": {
+      "vocab_per_24_messages": 109.0,
+      "messages": 30,
+      "distinct_messages": 30,
+      "mean_words": 7.566666666666666,
+      "vocabulary": 129,
+      "type_token_ratio": 0.5682819383259912,
+      "distinct_bigram_ratio": 0.9035532994923858,
+      "cmi_mean": 0.0,
+      "cmi_mixed_only": 0.0,
+      "share_code_mixed": 0.0
+    },
+    "hi": {
+      "vocab_per_24_messages": 99.0,
+      "messages": 24,
+      "distinct_messages": 24,
+      "mean_words": 6.583333333333333,
+      "vocabulary": 99,
+      "type_token_ratio": 0.6265822784810127,
+      "distinct_bigram_ratio": 0.9029850746268657,
+      "cmi_mean": 0.0,
+      "cmi_mixed_only": 0.0,
+      "share_code_mixed": 0.0
+    },
+    "hinglish": {
+      "vocab_per_24_messages": 107.26,
+      "messages": 25,
+      "distinct_messages": 25,
+      "mean_words": 7.72,
+      "vocabulary": 110,
+      "type_token_ratio": 0.5699481865284974,
+      "distinct_bigram_ratio": 0.9285714285714286,
+      "cmi_mean": 5.093650793650794,
+      "cmi_mixed_only": 18.191609977324266,
+      "share_code_mixed": 0.28
+    },
+    "mr": {
+      "vocab_per_24_messages": 85.0,
+      "messages": 24,
+      "distinct_messages": 24,
+      "mean_words": 4.666666666666667,
+      "vocabulary": 85,
+      "type_token_ratio": 0.7589285714285714,
+      "distinct_bigram_ratio": 0.9431818181818182,
+      "cmi_mean": 0.0,
+      "cmi_mixed_only": 0.0,
+      "share_code_mixed": 0.0
+    }
+  },
+  "probe": {
+    "en": {
+      "vocab_per_24_messages": 90.06,
+      "messages": 25,
+      "distinct_messages": 25,
+      "mean_words": 5.24,
+      "vocabulary": 93,
+      "type_token_ratio": 0.7099236641221374,
+      "distinct_bigram_ratio": 0.9622641509433962,
+      "cmi_mean": 0.0,
+      "cmi_mixed_only": 0.0,
+      "share_code_mixed": 0.0
+    },
+    "hi": {
+      "vocab_per_24_messages": 84.56,
+      "messages": 25,
+      "distinct_messages": 25,
+      "mean_words": 5.4,
+      "vocabulary": 87,
+      "type_token_ratio": 0.6444444444444445,
+      "distinct_bigram_ratio": 0.9545454545454546,
+      "cmi_mean": 0.0,
+      "cmi_mixed_only": 0.0,
+      "share_code_mixed": 0.0
+    },
+    "hinglish": {
+      "vocab_per_24_messages": 85.54,
+      "messages": 25,
+      "distinct_messages": 25,
+      "mean_words": 5.52,
+      "vocabulary": 88,
+      "type_token_ratio": 0.6376811594202898,
+      "distinct_bigram_ratio": 0.9469026548672567,
+      "cmi_mean": 6.338095238095238,
+      "cmi_mixed_only": 22.63605442176871,
+      "share_code_mixed": 0.28
+    },
+    "mr": {
+      "vocab_per_24_messages": 75.38,
+      "messages": 25,
+      "distinct_messages": 25,
+      "mean_words": 3.56,
+      "vocabulary": 78,
+      "type_token_ratio": 0.8764044943820225,
+      "distinct_bigram_ratio": 0.984375,
+      "cmi_mean": 0.0,
+      "cmi_mixed_only": 0.0,
+      "share_code_mixed": 0.0
+    }
+  }
+}

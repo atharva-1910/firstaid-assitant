@@ -1,0 +1,70 @@
+{
+  "word": {
+    "messages": 139,
+    "top1": {
+      "comprehensiveness": 0.0865558455891862,
+      "flip_rate": 0.06474820143884892
+    },
+    "random1": {
+      "comprehensiveness": 0.030114520299199584,
+      "flip_rate": 0.050359712230215826
+    },
+    "top2": {
+      "comprehensiveness": 0.18037892035146944,
+      "flip_rate": 0.17985611510791366
+    },
+    "random2": {
+      "comprehensiveness": 0.024804837776707094,
+      "flip_rate": 0.04316546762589928
+    },
+    "top3": {
+      "comprehensiveness": 0.2587704324230257,
+      "flip_rate": 0.2589928057553957
+    },
+    "random3": {
+      "comprehensiveness": 0.030273795174920626,
+      "flip_rate": 0.03597122302158273
+    },
+    "rule_trigger_words": {
+      "messages_with_triggers": 139,
+      "model_comprehensiveness": 0.06466874339015466,
+      "model_flip_rate": 0.07194244604316546,
+      "rules_flip_rate": 0.841726618705036,
+      "model_top_word_is_trigger": 0.5107913669064749
+    }
+  },
+  "char": {
+    "messages": 139,
+    "top1": {
+      "comprehensiveness": 0.04633346282671356,
+      "flip_rate": 0.04316546762589928
+    },
+    "random1": {
+      "comprehensiveness": 0.008898316721880644,
+      "flip_rate": 0.007194244604316547
+    },
+    "top2": {
+      "comprehensiveness": 0.08369047168123205,
+      "flip_rate": 0.050359712230215826
+    },
+    "random2": {
+      "comprehensiveness": 0.024917798830154117,
+      "flip_rate": 0.02877697841726619
+    },
+    "top3": {
+      "comprehensiveness": 0.12643687959698083,
+      "flip_rate": 0.08633093525179857
+    },
+    "random3": {
+      "comprehensiveness": 0.02847612221610501,
+      "flip_rate": 0.03597122302158273
+    },
+    "rule_trigger_words": {
+      "messages_with_triggers": 139,
+      "model_comprehensiveness": 0.056677530190208714,
+      "model_flip_rate": 0.050359712230215826,
+      "rules_flip_rate": 0.841726618705036,
+      "model_top_word_is_trigger": 0.7841726618705036
+    }
+  }
+}

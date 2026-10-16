@@ -1,0 +1,285 @@
+{
+  "slot_f1": {
+    "dev (template)": {
+      "en": 0.9898403483309144,
+      "hi": 0.9662576687116564,
+      "hinglish": 0.9667673716012085,
+      "mr": 0.9437500000000001
+    }
+  },
+  "clarify": {
+    "resolution": {
+      "en": {
+        "ambiguous": 32,
+        "resolved": 32
+      },
+      "hinglish": {
+        "ambiguous": 33,
+        "resolved": 33
+      },
+      "hi": {
+        "ambiguous": 30,
+        "resolved": 30
+      },
+      "mr": {
+        "ambiguous": 22,
+        "resolved": 22
+      }
+    },
+    "hand_written_asked": {
+      "en": {
+        "no question": 40,
+        "question": 15
+      },
+      "hinglish": {
+        "no question": 37,
+        "question": 13
+      },
+      "hi": {
+        "no question": 34,
+        "question": 15
+      },
+      "mr": {
+        "no question": 34,
+        "question": 15
+      }
+    }
+  },
+  "langid": {
+    "accuracy": {
+      "dev (template)": {
+        "word-list rules": {
+          "en": 1.0,
+          "hi": 1.0,
+          "hinglish": 0.9888888888888889,
+          "mr": 1.0
+        },
+        "char n-gram model": {
+          "en": 1.0,
+          "hi": 1.0,
+          "hinglish": 1.0,
+          "mr": 1.0
+        }
+      },
+      "safety suite": {
+        "word-list rules": {
+          "en": 1.0,
+          "hi": 1.0,
+          "hinglish": 1.0,
+          "mr": 0.9583333333333334
+        },
+        "char n-gram model": {
+          "en": 1.0,
+          "hi": 1.0,
+          "hinglish": 1.0,
+          "mr": 1.0
+        }
+      },
+      "probe": {
+        "word-list rules": {
+          "en": 1.0,
+          "hi": 1.0,
+          "hinglish": 0.92,
+          "mr": 0.96
+        },
+        "char n-gram model": {
+          "en": 1.0,
+          "hi": 1.0,
+          "hinglish": 1.0,
+          "mr": 1.0
+        }
+      }
+    },
+    "probe_confusion": {
+      "word-list rules": [
+        [
+          25,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          25,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          23,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          24
+        ]
+      ],
+      "char n-gram model": [
+        [
+          25,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          25,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          25,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          25
+        ]
+      ]
+    }
+  },
+  "confusion": {
+    "labels": [
+      "unresponsive",
+      "heart_attack",
+      "choking",
+      "bites",
+      "burns",
+      "out_of_scope"
+    ],
+    "rules": [
+      [
+        39,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        24,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        18,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        51,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        45,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        12
+      ]
+    ],
+    "model": [
+      [
+        36,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        24,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        17,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        50,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        43,
+        0
+      ],
+      [
+        4,
+        1,
+        2,
+        1,
+        0,
+        4
+      ]
+    ],
+    "n": 192
+  },
+  "safety_net": {
+    "en": {
+      "n": 25,
+      "missed_plain": 0,
+      "missed_net": 0,
+      "forced_as": "hinglish"
+    },
+    "hinglish": {
+      "n": 20,
+      "missed_plain": 17,
+      "missed_net": 0,
+      "forced_as": "en"
+    },
+    "hi": {
+      "n": 20,
+      "missed_plain": 19,
+      "missed_net": 0,
+      "forced_as": "mr"
+    },
+    "mr": {
+      "n": 20,
+      "missed_plain": 19,
+      "missed_net": 0,
+      "forced_as": "hi"
+    }
+  }
+}

@@ -1,0 +1,585 @@
+{
+  "diagnostic (machine-drafted)": {
+    "current (3 tokens, language direction)": {
+      "by_lang": {
+        "en": {
+          "facts": 80,
+          "accuracy": 0.9,
+          "dangerous": 4
+        },
+        "all": {
+          "facts": 320,
+          "accuracy": 0.853125,
+          "dangerous": 9
+        },
+        "hi": {
+          "facts": 80,
+          "accuracy": 0.8125,
+          "dangerous": 5
+        },
+        "hinglish": {
+          "facts": 80,
+          "accuracy": 0.8125,
+          "dangerous": 0
+        },
+        "mr": {
+          "facts": 80,
+          "accuracy": 0.8875,
+          "dangerous": 0
+        }
+      },
+      "by_frame": {
+        "en:F01": 1.0,
+        "en:F02": 1.0,
+        "en:F03": 0.2,
+        "en:F04": 1.0,
+        "en:F05": 1.0,
+        "en:F06": 1.0,
+        "en:F07": 1.0,
+        "en:F08": 1.0,
+        "en:F09": 1.0,
+        "en:F10": 1.0,
+        "en:F11": 1.0,
+        "en:F12": 1.0,
+        "en:F13": 0.2,
+        "hi:F01": 1.0,
+        "hi:F02": 1.0,
+        "hi:F03": 0.0,
+        "hi:F04": 1.0,
+        "hi:F05": 1.0,
+        "hi:F06": 1.0,
+        "hi:F07": 1.0,
+        "hi:F08": 0.0,
+        "hi:F09": 1.0,
+        "hi:F10": 1.0,
+        "hi:F11": 1.0,
+        "hi:F12": 1.0,
+        "hi:F13": 0.0,
+        "hinglish:F01": 1.0,
+        "hinglish:F02": 1.0,
+        "hinglish:F03": 0.0,
+        "hinglish:F04": 1.0,
+        "hinglish:F05": 1.0,
+        "hinglish:F06": 1.0,
+        "hinglish:F07": 1.0,
+        "hinglish:F08": 0.0,
+        "hinglish:F09": 1.0,
+        "hinglish:F10": 1.0,
+        "hinglish:F11": 1.0,
+        "hinglish:F12": 1.0,
+        "hinglish:F13": 0.0,
+        "mr:F01": 1.0,
+        "mr:F02": 1.0,
+        "mr:F03": 0.2,
+        "mr:F04": 1.0,
+        "mr:F05": 1.0,
+        "mr:F06": 1.0,
+        "mr:F07": 1.0,
+        "mr:F08": 0.0,
+        "mr:F09": 1.0,
+        "mr:F10": 1.0,
+        "mr:F11": 1.0,
+        "mr:F12": 1.0,
+        "mr:F13": 1.0
+      }
+    },
+    "no direction preference": {
+      "by_lang": {
+        "en": {
+          "facts": 80,
+          "accuracy": 0.9,
+          "dangerous": 4
+        },
+        "all": {
+          "facts": 320,
+          "accuracy": 0.853125,
+          "dangerous": 9
+        },
+        "hi": {
+          "facts": 80,
+          "accuracy": 0.8125,
+          "dangerous": 5
+        },
+        "hinglish": {
+          "facts": 80,
+          "accuracy": 0.8125,
+          "dangerous": 0
+        },
+        "mr": {
+          "facts": 80,
+          "accuracy": 0.8875,
+          "dangerous": 0
+        }
+      },
+      "by_frame": {
+        "en:F01": 1.0,
+        "en:F02": 1.0,
+        "en:F03": 0.2,
+        "en:F04": 1.0,
+        "en:F05": 1.0,
+        "en:F06": 1.0,
+        "en:F07": 1.0,
+        "en:F08": 1.0,
+        "en:F09": 1.0,
+        "en:F10": 1.0,
+        "en:F11": 1.0,
+        "en:F12": 1.0,
+        "en:F13": 0.2,
+        "hi:F01": 1.0,
+        "hi:F02": 1.0,
+        "hi:F03": 0.0,
+        "hi:F04": 1.0,
+        "hi:F05": 1.0,
+        "hi:F06": 1.0,
+        "hi:F07": 1.0,
+        "hi:F08": 0.0,
+        "hi:F09": 1.0,
+        "hi:F10": 1.0,
+        "hi:F11": 1.0,
+        "hi:F12": 1.0,
+        "hi:F13": 0.0,
+        "hinglish:F01": 1.0,
+        "hinglish:F02": 1.0,
+        "hinglish:F03": 0.0,
+        "hinglish:F04": 1.0,
+        "hinglish:F05": 1.0,
+        "hinglish:F06": 1.0,
+        "hinglish:F07": 1.0,
+        "hinglish:F08": 0.0,
+        "hinglish:F09": 1.0,
+        "hinglish:F10": 1.0,
+        "hinglish:F11": 1.0,
+        "hinglish:F12": 1.0,
+        "hinglish:F13": 0.0,
+        "mr:F01": 1.0,
+        "mr:F02": 1.0,
+        "mr:F03": 0.2,
+        "mr:F04": 1.0,
+        "mr:F05": 1.0,
+        "mr:F06": 1.0,
+        "mr:F07": 1.0,
+        "mr:F08": 0.0,
+        "mr:F09": 1.0,
+        "mr:F10": 1.0,
+        "mr:F11": 1.0,
+        "mr:F12": 1.0,
+        "mr:F13": 1.0
+      }
+    },
+    "English rule (cue before word only)": {
+      "by_lang": {
+        "en": {
+          "facts": 80,
+          "accuracy": 0.9,
+          "dangerous": 4
+        },
+        "all": {
+          "facts": 320,
+          "accuracy": 0.696875,
+          "dangerous": 78
+        },
+        "hi": {
+          "facts": 80,
+          "accuracy": 0.625,
+          "dangerous": 25
+        },
+        "hinglish": {
+          "facts": 80,
+          "accuracy": 0.625,
+          "dangerous": 25
+        },
+        "mr": {
+          "facts": 80,
+          "accuracy": 0.6375,
+          "dangerous": 24
+        }
+      },
+      "by_frame": {
+        "en:F01": 1.0,
+        "en:F02": 1.0,
+        "en:F03": 0.2,
+        "en:F04": 1.0,
+        "en:F05": 1.0,
+        "en:F06": 1.0,
+        "en:F07": 1.0,
+        "en:F08": 1.0,
+        "en:F09": 1.0,
+        "en:F10": 1.0,
+        "en:F11": 1.0,
+        "en:F12": 1.0,
+        "en:F13": 0.2,
+        "hi:F01": 1.0,
+        "hi:F02": 0.0,
+        "hi:F03": 0.0,
+        "hi:F04": 1.0,
+        "hi:F05": 1.0,
+        "hi:F06": 1.0,
+        "hi:F07": 0.0,
+        "hi:F08": 0.0,
+        "hi:F09": 1.0,
+        "hi:F10": 1.0,
+        "hi:F11": 1.0,
+        "hi:F12": 0.0,
+        "hi:F13": 0.0,
+        "hinglish:F01": 1.0,
+        "hinglish:F02": 0.0,
+        "hinglish:F03": 0.0,
+        "hinglish:F04": 1.0,
+        "hinglish:F05": 1.0,
+        "hinglish:F06": 1.0,
+        "hinglish:F07": 0.0,
+        "hinglish:F08": 0.0,
+        "hinglish:F09": 1.0,
+        "hinglish:F10": 1.0,
+        "hinglish:F11": 1.0,
+        "hinglish:F12": 0.0,
+        "hinglish:F13": 0.0,
+        "mr:F01": 1.0,
+        "mr:F02": 0.0,
+        "mr:F03": 0.2,
+        "mr:F04": 1.0,
+        "mr:F05": 1.0,
+        "mr:F06": 1.0,
+        "mr:F07": 0.0,
+        "mr:F08": 0.0,
+        "mr:F09": 1.0,
+        "mr:F10": 1.0,
+        "mr:F11": 1.0,
+        "mr:F12": 0.0,
+        "mr:F13": 0.0
+      }
+    },
+    "window 1": {
+      "by_lang": {
+        "en": {
+          "facts": 80,
+          "accuracy": 0.775,
+          "dangerous": 14
+        },
+        "all": {
+          "facts": 320,
+          "accuracy": 0.790625,
+          "dangerous": 34
+        },
+        "hi": {
+          "facts": 80,
+          "accuracy": 0.75,
+          "dangerous": 10
+        },
+        "hinglish": {
+          "facts": 80,
+          "accuracy": 0.8125,
+          "dangerous": 5
+        },
+        "mr": {
+          "facts": 80,
+          "accuracy": 0.825,
+          "dangerous": 5
+        }
+      },
+      "by_frame": {
+        "en:F01": 1.0,
+        "en:F02": 1.0,
+        "en:F03": 0.2,
+        "en:F04": 1.0,
+        "en:F05": 1.0,
+        "en:F06": 1.0,
+        "en:F07": 1.0,
+        "en:F08": 0.0,
+        "en:F09": 1.0,
+        "en:F10": 1.0,
+        "en:F11": 1.0,
+        "en:F12": 0.0,
+        "en:F13": 0.2,
+        "hi:F01": 1.0,
+        "hi:F02": 1.0,
+        "hi:F03": 0.0,
+        "hi:F04": 1.0,
+        "hi:F05": 1.0,
+        "hi:F06": 1.0,
+        "hi:F07": 1.0,
+        "hi:F08": 0.0,
+        "hi:F09": 1.0,
+        "hi:F10": 1.0,
+        "hi:F11": 1.0,
+        "hi:F12": 0.0,
+        "hi:F13": 0.0,
+        "hinglish:F01": 1.0,
+        "hinglish:F02": 1.0,
+        "hinglish:F03": 0.0,
+        "hinglish:F04": 1.0,
+        "hinglish:F05": 1.0,
+        "hinglish:F06": 1.0,
+        "hinglish:F07": 1.0,
+        "hinglish:F08": 0.0,
+        "hinglish:F09": 1.0,
+        "hinglish:F10": 1.0,
+        "hinglish:F11": 1.0,
+        "hinglish:F12": 1.0,
+        "hinglish:F13": 0.0,
+        "mr:F01": 1.0,
+        "mr:F02": 1.0,
+        "mr:F03": 0.2,
+        "mr:F04": 1.0,
+        "mr:F05": 1.0,
+        "mr:F06": 1.0,
+        "mr:F07": 1.0,
+        "mr:F08": 0.0,
+        "mr:F09": 1.0,
+        "mr:F10": 1.0,
+        "mr:F11": 1.0,
+        "mr:F12": 0.0,
+        "mr:F13": 1.0
+      }
+    },
+    "window 6": {
+      "by_lang": {
+        "en": {
+          "facts": 80,
+          "accuracy": 0.9,
+          "dangerous": 4
+        },
+        "all": {
+          "facts": 320,
+          "accuracy": 0.853125,
+          "dangerous": 4
+        },
+        "hi": {
+          "facts": 80,
+          "accuracy": 0.8125,
+          "dangerous": 0
+        },
+        "hinglish": {
+          "facts": 80,
+          "accuracy": 0.8125,
+          "dangerous": 0
+        },
+        "mr": {
+          "facts": 80,
+          "accuracy": 0.8875,
+          "dangerous": 0
+        }
+      },
+      "by_frame": {
+        "en:F01": 1.0,
+        "en:F02": 1.0,
+        "en:F03": 0.2,
+        "en:F04": 1.0,
+        "en:F05": 1.0,
+        "en:F06": 1.0,
+        "en:F07": 1.0,
+        "en:F08": 1.0,
+        "en:F09": 1.0,
+        "en:F10": 1.0,
+        "en:F11": 1.0,
+        "en:F12": 1.0,
+        "en:F13": 0.2,
+        "hi:F01": 1.0,
+        "hi:F02": 1.0,
+        "hi:F03": 0.0,
+        "hi:F04": 1.0,
+        "hi:F05": 1.0,
+        "hi:F06": 1.0,
+        "hi:F07": 1.0,
+        "hi:F08": 0.0,
+        "hi:F09": 1.0,
+        "hi:F10": 1.0,
+        "hi:F11": 1.0,
+        "hi:F12": 1.0,
+        "hi:F13": 0.0,
+        "hinglish:F01": 1.0,
+        "hinglish:F02": 1.0,
+        "hinglish:F03": 0.0,
+        "hinglish:F04": 1.0,
+        "hinglish:F05": 1.0,
+        "hinglish:F06": 1.0,
+        "hinglish:F07": 1.0,
+        "hinglish:F08": 0.0,
+        "hinglish:F09": 1.0,
+        "hinglish:F10": 1.0,
+        "hinglish:F11": 1.0,
+        "hinglish:F12": 1.0,
+        "hinglish:F13": 0.0,
+        "mr:F01": 1.0,
+        "mr:F02": 1.0,
+        "mr:F03": 0.2,
+        "mr:F04": 1.0,
+        "mr:F05": 1.0,
+        "mr:F06": 1.0,
+        "mr:F07": 1.0,
+        "mr:F08": 0.0,
+        "mr:F09": 1.0,
+        "mr:F10": 1.0,
+        "mr:F11": 1.0,
+        "mr:F12": 1.0,
+        "mr:F13": 1.0
+      }
+    },
+    "ConText-style (whole clause)": {
+      "by_lang": {
+        "en": {
+          "facts": 80,
+          "accuracy": 0.9375,
+          "dangerous": 0
+        },
+        "all": {
+          "facts": 320,
+          "accuracy": 0.859375,
+          "dangerous": 0
+        },
+        "hi": {
+          "facts": 80,
+          "accuracy": 0.8125,
+          "dangerous": 0
+        },
+        "hinglish": {
+          "facts": 80,
+          "accuracy": 0.8125,
+          "dangerous": 0
+        },
+        "mr": {
+          "facts": 80,
+          "accuracy": 0.875,
+          "dangerous": 0
+        }
+      },
+      "by_frame": {
+        "en:F01": 1.0,
+        "en:F02": 1.0,
+        "en:F03": 1.0,
+        "en:F04": 1.0,
+        "en:F05": 1.0,
+        "en:F06": 1.0,
+        "en:F07": 1.0,
+        "en:F08": 1.0,
+        "en:F09": 1.0,
+        "en:F10": 0.5,
+        "en:F11": 1.0,
+        "en:F12": 1.0,
+        "en:F13": 1.0,
+        "hi:F01": 1.0,
+        "hi:F02": 1.0,
+        "hi:F03": 0.0,
+        "hi:F04": 1.0,
+        "hi:F05": 1.0,
+        "hi:F06": 1.0,
+        "hi:F07": 1.0,
+        "hi:F08": 0.0,
+        "hi:F09": 1.0,
+        "hi:F10": 1.0,
+        "hi:F11": 1.0,
+        "hi:F12": 1.0,
+        "hi:F13": 0.0,
+        "hinglish:F01": 1.0,
+        "hinglish:F02": 1.0,
+        "hinglish:F03": 0.0,
+        "hinglish:F04": 1.0,
+        "hinglish:F05": 1.0,
+        "hinglish:F06": 1.0,
+        "hinglish:F07": 1.0,
+        "hinglish:F08": 0.0,
+        "hinglish:F09": 1.0,
+        "hinglish:F10": 1.0,
+        "hinglish:F11": 1.0,
+        "hinglish:F12": 1.0,
+        "hinglish:F13": 0.0,
+        "mr:F01": 1.0,
+        "mr:F02": 1.0,
+        "mr:F03": 0.0,
+        "mr:F04": 1.0,
+        "mr:F05": 1.0,
+        "mr:F06": 1.0,
+        "mr:F07": 1.0,
+        "mr:F08": 0.0,
+        "mr:F09": 1.0,
+        "mr:F10": 1.0,
+        "mr:F11": 1.0,
+        "mr:F12": 1.0,
+        "mr:F13": 1.0
+      }
+    },
+    "proposed: current + clause-wide uncertainty": {
+      "by_lang": {
+        "en": {
+          "facts": 80,
+          "accuracy": 1.0,
+          "dangerous": 0
+        },
+        "all": {
+          "facts": 320,
+          "accuracy": 0.953125,
+          "dangerous": 0
+        },
+        "hi": {
+          "facts": 80,
+          "accuracy": 0.9375,
+          "dangerous": 0
+        },
+        "hinglish": {
+          "facts": 80,
+          "accuracy": 0.9375,
+          "dangerous": 0
+        },
+        "mr": {
+          "facts": 80,
+          "accuracy": 0.9375,
+          "dangerous": 0
+        }
+      },
+      "by_frame": {
+        "en:F01": 1.0,
+        "en:F02": 1.0,
+        "en:F03": 1.0,
+        "en:F04": 1.0,
+        "en:F05": 1.0,
+        "en:F06": 1.0,
+        "en:F07": 1.0,
+        "en:F08": 1.0,
+        "en:F09": 1.0,
+        "en:F10": 1.0,
+        "en:F11": 1.0,
+        "en:F12": 1.0,
+        "en:F13": 1.0,
+        "hi:F01": 1.0,
+        "hi:F02": 1.0,
+        "hi:F03": 1.0,
+        "hi:F04": 1.0,
+        "hi:F05": 1.0,
+        "hi:F06": 1.0,
+        "hi:F07": 1.0,
+        "hi:F08": 0.0,
+        "hi:F09": 1.0,
+        "hi:F10": 1.0,
+        "hi:F11": 1.0,
+        "hi:F12": 1.0,
+        "hi:F13": 1.0,
+        "hinglish:F01": 1.0,
+        "hinglish:F02": 1.0,
+        "hinglish:F03": 1.0,
+        "hinglish:F04": 1.0,
+        "hinglish:F05": 1.0,
+        "hinglish:F06": 1.0,
+        "hinglish:F07": 1.0,
+        "hinglish:F08": 0.0,
+        "hinglish:F09": 1.0,
+        "hinglish:F10": 1.0,
+        "hinglish:F11": 1.0,
+        "hinglish:F12": 1.0,
+        "hinglish:F13": 1.0,
+        "mr:F01": 1.0,
+        "mr:F02": 1.0,
+        "mr:F03": 1.0,
+        "mr:F04": 1.0,
+        "mr:F05": 1.0,
+        "mr:F06": 1.0,
+        "mr:F07": 1.0,
+        "mr:F08": 0.0,
+        "mr:F09": 1.0,
+        "mr:F10": 1.0,
+        "mr:F11": 1.0,
+        "mr:F12": 1.0,
+        "mr:F13": 1.0
+      }
+    }
+  }
+}

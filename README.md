@@ -12,7 +12,7 @@ It covers five situations: unresponsive or unconscious, heart attack, choking, b
 
 > **Research demo, not medical advice.** Every first aid step comes from `backend/content/` and carries its source. All records are still `draft`. Each situation owner must check every item in [`docs/VERIFY.md`](docs/VERIFY.md) against the source PDF before any demo.
 
-CCNLP Mini Project, MIT World Peace University, Pune. The full specification is in [`docs/specification.md`](docs/specification.md).
+CCNLP Mini Project, MIT World Peace University, Pune. The full specification is in [`docs/specification.md`](docs/specification.md). For a guided tour of every folder, file and model, see [`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md).
 
 ---
 

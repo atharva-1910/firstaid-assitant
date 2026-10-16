@@ -18,7 +18,7 @@ G1 page numbers currently in the records are section start pages from its table 
 | `unr_a4` (default) | Push hard and fast: at least 5 cm deep but not more than 6 cm, 100 to 120 times a minute. Let the chest rise fully each time. | G3 | page number; agreement; evidence; verified flag; picture matches step (unr_a4.webp); movement matches guideline (anim/unr_a4.svg) |
 | `unr_a5` (default) | If you are trained and willing, give 2 breaths after every 30 pushes. If not, keep pushing without stopping. | G3 | VERIFY 30:2 ratio (compression-only for untrained rescuers is checked); page number; agreement; evidence; verified flag |
 | `unr_a6` (default) | When the AED arrives, switch it on and follow its voice instructions. | G1 p. 196 | agreement; evidence; verified flag |
-| `unr_a7` (default) | Keep going until help takes over, they start breathing normally, or you cannot continue. | G1 p. 158 | VERIFY; agreement; evidence; verified flag |
+| `unr_a7` (default) | Keep going until help takes over, they start breathing normally, or you cannot continue. | G1 p. 158 | VERIFY; Yes/No check: Yes leads to Path B from the recovery position (unr_b2); check against G1 and G3.; agreement; evidence; verified flag |
 | `unr_b1` (default) | Call 112. | G1 p. 152 | VERIFY; agreement; evidence; verified flag |
 | `unr_b2` (default) | Roll them onto their side (recovery position) so their airway stays open, unless you think they have a neck or back injury. | G1 p. 152 | VERIFY injury exception; agreement; evidence; verified flag; picture matches step (unr_b2.webp) |
 | `unr_b3` (default) | Keep checking their breathing. If it stops or becomes gasping, go to Path A. | G1 p. 152 | VERIFY; agreement; evidence; verified flag |

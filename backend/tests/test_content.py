@@ -173,3 +173,54 @@ def test_step_animations_exist_and_respect_reduced_motion():
 def test_cpr_animation_runs_at_the_pacer_rate():
     svg = (config.REPO_DIR / "frontend" / "public" / "steps" / "anim" / "unr_a4.svg").read_text(encoding="utf-8")
     assert "0.5455s" in svg  # 60 / 110 per minute, the same rate as the CPR rhythm circle
+
+
+def _all_step_ids() -> dict[str, set[str]]:
+    return {sid: {s["id"] for b in rec["branches"].values() for s in b["steps"]} for sid, rec in content.situations().items()}
+
+
+def test_step_checks_only_lead_to_existing_verified_steps():
+    """A yes/no check may change which verified step comes next, but never invents one."""
+    ids = _all_step_ids()
+    n = 0
+    for sid, rec in content.situations().items():
+        for b in rec["branches"].values():
+            for s in b["steps"]:
+                check = s.get("check")
+                if not check:
+                    continue
+                n += 1
+                assert all(check["question"].get(l) for l in LANGS), s["id"]
+                for o in check["options"]:
+                    assert all(o["label"].get(l) for l in LANGS), (s["id"], o["id"])
+                    go = o["go"]
+                    if go in ("next", "stay"):
+                        continue
+                    target_sit = go.get("situation", sid)
+                    assert target_sit in ids
+                    if "branch" in go:
+                        rec2 = content.situations()[target_sit]
+                        assert go["branch"] in (list(rec2["branches"]) + list(rec2.get("paths", {}))), go
+                    if "step" in go:
+                        assert go["step"] in ids[target_sit], go
+    assert n >= 7
+
+
+@pytest.mark.parametrize("sid,branch,step_id,answers", [
+    ("unresponsive", "path_a", "unr_s3", {"yes", "no"}),
+    ("choking", None, "ch_s6", {"yes", "not_yet", "unresponsive"}),
+    ("heart_attack", None, "ha_s7", {"yes", "no"}),
+])
+def test_api_returns_step_checks(sid, branch, step_id, answers):
+    view = pipeline.situation_view(sid, "hi", branch)
+    step = next(s for s in view["steps"] if s["id"] == step_id)
+    assert step["check"] and {o["id"] for o in step["check"]["options"]} == answers
+    assert step["check"]["question"] and not step["check"]["translation_pending"]
+
+
+def test_breathing_check_routes_to_the_right_path():
+    view = pipeline.situation_view("unresponsive", "en", "path_a")
+    check = next(s for s in view["steps"] if s["id"] == "unr_s3")["check"]
+    go = {o["id"]: o["go"] for o in check["options"]}
+    assert go["yes"] == {"situation": "unresponsive", "branch": "path_b", "step": "unr_b1"}
+    assert go["no"]["branch"] == "path_a"

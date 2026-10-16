@@ -40,6 +40,8 @@ def main() -> None:
                 todo = []
                 if s.get("verify_note"):
                     todo.append(s["verify_note"])
+                if (s.get("check") or {}).get("verify_note"):
+                    todo.append("Yes/No check: " + s["check"]["verify_note"])
                 if s["source"]["doc"] == "UNSOURCED":
                     todo.append("**source needed**")
                 elif s["source"].get("page") is None:

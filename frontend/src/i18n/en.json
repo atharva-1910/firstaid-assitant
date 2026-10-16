@@ -121,5 +121,6 @@
   "tts_off": "Stop reading aloud",
   "tts_again": "Read again",
   "tts_auto_note": "Steps are read one after another. On steps that take time, it waits for you to tap Done, next.",
-  "tts_tap_next": "When you have done this, tap Done, next."
+  "tts_tap_next": "When you have done this, tap Done, next.",
+  "check_stay": "Keep doing this step. If anything changes, answer again."
 }

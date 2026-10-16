@@ -97,6 +97,7 @@ def render_steps(record: dict, branch: dict, slots: dict, lang: str) -> list[dic
             "image": render_image(s.get("image"), lang),
             "animation": render_animation(s.get("animation"), lang),
             "aid": render_aid(s.get("aid")),
+            "check": render_check(s.get("check"), lang),
             "do_not": step_dn,
         })
     return out
@@ -131,6 +132,23 @@ def render_aid(aid: dict | None) -> dict | None:
     if "phases" in out:
         out["phases"] = [{**p, "image": f"/steps/{p['image']}" if p.get("image") else None} for p in out["phases"]]
     return out
+
+
+def render_check(check: dict | None, lang: str) -> dict | None:
+    """A yes/no check the step itself asks ("Are they breathing normally?").
+
+    Every answer points at a step that already exists in the verified records (or "next" / "stay"),
+    so a check changes which verified step comes next and never adds an instruction of its own.
+    """
+    if not check:
+        return None
+    q, pending = content.localized(check["question"], lang)
+    options = []
+    for o in check["options"]:
+        label, p = content.localized(o["label"], lang)
+        pending = pending or p
+        options.append({"id": o["id"], "label": label, "go": o["go"], "set": o.get("set", {}), "emergency": bool(o.get("emergency"))})
+    return {"question": q, "options": options, "translation_pending": pending}
 
 
 def render_do_not(branch: dict, lang: str) -> list[dict]:

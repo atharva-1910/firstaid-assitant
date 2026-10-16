@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { api, type AnalyzeResponse, type Lang, type Step as StepT, type Urgency } from "./api/client";
+import { api, type AnalyzeResponse, type CheckOption, type Lang, type Step as StepT, type Urgency } from "./api/client";
 import { PrimaryButton } from "./components/Buttons";
 import { clearAids } from "./components/aids/store";
 import { Call112Button } from "./components/Call112Button";
@@ -30,6 +30,8 @@ export default function App() {
   const [steps, setSteps] = useState<StepT[]>([]);
   const [stepView, setStepView] = useState<{ situation: string; branch: string | null } | null>(null);
   const [stepIndex, setStepIndex] = useState(0);
+  // Steps visited before this one, so Back returns along the path a check answer took.
+  const [trail, setTrail] = useState<number[]>([]);
   const [urgency, setUrgency] = useState<Urgency>("home");
   const [completed, setCompleted] = useState(0);
   const [summary, setSummary] = useState<{ lines: string[]; pending: boolean }>({ lines: [], pending: false });
@@ -82,7 +84,10 @@ export default function App() {
       const sameSteps = steps.length > 0 && r.steps.length > 0 && steps.map((s) => s.id).join() === r.steps.map((s) => s.id).join();
       setSteps(r.steps);
       setStepView(r.situation.branch ? { situation: r.situation.id, branch: r.situation.branch } : null);
-      if (!sameSteps) setStepIndex(0);
+      if (!sameSteps) {
+        setStepIndex(0);
+        setTrail([]);
+      }
       setBanner(r.situation_changed ? t("situation_changed", { name: r.situation.name }) : null);
       const q = buildQueue(r);
       setQueue(q.slice(1));
@@ -128,11 +133,18 @@ export default function App() {
 
   const nextStep = () => {
     setCompleted((c) => Math.max(c, stepIndex + 1));
-    if (stepIndex < steps.length - 1) setStepIndex((i) => i + 1);
-    else showSummary();
+    if (stepIndex < steps.length - 1) {
+      setTrail((t) => [...t, stepIndex]);
+      setStepIndex((i) => i + 1);
+    } else showSummary();
   };
 
   const backStep = () => {
+    if (trail.length) {
+      setStepIndex(trail[trail.length - 1]);
+      setTrail((t) => t.slice(0, -1));
+      return;
+    }
     if (stepIndex > 0) {
       setStepIndex((i) => i - 1);
       return;
@@ -141,16 +153,37 @@ export default function App() {
     setScreen(prev ?? "home");
   };
 
-  const openLink = (situation: string, branch?: string) =>
+  const openLink = (situation: string, branch?: string, stepId?: string) =>
     run(async () => {
       const view = await api.situation(situation, lang, branch);
+      const sameSituation = stepView?.situation === situation;
       setSteps(view.steps);
       setStepView({ situation, branch: branch ?? null });
       setUrgency("emergency");
-      const start = branch === "path_a" ? Math.max(0, view.steps.findIndex((s) => s.id.startsWith("unr_a"))) : 0;
+      const target = stepId ? view.steps.findIndex((s) => s.id === stepId) : -1;
+      const start = target >= 0 ? target : branch === "path_a" ? Math.max(0, view.steps.findIndex((s) => s.id.startsWith("unr_a"))) : 0;
       setStepIndex(start);
-      setBanner(t("situation_changed", { name: view.name }));
-    }, () => openLink(situation, branch));
+      setTrail([]);
+      setBanner(sameSituation ? null : t("situation_changed", { name: view.name }));
+    }, () => openLink(situation, branch, stepId));
+
+  // The person answered a step's own check ("Are they breathing normally?"): go to the verified step it points at.
+  const answerCheck = (option: CheckOption) => {
+    if (option.emergency) {
+      setUrgency("emergency");
+      setBanner(t("call_112_now"));
+    }
+    const go = option.go;
+    if (go === "stay") return;
+    if (go === "next") return nextStep();
+    setCompleted((c) => Math.max(c, stepIndex + 1));
+    if ("situation" in go) return openLink(go.situation, go.branch, go.step);
+    const i = steps.findIndex((s) => s.id === go.step);
+    if (i >= 0) {
+      setTrail((tr) => [...tr, stepIndex]);
+      setStepIndex(i);
+    }
+  };
 
   const changeLang = (l: Lang) => {
     setLang(l);
@@ -176,6 +209,7 @@ export default function App() {
     setSteps([]);
     setStepView(null);
     setStepIndex(0);
+    setTrail([]);
     setQueue([]);
     setHistory([]);
     setCompleted(0);
@@ -219,6 +253,7 @@ export default function App() {
         onNext={nextStep}
         onBack={backStep}
         onLink={openLink}
+        onCheck={answerCheck}
         onMoreInfo={submit}
         busy={busy}
         banner={banner}

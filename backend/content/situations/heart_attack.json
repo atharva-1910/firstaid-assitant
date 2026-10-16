@@ -199,6 +199,44 @@
           "link": {
             "situation": "unresponsive",
             "branch": "path_a"
+          },
+          "check": {
+            "question": {
+              "en": "Are they unresponsive and not breathing normally?",
+              "hi": "क्या वे जवाब नहीं दे रहे और सामान्य रूप से साँस नहीं ले रहे?",
+              "hinglish": "Kya woh jawab nahi de rahe aur normal saans nahi le rahe?",
+              "mr": "ते प्रतिसाद देत नाहीत आणि नेहमीसारखा श्वास घेत नाहीत का?"
+            },
+            "options": [
+              {
+                "id": "yes",
+                "label": {
+                  "en": "Yes, start CPR",
+                  "hi": "हाँ, CPR शुरू करें",
+                  "hinglish": "Haan, CPR shuru karein",
+                  "mr": "हो, CPR सुरू करा"
+                },
+                "go": {
+                  "situation": "unresponsive",
+                  "branch": "path_a",
+                  "step": "unr_a1"
+                },
+                "set": {
+                  "responsive": "no",
+                  "breathing": "absent"
+                }
+              },
+              {
+                "id": "no",
+                "label": {
+                  "en": "No",
+                  "hi": "नहीं",
+                  "hinglish": "Nahi",
+                  "mr": "नाही"
+                },
+                "go": "next"
+              }
+            ]
           }
         }
       ],

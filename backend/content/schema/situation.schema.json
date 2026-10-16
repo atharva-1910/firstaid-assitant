@@ -136,7 +136,41 @@
         "verify_note": {"type": "string"},
         "link": {"type": "object", "required": ["situation"]},
         "cpr_rhythm": {"type": "boolean"},
-        "aid": {"$ref": "#/$defs/aid"}
+        "aid": {"$ref": "#/$defs/aid"},
+        "check": {"$ref": "#/$defs/check"}
+      }
+    },
+    "check": {
+      "description": "A check the step itself asks the bystander (for example 'Are they breathing normally?'). Each answer leads to a step that already exists in the verified records, so a check adds no new instructions.",
+      "type": "object",
+      "required": ["question", "options"],
+      "additionalProperties": false,
+      "properties": {
+        "question": {"$ref": "#/$defs/localized"},
+        "verify_note": {"type": "string"},
+        "options": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["id", "label", "go"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z_]+$"},
+              "label": {"$ref": "#/$defs/localized"},
+              "go": {
+                "oneOf": [
+                  {"enum": ["next", "stay"]},
+                  {"type": "object", "required": ["step"], "additionalProperties": false, "properties": {"step": {"type": "string"}}},
+                  {"type": "object", "required": ["situation", "branch"], "additionalProperties": false,
+                   "properties": {"situation": {"type": "string"}, "branch": {"type": "string"}, "step": {"type": "string"}}}
+                ]
+              },
+              "set": {"type": "object", "additionalProperties": {"type": "string"}},
+              "emergency": {"type": "boolean"}
+            }
+          }
+        }
       }
     },
     "branch": {

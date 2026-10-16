@@ -41,6 +41,24 @@ export type StepAid =
   | { kind: "cycle"; phases: AidPhase[] }
   | { kind: "note_time"; key: string };
 
+// A check the step itself asks ("Are they breathing normally?"). Every answer leads to a step that
+// already exists in the verified records, so answering changes which step comes next, never what it says.
+export type CheckGo = "next" | "stay" | { step: string } | { situation: string; branch: string; step?: string };
+
+export interface CheckOption {
+  id: string;
+  label: string;
+  go: CheckGo;
+  set: Record<string, string>;
+  emergency: boolean;
+}
+
+export interface StepCheck {
+  question: string;
+  options: CheckOption[];
+  translation_pending: boolean;
+}
+
 export interface Step {
   id: string;
   order: number;
@@ -58,6 +76,7 @@ export interface Step {
   image?: StepImage | null;
   animation?: StepImage | null;
   aid?: StepAid | null;
+  check?: StepCheck | null;
   do_not: DoNot[];
 }
 

@@ -290,7 +290,41 @@
           "agreement": "unchecked",
           "evidence": "unchecked",
           "next": "bite_insect_s2",
-          "verified": false
+          "verified": false,
+          "check": {
+            "question": {
+              "en": "Do you see any of these signs?",
+              "hi": "क्या इनमें से कोई लक्षण दिख रहा है?",
+              "hinglish": "Kya inmein se koi lakshan dikh raha hai?",
+              "mr": "यापैकी कोणतेही लक्षण दिसत आहे का?"
+            },
+            "options": [
+              {
+                "id": "yes",
+                "label": {
+                  "en": "Yes",
+                  "hi": "हाँ",
+                  "hinglish": "Haan",
+                  "mr": "हो"
+                },
+                "go": "next",
+                "set": {
+                  "allergy_signs": "yes"
+                },
+                "emergency": true
+              },
+              {
+                "id": "no",
+                "label": {
+                  "en": "No",
+                  "hi": "नहीं",
+                  "hinglish": "Nahi",
+                  "mr": "नाही"
+                },
+                "go": "next"
+              }
+            ]
+          }
         },
         {
           "id": "bite_insect_s2",
@@ -447,7 +481,41 @@
           "agreement": "unchecked",
           "evidence": "unchecked",
           "next": "bite_insect_s2",
-          "verified": false
+          "verified": false,
+          "check": {
+            "question": {
+              "en": "Do you see any of these signs?",
+              "hi": "क्या इनमें से कोई लक्षण दिख रहा है?",
+              "hinglish": "Kya inmein se koi lakshan dikh raha hai?",
+              "mr": "यापैकी कोणतेही लक्षण दिसत आहे का?"
+            },
+            "options": [
+              {
+                "id": "yes",
+                "label": {
+                  "en": "Yes",
+                  "hi": "हाँ",
+                  "hinglish": "Haan",
+                  "mr": "हो"
+                },
+                "go": "next",
+                "set": {
+                  "allergy_signs": "yes"
+                },
+                "emergency": true
+              },
+              {
+                "id": "no",
+                "label": {
+                  "en": "No",
+                  "hi": "नहीं",
+                  "hinglish": "Nahi",
+                  "mr": "नाही"
+                },
+                "go": "next"
+              }
+            ]
+          }
         },
         {
           "id": "bite_insect_s2",

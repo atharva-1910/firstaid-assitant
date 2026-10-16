@@ -46,7 +46,46 @@
           "agreement": "unchecked",
           "evidence": "unchecked",
           "next": "ch_s2",
-          "verified": false
+          "verified": false,
+          "check": {
+            "question": {
+              "en": "Can they cough strongly?",
+              "hi": "क्या वे ज़ोर से खाँस पा रहे हैं?",
+              "hinglish": "Kya woh zor se khaans pa rahe hain?",
+              "mr": "ते जोरात खोकू शकत आहेत का?"
+            },
+            "options": [
+              {
+                "id": "yes",
+                "label": {
+                  "en": "Yes",
+                  "hi": "हाँ",
+                  "hinglish": "Haan",
+                  "mr": "हो"
+                },
+                "go": "stay",
+                "set": {
+                  "choking_signs": "coughing_strongly"
+                }
+              },
+              {
+                "id": "no",
+                "label": {
+                  "en": "No: weak cough, or cannot breathe or speak",
+                  "hi": "नहीं: खाँसी कमज़ोर है, या साँस नहीं ले पा रहे या बोल नहीं पा रहे",
+                  "hinglish": "Nahi: khaansi kamzor hai, ya saans nahi le pa rahe ya bol nahi pa rahe",
+                  "mr": "नाही: खोकला कमजोर आहे, किंवा श्वास घेता किंवा बोलता येत नाही"
+                },
+                "go": {
+                  "step": "ch_s2"
+                },
+                "set": {
+                  "choking_signs": "weak_or_silent"
+                },
+                "emergency": true
+              }
+            ]
+          }
         },
         {
           "id": "ch_s2",
@@ -236,6 +275,55 @@
                 "image": "anim/ch_s5.svg"
               }
             ]
+          },
+          "check": {
+            "question": {
+              "en": "Has the object come out?",
+              "hi": "क्या फँसी हुई चीज़ बाहर निकल गई?",
+              "hinglish": "Kya phasi hui cheez bahar nikal gayi?",
+              "mr": "अडकलेली वस्तू बाहेर आली का?"
+            },
+            "options": [
+              {
+                "id": "yes",
+                "label": {
+                  "en": "Yes",
+                  "hi": "हाँ",
+                  "hinglish": "Haan",
+                  "mr": "हो"
+                },
+                "go": {
+                  "step": "ch_s8"
+                }
+              },
+              {
+                "id": "not_yet",
+                "label": {
+                  "en": "Not yet",
+                  "hi": "अभी नहीं",
+                  "hinglish": "Abhi nahi",
+                  "mr": "अजून नाही"
+                },
+                "go": "stay"
+              },
+              {
+                "id": "unresponsive",
+                "label": {
+                  "en": "They became unresponsive",
+                  "hi": "वे बेहोश हो गए, जवाब नहीं दे रहे",
+                  "hinglish": "Woh behosh ho gaye, jawab nahi de rahe",
+                  "mr": "ते बेशुद्ध झाले, प्रतिसाद देत नाहीत"
+                },
+                "go": {
+                  "situation": "unresponsive",
+                  "branch": "path_a",
+                  "step": "unr_a1"
+                },
+                "set": {
+                  "responsive": "no"
+                }
+              }
+            ]
           }
         },
         {
@@ -260,6 +348,46 @@
           "link": {
             "situation": "unresponsive",
             "branch": "path_a"
+          },
+          "check": {
+            "question": {
+              "en": "Are they unresponsive and not breathing normally?",
+              "hi": "क्या वे जवाब नहीं दे रहे और सामान्य रूप से साँस नहीं ले रहे?",
+              "hinglish": "Kya woh jawab nahi de rahe aur normal saans nahi le rahe?",
+              "mr": "ते प्रतिसाद देत नाहीत आणि नेहमीसारखा श्वास घेत नाहीत का?"
+            },
+            "options": [
+              {
+                "id": "yes",
+                "label": {
+                  "en": "Yes, start CPR",
+                  "hi": "हाँ, CPR शुरू करें",
+                  "hinglish": "Haan, CPR shuru karein",
+                  "mr": "हो, CPR सुरू करा"
+                },
+                "go": {
+                  "situation": "unresponsive",
+                  "branch": "path_a",
+                  "step": "unr_a1"
+                },
+                "set": {
+                  "responsive": "no",
+                  "breathing": "absent"
+                }
+              },
+              {
+                "id": "no",
+                "label": {
+                  "en": "No",
+                  "hi": "नहीं",
+                  "hinglish": "Nahi",
+                  "mr": "नाही"
+                },
+                "go": {
+                  "step": "ch_s8"
+                }
+              }
+            ]
           }
         },
         {

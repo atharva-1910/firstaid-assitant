@@ -136,6 +136,50 @@
               "mr": "झोपलेल्या व्यक्तीची छाती वर-खाली होते का ते पाहताना."
             },
             "verified": false
+          },
+          "check": {
+            "question": {
+              "en": "Are they breathing normally?",
+              "hi": "क्या वे सामान्य रूप से साँस ले रहे हैं?",
+              "hinglish": "Kya woh normal saans le rahe hain?",
+              "mr": "ते नेहमीसारखा श्वास घेत आहेत का?"
+            },
+            "options": [
+              {
+                "id": "yes",
+                "label": {
+                  "en": "Yes",
+                  "hi": "हाँ",
+                  "hinglish": "Haan",
+                  "mr": "हो"
+                },
+                "go": {
+                  "situation": "unresponsive",
+                  "branch": "path_b",
+                  "step": "unr_b1"
+                },
+                "set": {
+                  "breathing": "normal"
+                }
+              },
+              {
+                "id": "no",
+                "label": {
+                  "en": "No, or only gasping",
+                  "hi": "नहीं, या सिर्फ़ हाँफ रहे हैं",
+                  "hinglish": "Nahi, ya sirf haanf rahe hain",
+                  "mr": "नाही, किंवा फक्त धापा टाकत आहेत"
+                },
+                "go": {
+                  "situation": "unresponsive",
+                  "branch": "path_a",
+                  "step": "unr_a1"
+                },
+                "set": {
+                  "breathing": "absent"
+                }
+              }
+            ]
           }
         },
         {
@@ -337,7 +381,45 @@
           "next": null,
           "verified": false,
           "verify_note": "VERIFY",
-          "cpr_rhythm": true
+          "cpr_rhythm": true,
+          "check": {
+            "question": {
+              "en": "Have they started breathing normally?",
+              "hi": "क्या वे सामान्य रूप से साँस लेने लगे हैं?",
+              "hinglish": "Kya woh normal saans lene lage hain?",
+              "mr": "ते नेहमीसारखा श्वास घेऊ लागले आहेत का?"
+            },
+            "options": [
+              {
+                "id": "yes",
+                "label": {
+                  "en": "Yes",
+                  "hi": "हाँ",
+                  "hinglish": "Haan",
+                  "mr": "हो"
+                },
+                "go": {
+                  "situation": "unresponsive",
+                  "branch": "path_b",
+                  "step": "unr_b2"
+                },
+                "set": {
+                  "breathing": "normal"
+                }
+              },
+              {
+                "id": "no",
+                "label": {
+                  "en": "No, keep pushing",
+                  "hi": "नहीं, दबाते रहें",
+                  "hinglish": "Nahi, dabaate rahein",
+                  "mr": "नाही, दाबत राहा"
+                },
+                "go": "stay"
+              }
+            ],
+            "verify_note": "Yes leads to Path B from the recovery position (unr_b2); check against G1 and G3."
+          }
         },
         {
           "id": "unr_b1",
@@ -425,6 +507,45 @@
           "link": {
             "situation": "unresponsive",
             "branch": "path_a"
+          },
+          "check": {
+            "question": {
+              "en": "Are they still breathing normally?",
+              "hi": "क्या वे अब भी सामान्य रूप से साँस ले रहे हैं?",
+              "hinglish": "Kya woh abhi bhi normal saans le rahe hain?",
+              "mr": "ते अजूनही नेहमीसारखा श्वास घेत आहेत का?"
+            },
+            "options": [
+              {
+                "id": "yes",
+                "label": {
+                  "en": "Yes",
+                  "hi": "हाँ",
+                  "hinglish": "Haan",
+                  "mr": "हो"
+                },
+                "go": {
+                  "step": "unr_b4"
+                }
+              },
+              {
+                "id": "no",
+                "label": {
+                  "en": "No, it stopped or they are gasping",
+                  "hi": "नहीं, साँस रुक गई या हाँफ रहे हैं",
+                  "hinglish": "Nahi, saans ruk gayi ya haanf rahe hain",
+                  "mr": "नाही, श्वास थांबला किंवा धापा टाकत आहेत"
+                },
+                "go": {
+                  "situation": "unresponsive",
+                  "branch": "path_a",
+                  "step": "unr_a1"
+                },
+                "set": {
+                  "breathing": "absent"
+                }
+              }
+            ]
           }
         },
         {

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import type { Lang } from "../api/client";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
+import { LANGUAGES } from "../i18n";
 import { useSpeechInput } from "../speech";
 
 const TILES = [
@@ -14,12 +15,23 @@ const TILES = [
   { key: "burns", icon: Flame },
 ] as const;
 
-export function Home({ onSubmit, onAbout, busy }: { onSubmit: (text: string) => void; onAbout: () => void; busy: boolean }) {
-  const { t, i18n } = useTranslation();
+export function Home({
+  onSubmit,
+  onAbout,
+  busy,
+  preferredLang = null,
+}: {
+  onSubmit: (text: string) => void;
+  onAbout: () => void;
+  busy: boolean;
+  preferredLang?: Lang | null;
+}) {
+  const { t } = useTranslation();
   const [text, setText] = useState("");
   // Spoken words are added after whatever was already typed when the mic was switched on.
   const typedBefore = useRef("");
-  const speech = useSpeechInput(i18n.language as Lang, (spoken) => setText((typedBefore.current + " " + spoken).trim()));
+  // The user does not have to pick a language: the mic works out which one is being spoken.
+  const speech = useSpeechInput(preferredLang, (spoken) => setText((typedBefore.current + " " + spoken).trim()));
   const toggleMic = () => {
     if (speech.listening) return speech.stop();
     typedBefore.current = text;
@@ -53,7 +65,13 @@ export function Home({ onSubmit, onAbout, busy }: { onSubmit: (text: string) => 
               {speech.listening ? t("mic_stop") : t("mic_start")}
             </SecondaryButton>
             <p role="status" aria-live="polite" className="text-note text-text-muted">
-              {speech.listening ? t("mic_listening") : speech.error ? t(`mic_${speech.error}`) : t("mic_note")}
+              {speech.listening
+                ? speech.heard
+                  ? t("mic_switched", { lang: LANGUAGES.find((l) => l.code === speech.heard)?.label ?? speech.heard })
+                  : t("mic_listening")
+                : speech.error
+                  ? t(`mic_${speech.error}`)
+                  : t("mic_note")}
             </p>
           </div>
         )}

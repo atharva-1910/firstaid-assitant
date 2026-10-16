@@ -51,6 +51,18 @@ class SummaryRequest(BaseModel):
     completed_steps: int = Field(default=0, ge=0, le=100)
 
 
+class LangIdRequest(BaseModel):
+    text: str = Field(min_length=1, max_length=2000)
+
+
+@app.post("/api/langid")
+def langid(req: LangIdRequest) -> dict:
+    """Language of a piece of text. The mic uses it to switch the speech recogniser to the language being spoken."""
+    from .models import registry
+
+    return registry()["langid"].detect(req.text)
+
+
 @app.post("/api/analyze")
 def analyze(req: AnalyzeRequest) -> dict:
     return pipeline.analyze(req.session_id, req.text, req.ui_lang)

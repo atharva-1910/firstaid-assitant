@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { api, type AnalyzeResponse, type Lang, type Step as StepT, type Urgency } from "./api/client";
 import { PrimaryButton } from "./components/Buttons";
+import { clearAids } from "./components/aids/store";
 import { Call112Button } from "./components/Call112Button";
 import { Header } from "./components/Header";
 import { buildQueue, type Screen } from "./flow";
@@ -36,6 +37,23 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastAction, setLastAction] = useState<(() => void) | null>(null);
+  // Read-aloud is remembered on this device; storage can be blocked, so every access is guarded.
+  const [readAloud, setReadAloud] = useState<boolean>(() => {
+    try {
+      return window.localStorage.getItem("readAloud") === "1";
+    } catch {
+      return false;
+    }
+  });
+  const toggleRead = () =>
+    setReadAloud((on) => {
+      try {
+        window.localStorage.setItem("readAloud", on ? "0" : "1");
+      } catch {
+        /* storage blocked */
+      }
+      return !on;
+    });
 
   // Language and script on <html>, so Devanagari gets its font and 1.6 line height.
   useEffect(() => {
@@ -152,6 +170,7 @@ export default function App() {
   };
 
   const startOver = () => {
+    clearAids();
     setSessionId(null);
     setResp(null);
     setSteps([]);
@@ -175,7 +194,7 @@ export default function App() {
       </div>
     );
   } else if (screen === "home") {
-    body = <Home onSubmit={submit} onAbout={() => go("about")} busy={busy} />;
+    body = <Home onSubmit={submit} onAbout={() => go("about")} busy={busy} preferredLang={langChosen ? lang : null} />;
   } else if (screen === "about") {
     body = (
       <About
@@ -203,6 +222,8 @@ export default function App() {
         onMoreInfo={submit}
         busy={busy}
         banner={banner}
+        readAloud={readAloud}
+        onToggleRead={toggleRead}
       />
     );
   } else if (screen === "summary") {
@@ -212,7 +233,7 @@ export default function App() {
   } else if (screen === "out_of_scope") {
     body = <OutOfScope note={resp?.out_of_scope_note ?? null} fallback={Boolean(resp?.fallback_note)} onStartOver={startOver} />;
   } else {
-    body = <Home onSubmit={submit} onAbout={() => go("about")} busy={busy} />;
+    body = <Home onSubmit={submit} onAbout={() => go("about")} busy={busy} preferredLang={langChosen ? lang : null} />;
   }
 
   return (

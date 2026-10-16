@@ -77,3 +77,16 @@ def test_ui_lang_override():
 
 def test_empty_text_rejected():
     assert client.post("/api/analyze", json={"text": ""}).status_code == 422
+
+
+def test_langid_endpoint_names_the_spoken_language():
+    from fastapi.testclient import TestClient
+
+    from app.main import app
+
+    c = TestClient(app)
+    cases = {"माझे वडील श्वास घेत नाहीत": "mr", "मेरे पिता सांस नहीं ले रहे": "hi", "papa saans nahi le rahe": "hinglish", "my father is not breathing": "en"}
+    for text, lang in cases.items():
+        r = c.post("/api/langid", json={"text": text}).json()
+        assert r["lang"] == lang and "p" in r, (text, r)
+    assert c.post("/api/langid", json={"text": ""}).status_code == 422

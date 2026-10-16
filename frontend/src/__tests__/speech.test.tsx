@@ -56,7 +56,8 @@ describe("speech input", () => {
 
     fireEvent.click(screen.getByRole("button", { name: /speak instead/i }));
     expect(FakeRecognition.last?.started).toBe(true);
-    expect(FakeRecognition.last?.lang).toBe("en-IN");
+    // No language picked: listening starts in Hindi, the recogniser that copes best with all four.
+    expect(FakeRecognition.last?.lang).toBe("hi-IN");
     act(() => FakeRecognition.last!.say("is not ", "breathing"));
     expect(box.value).toBe("my father is not breathing");
     expect(onSubmit).not.toHaveBeenCalled();
@@ -70,7 +71,7 @@ describe("speech input", () => {
   it("listens in the selected language; Hinglish uses Hindi recognition", () => {
     w.webkitSpeechRecognition = FakeRecognition;
     act(() => void i18n.changeLanguage("hinglish"));
-    render(<Home onSubmit={() => {}} onAbout={() => {}} busy={false} />);
+    render(<Home onSubmit={() => {}} onAbout={() => {}} busy={false} preferredLang="hinglish" />);
     fireEvent.click(screen.getByRole("button", { name: /bol kar batayein/i }));
     expect(FakeRecognition.last?.lang).toBe("hi-IN");
   });
@@ -84,5 +85,49 @@ describe("speech input", () => {
       FakeRecognition.last!.onend?.();
     });
     expect(screen.getByRole("status").textContent).toMatch(/microphone access is blocked/i);
+  });
+
+  it("hears Marathi and switches the recogniser to Marathi without being told", async () => {
+    w.webkitSpeechRecognition = FakeRecognition;
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ lang: "mr", script: "devanagari", p: 0.99 })));
+    vi.stubGlobal("fetch", fetchMock);
+    render(<Home onSubmit={() => {}} onAbout={() => {}} busy={false} />);
+    fireEvent.click(screen.getByRole("button", { name: /speak instead/i }));
+    const first = FakeRecognition.last!;
+    expect(first.lang).toBe("hi-IN");
+    await act(async () => first.say("माझे वडील श्वास घेत नाहीत"));
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    const second = FakeRecognition.last!;
+    expect(second).not.toBe(first);
+    expect(second.lang).toBe("mr-IN");
+    expect(screen.getByRole("status").textContent).toMatch(/Heard मराठी/);
+    // What was heard before the switch is kept; new words follow it.
+    act(() => second.say("लवकर सांगा"));
+    expect((screen.getByRole("textbox") as HTMLTextAreaElement).value).toBe("माझे वडील श्वास घेत नाहीत लवकर सांगा");
+    vi.unstubAllGlobals();
+  });
+
+  it("does not switch when the language model is unsure", async () => {
+    w.webkitSpeechRecognition = FakeRecognition;
+    vi.stubGlobal("fetch", vi.fn(async () => new Response(JSON.stringify({ lang: "mr", script: "devanagari", p: 0.58 }))));
+    render(<Home onSubmit={() => {}} onAbout={() => {}} busy={false} />);
+    fireEvent.click(screen.getByRole("button", { name: /speak instead/i }));
+    const first = FakeRecognition.last!;
+    await act(async () => first.say("माय फादर इज नॉट ब्रीदिंग"));
+    expect(FakeRecognition.last).toBe(first);
+    expect(first.lang).toBe("hi-IN");
+    vi.unstubAllGlobals();
+  });
+
+  it("keeps listening in the current language if the language check fails (offline)", async () => {
+    w.webkitSpeechRecognition = FakeRecognition;
+    vi.stubGlobal("fetch", vi.fn(async () => { throw new TypeError("offline"); }));
+    render(<Home onSubmit={() => {}} onAbout={() => {}} busy={false} />);
+    fireEvent.click(screen.getByRole("button", { name: /speak instead/i }));
+    const first = FakeRecognition.last!;
+    await act(async () => first.say("my father is not breathing"));
+    expect(FakeRecognition.last).toBe(first);
+    expect((screen.getByRole("textbox") as HTMLTextAreaElement).value).toBe("my father is not breathing");
+    vi.unstubAllGlobals();
   });
 });

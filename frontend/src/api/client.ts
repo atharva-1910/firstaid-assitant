@@ -28,6 +28,19 @@ export interface StepImage {
   verified: boolean;
 }
 
+// A timer, counter or clock that helps the user do what the step already says (no new instructions).
+export interface AidPhase {
+  key: string;
+  count: number;
+  image?: string | null;
+}
+
+export type StepAid =
+  | { kind: "timer"; seconds: number }
+  | { kind: "stopwatch" }
+  | { kind: "cycle"; phases: AidPhase[] }
+  | { kind: "note_time"; key: string };
+
 export interface Step {
   id: string;
   order: number;
@@ -43,6 +56,8 @@ export interface Step {
   cpr_rhythm: boolean;
   link?: { situation: string; branch?: string } | null;
   image?: StepImage | null;
+  animation?: StepImage | null;
+  aid?: StepAid | null;
   do_not: DoNot[];
 }
 
@@ -134,7 +149,14 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   return (await res.json()) as T;
 }
 
+export interface LangIdResponse {
+  lang: Lang;
+  script: "latin" | "devanagari";
+  p?: number;
+}
+
 export const api = {
+  langid: (text: string) => request<LangIdResponse>("/api/langid", { method: "POST", body: JSON.stringify({ text }) }),
   analyze: (text: string, sessionId: string | null, uiLang: UiLang) =>
     request<AnalyzeResponse>("/api/analyze", {
       method: "POST",

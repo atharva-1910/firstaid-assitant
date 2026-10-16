@@ -71,6 +71,40 @@ class NgramLanguageId:
         return {lang: e / total for lang, e in exp.items()}
 
     def detect(self, text: str) -> dict:
+        script = script_of(text)
+        if script == "devanagari":
+            share = english_in_devanagari(text)
+            if share is not None:
+                return {"lang": "en", "script": script, "p": round(min(0.99, 0.55 + share), 4), "transliterated": True}
         probs = self.scores(text)
         lang = max(probs, key=probs.get)
-        return {"lang": lang, "script": script_of(text), "p": round(probs[lang], 4)}
+        return {"lang": lang, "script": script, "p": round(probs[lang], 4)}
+
+
+# English heard by a Hindi or Marathi speech recogniser comes back written in Devanagari
+# ("माय फादर इज़ नॉट ब्रीदिंग"). These are English words, mostly function words, as such a
+# recogniser spells them. Words that are also common Hindi or Marathi words are left out
+# (इस, ही, दे, इन, हर, आई, मी, दी, ना, तो, and loanwords such as हेल्प, प्लीज़, अंकल), so a Hindi sentence with English loanwords such as
+# "हार्ट अटैक" or "करंट" is not mistaken for English.
+_EN_IN_DEVANAGARI = {
+    "माय", "इज़", "नॉट", "द", "एंड", "शी", "हिज़", "इट", "इट्स", "ऑफ", "टू", "विद", "विथ", "हैज़", "हैव",
+    "कैन", "कांट", "कान्ट", "प्लीज़", "व्हाट", "डू", "डोंट", "डज़", "एम", "आर", "वॉज़", "वाज़", "दिस", "दैट", "देयर",
+    "समवन", "यू", "योर", "वेरी", "नाउ", "गॉट", "ऑन", "ऐट", "विल", "शुड", "हाउ", "आफ्टर", "बिकॉज़", "वी", "ही'ज़",
+    "ब्रीदिंग", "रिस्पॉन्डिंग", "रेस्पॉन्डिंग", "कोलैप्स्ड", "कॉलेप्स्ड", "अनकॉन्शियस", "बिटन", "बर्न्ड", "चोकिंग",
+    "फादर", "मदर", "ब्रदर", "सिस्टर", "हस्बैंड", "वाइफ",
+}
+_EN_LATIN = {"my", "is", "not", "the", "and", "he", "she", "his", "her", "it", "of", "to", "with", "has", "have", "can",
+             "please", "what", "do", "am", "are", "was", "this", "that", "someone", "you", "your", "breathing", "help"}
+_EN_DEV_NORM = {normalize(w).text for w in _EN_IN_DEVANAGARI}
+_WORD = re.compile(r"[a-z']+|[ऀ-ॿ]+")
+
+
+def english_in_devanagari(text: str) -> float | None:
+    """Share of words that are English written in Devanagari (or English Latin words mixed in),
+    when it is high enough to call the message English; otherwise None."""
+    words = _WORD.findall(normalize(text).text)
+    if len(words) < 2:
+        return None
+    hits = sum(1 for w in words if w in _EN_DEV_NORM or w in _EN_LATIN)
+    share = hits / len(words)
+    return share if hits >= 2 and share >= 0.4 else None

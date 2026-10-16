@@ -67,7 +67,7 @@ export function Home({
             <p role="status" aria-live="polite" className="text-note text-text-muted">
               {speech.listening
                 ? speech.heard
-                  ? t("mic_switched", { lang: LANGUAGES.find((l) => l.code === speech.heard)?.label ?? speech.heard })
+                  ? t(speech.repeat ? "mic_switched_repeat" : "mic_switched", { lang: LANGUAGES.find((l) => l.code === speech.heard)?.label ?? speech.heard })
                   : t("mic_listening")
                 : speech.error
                   ? t(`mic_${speech.error}`)

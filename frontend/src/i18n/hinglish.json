@@ -116,6 +116,7 @@
   "show_photo": "Ruki hui tasveer dikhayein",
   "show_animation": "Harkat dikhayein",
   "mic_switched": "{{lang}} sunai di. Ab {{lang}} mein sun rahe hain, bolte rahiye.",
+  "mic_switched_repeat": "{{lang}} sunai di. Ab {{lang}} mein sun rahe hain: kripya phir se boliye.",
   "tts_on": "Steps padhkar sunayein",
   "tts_off": "Padhna band karein",
   "tts_again": "Phir se sunayein",

@@ -76,3 +76,25 @@ def test_safety_net_matches_plain_extraction_when_language_is_right():
     for c in SUITE:
         a, b = extract(c["text"], c["lang"]), extract_safe(c["text"], c["lang"])
         assert _urgency(a) == _urgency(b), c["text"]
+
+
+@pytest.mark.parametrize("text", [
+    "माय फादर इज़ नॉट ब्रीदिंग",
+    "शी इज़ चोकिंग एंड कांट स्पीक",
+    "माय father इज़ not breathing",
+])
+def test_english_heard_by_hindi_recogniser_is_english(model, text):
+    """English speech under the Hindi recogniser comes back in Devanagari; it must be called English."""
+    r = model.detect(text)
+    assert r["lang"] == "en" and r["p"] >= 0.85
+
+
+@pytest.mark.parametrize("text,lang", [
+    ("पापा को हार्ट अटैक आया है", "hi"),
+    ("अंकल को हेल्प चाहिए प्लीज़", "hi"),
+    ("पापा रिस्पॉन्ड नहीं कर रहे", "hi"),
+    ("इस आदमी को सांप ने काटा", "hi"),
+    ("माझे वडील श्वास घेत नाहीत", "mr"),
+])
+def test_hindi_with_english_loanwords_stays_hindi(model, text, lang):
+    assert model.detect(text)["lang"] == lang

@@ -107,6 +107,26 @@ describe("speech input", () => {
     vi.unstubAllGlobals();
   });
 
+  it("hears English written in Devanagari, switches to English and asks for it again", async () => {
+    w.webkitSpeechRecognition = FakeRecognition;
+    vi.stubGlobal("fetch", vi.fn(async () => new Response(JSON.stringify({ lang: "en", script: "devanagari", p: 0.99, transliterated: true }))));
+    render(<Home onSubmit={() => {}} onAbout={() => {}} busy={false} />);
+    fireEvent.click(screen.getByRole("button", { name: /speak instead/i }));
+    const first = FakeRecognition.last!;
+    expect(first.lang).toBe("hi-IN");
+    await act(async () => first.say("माय फादर इज़ नॉट ब्रीदिंग"));
+    const second = FakeRecognition.last!;
+    expect(second).not.toBe(first);
+    expect(second.lang).toBe("en-IN");
+    // The Devanagari spelling of English is dropped, not sent on.
+    const box = screen.getByRole("textbox") as HTMLTextAreaElement;
+    expect(box.value).toBe("");
+    expect(screen.getByRole("status").textContent).toMatch(/please say it again/i);
+    act(() => second.say("my father is not breathing"));
+    expect(box.value).toBe("my father is not breathing");
+    vi.unstubAllGlobals();
+  });
+
   it("does not switch when the language model is unsure", async () => {
     w.webkitSpeechRecognition = FakeRecognition;
     vi.stubGlobal("fetch", vi.fn(async () => new Response(JSON.stringify({ lang: "mr", script: "devanagari", p: 0.58 }))));

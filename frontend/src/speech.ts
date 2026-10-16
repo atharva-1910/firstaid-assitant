@@ -55,6 +55,8 @@ export function initialSpeechLang(preferred: Lang | null): Lang {
 }
 
 const words = (s: string) => s.trim().split(/\s+/).filter(Boolean).length;
+const SCRIPT_OF: Record<Lang, "latin" | "devanagari"> = { en: "latin", hinglish: "latin", hi: "devanagari", mr: "devanagari" };
+const scriptOfText = (s: string) => (/[\u0900-\u097F]/.test(s) ? "devanagari" : "latin");
 
 /** `onText` receives the full transcript so far for this listening session.
  *  `preferred` is the language the user picked, or null if they have not picked one. */
@@ -62,6 +64,7 @@ export function useSpeechInput(preferred: Lang | null, onText: (transcript: stri
   const [listening, setListening] = useState(false);
   const [error, setError] = useState<SpeechError | null>(null);
   const [heard, setHeard] = useState<Lang | null>(null); // language the mic switched to, for the status line
+  const [repeat, setRepeat] = useState(false); // the words heard before the switch were dropped: ask to say them again
   const rec = useRef<Recognition | null>(null);
   const session = useRef({ prefix: "", switches: 0, lang: "hi" as Lang, next: null as Lang | null, checking: false, checkedAt: 0 });
   const onTextRef = useRef(onText);
@@ -104,9 +107,15 @@ export function useSpeechInput(preferred: Lang | null, onText: (transcript: stri
         .then(({ lang: found, p }) => {
           if (rec.current !== r || (p ?? 0.9) < SWITCH_CONFIDENCE) return;
           if (SPEECH_LANG[found] === SPEECH_LANG[s.lang]) return;
-          s.prefix = [s.prefix, transcript].filter(Boolean).join(" ");
+          // Keep what was heard only if it is already in the new language's script. English heard by the
+          // Hindi recogniser comes back in Devanagari ("माय फादर इज़ नॉट ब्रीदिंग"), which no English
+          // reader or rule can use, so it is dropped and the person is asked to say it again.
+          const keep = scriptOfText(transcript) === SCRIPT_OF[found];
+          if (keep) s.prefix = [s.prefix, transcript].filter(Boolean).join(" ");
+          else onTextRef.current(s.prefix);
           s.next = found;
           setHeard(found);
+          setRepeat(!keep);
           r.stop(); // onend restarts in the new language
         })
         .catch(() => undefined) // no network: keep listening in the current language
@@ -146,6 +155,7 @@ export function useSpeechInput(preferred: Lang | null, onText: (transcript: stri
     session.current = { prefix: "", switches: 0, lang: "hi", next: null, checking: false, checkedAt: 0 };
     setError(null);
     setHeard(null);
+    setRepeat(false);
     begin(initialSpeechLang(preferred));
   }, [begin, preferred]);
 
@@ -160,5 +170,5 @@ export function useSpeechInput(preferred: Lang | null, onText: (transcript: stri
     [preferred],
   );
 
-  return { supported: speechSupported(), listening, error, heard, start, stop };
+  return { supported: speechSupported(), listening, error, heard, repeat, start, stop };
 }

@@ -116,6 +116,7 @@
   "show_photo": "Show still picture",
   "show_animation": "Show the movement",
   "mic_switched": "Heard {{lang}}. Now listening in {{lang}}, keep speaking.",
+  "mic_switched_repeat": "Heard {{lang}}. Now listening in {{lang}}: please say it again.",
   "tts_on": "Read steps aloud",
   "tts_off": "Stop reading aloud",
   "tts_again": "Read again",

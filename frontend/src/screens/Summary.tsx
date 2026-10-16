@@ -3,11 +3,15 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
+import { allNotedTimes, formatClockTime } from "../components/aids/store";
 import { PendingLabel } from "../components/PendingLabel";
 
 export function Summary({ lines, pending, onStartOver }: { lines: string[]; pending: boolean; onStartOver: () => void }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [copied, setCopied] = useState(false);
+  // Times the user noted on a step (for example the time of a snakebite) go first: the crew needs them.
+  const noted = allNotedTimes().map(([key, at]) => t(`summary_${key}`, { time: formatClockTime(at, i18n.language) }));
+  lines = [...noted, ...lines];
   const text = lines.join("\n");
   const canShare = typeof navigator !== "undefined" && "share" in navigator;
   return (

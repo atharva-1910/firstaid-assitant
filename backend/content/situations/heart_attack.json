@@ -66,7 +66,23 @@
           "evidence": "unchecked",
           "next": "ha_s3",
           "verified": false,
-          "verify_note": "VERIFY"
+          "verify_note": "VERIFY",
+          "image": {
+            "file": "ha_s2.webp",
+            "title": "Sitting still, supported",
+            "author": "Multilingual First Aid Assistant team",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations",
+            "changes": "Original drawing made for this project.",
+            "alt": {
+              "en": "Person sitting on the floor with their back against a wall, knees bent, resting still.",
+              "hi": "व्यक्ति दीवार से पीठ टिकाकर, घुटने मोड़कर, ज़मीन पर शांत बैठा है।",
+              "hinglish": "Vyakti deewar se peeth tikakar, ghutne modkar, zameen par shaant baitha hai.",
+              "mr": "व्यक्ती भिंतीला पाठ टेकून, गुडघे वाकवून, जमिनीवर शांत बसली आहे."
+            },
+            "verified": false
+          }
         },
         {
           "id": "ha_s3",

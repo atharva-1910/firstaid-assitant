@@ -87,7 +87,23 @@
           "evidence": "unchecked",
           "next": "burns_fire_s2",
           "verified": false,
-          "verify_note": "VERIFY"
+          "verify_note": "VERIFY",
+          "image": {
+            "file": "burns_fire_s1.webp",
+            "title": "Stop, drop and roll",
+            "author": "Multilingual First Aid Assistant team",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations",
+            "changes": "Original drawing made for this project.",
+            "alt": {
+              "en": "Three pictures: stand still, drop to the ground covering the face, then roll on the ground.",
+              "hi": "तीन चित्र: रुकें, चेहरा ढककर ज़मीन पर गिरें, फिर ज़मीन पर लुढ़कें।",
+              "hinglish": "Teen chitra: rukein, chehra dhakkar zameen par girein, phir zameen par ludhkein.",
+              "mr": "तीन चित्रे: थांबा, चेहरा झाकून जमिनीवर पडा, मग जमिनीवर लोळा."
+            },
+            "verified": false
+          }
         },
         {
           "id": "burns_fire_s2",
@@ -117,7 +133,27 @@
           "evidence": "unchecked",
           "next": "burns_fire_s3",
           "verified": false,
-          "verify_note": "VERIFY duration in each source"
+          "verify_note": "VERIFY duration in each source",
+          "aid": {
+            "kind": "timer",
+            "seconds": 1200
+          },
+          "image": {
+            "file": "burns_fire_s2.webp",
+            "title": "Cool the burn under running water",
+            "author": "Multilingual First Aid Assistant team",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations",
+            "changes": "Original drawing made for this project.",
+            "alt": {
+              "en": "Burned forearm held under a running tap over a basin, with a timer.",
+              "hi": "जली हुई बाँह को बहते नल के पानी के नीचे रखा गया है, साथ में टाइमर।",
+              "hinglish": "Jali hui baanh ko behte nal ke paani ke neeche rakha gaya hai, saath mein timer.",
+              "mr": "भाजलेला हात वाहत्या नळाच्या पाण्याखाली धरला आहे, सोबत टायमर."
+            },
+            "verified": false
+          }
         },
         {
           "id": "burns_fire_s3",
@@ -189,7 +225,23 @@
           "evidence": "unchecked",
           "next": "burns_fire_s6",
           "verified": false,
-          "verify_note": "VERIFY"
+          "verify_note": "VERIFY",
+          "image": {
+            "file": "burns_fire_s5.webp",
+            "title": "Cover the burn loosely",
+            "author": "Multilingual First Aid Assistant team",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations",
+            "changes": "Original drawing made for this project.",
+            "alt": {
+              "en": "Cling film laid loosely along the burned forearm, not wrapped tightly.",
+              "hi": "जली हुई बाँह पर क्लिंग फ़िल्म ढीली रखी है, कसकर लपेटी नहीं।",
+              "hinglish": "Jali hui baanh par cling film dheeli rakhi hai, kaskar lapeti nahi.",
+              "mr": "भाजलेल्या हातावर क्लिंग फिल्म सैल ठेवली आहे, घट्ट गुंडाळलेली नाही."
+            },
+            "verified": false
+          }
         },
         {
           "id": "burns_fire_s6",
@@ -396,7 +448,27 @@
           "evidence": "unchecked",
           "next": "burns_chem_s5",
           "verified": false,
-          "verify_note": "VERIFY duration"
+          "verify_note": "VERIFY duration",
+          "aid": {
+            "kind": "timer",
+            "seconds": 1200
+          },
+          "image": {
+            "file": "burns_fire_s2.webp",
+            "title": "Rinse with plenty of running water",
+            "author": "Multilingual First Aid Assistant team",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations",
+            "changes": "Original drawing made for this project.",
+            "alt": {
+              "en": "Burned forearm held under a running tap over a basin, with a timer.",
+              "hi": "जली हुई बाँह को बहते नल के पानी के नीचे रखा गया है, साथ में टाइमर।",
+              "hinglish": "Jali hui baanh ko behte nal ke paani ke neeche rakha gaya hai, saath mein timer.",
+              "mr": "भाजलेला हात वाहत्या नळाच्या पाण्याखाली धरला आहे, सोबत टायमर."
+            },
+            "verified": false
+          }
         },
         {
           "id": "burns_chem_s5",
@@ -417,7 +489,10 @@
           "evidence": "unchecked",
           "next": "burns_chem_s6",
           "verified": false,
-          "verify_note": "VERIFY duration"
+          "verify_note": "VERIFY duration",
+          "aid": {
+            "kind": "stopwatch"
+          }
         },
         {
           "id": "burns_chem_s6",
@@ -501,7 +576,23 @@
           "evidence": "unchecked",
           "next": "burns_elec_s2",
           "verified": false,
-          "verify_note": "VERIFY (G1 scene safety)"
+          "verify_note": "VERIFY (G1 scene safety)",
+          "image": {
+            "file": "burns_elec_s1.webp",
+            "title": "Switch off the power first",
+            "author": "Multilingual First Aid Assistant team",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations",
+            "changes": "Original drawing made for this project.",
+            "alt": {
+              "en": "A finger pushing a switch down to off on the main switch board.",
+              "hi": "मेन स्विच बोर्ड पर उंगली से स्विच नीचे करके बिजली बंद करते हुए।",
+              "hinglish": "Main switch board par ungli se switch neeche karke bijli band karte hue.",
+              "mr": "मेन स्विच बोर्डवर बोटाने स्विच खाली करून वीज बंद करताना."
+            },
+            "verified": false
+          }
         },
         {
           "id": "burns_elec_s2",

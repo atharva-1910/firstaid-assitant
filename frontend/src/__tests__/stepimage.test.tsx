@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import type { Step } from "../api/client";
 import { StepCard } from "../components/StepCard";
@@ -25,5 +25,30 @@ describe("step image", () => {
   it("shows no figure when a step has no image", () => {
     render(<StepCard step={{ ...step, image: null }} />);
     expect(screen.queryByRole("img")).toBeNull();
+  });
+});
+
+describe("step animation", () => {
+  const anim = {
+    src: "/steps/anim/ch_s4.svg", alt: "Moving picture: back blows.", title: "Back blows",
+    author: "Multilingual First Aid Assistant team", license: "CC0 1.0",
+    license_url: "https://creativecommons.org/publicdomain/zero/1.0/",
+    source_url: "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations", verified: false,
+  };
+  it("shows the movement first and can switch to the still picture", () => {
+    render(<StepCard step={{ ...step, animation: anim }} />);
+    expect(screen.getByRole("img").getAttribute("src")).toBe("/steps/anim/ch_s4.svg");
+    expect(screen.getByText(/Animation:/)).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: "Show still picture" }));
+    expect(screen.getByRole("img").getAttribute("src")).toBe("/steps/unr_a3.webp");
+    fireEvent.click(screen.getByRole("button", { name: "Show the movement" }));
+    expect(screen.getByRole("img").getAttribute("src")).toBe("/steps/anim/ch_s4.svg");
+  });
+  it("shows the still picture first when the phone asks for reduced motion", () => {
+    const mm = window.matchMedia;
+    window.matchMedia = ((q: string) => ({ matches: q.includes("reduce"), media: q, addEventListener() {}, removeEventListener() {} })) as unknown as typeof window.matchMedia;
+    render(<StepCard step={{ ...step, animation: anim }} />);
+    expect(screen.getByRole("img").getAttribute("src")).toBe("/steps/unr_a3.webp");
+    window.matchMedia = mm;
   });
 });

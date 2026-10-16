@@ -129,6 +129,21 @@
             },
             "changes": "Resized to 500 px, white background, converted to WebP.",
             "verified": false
+          },
+          "animation": {
+            "file": "anim/ch_s4.svg",
+            "title": "Back blows",
+            "author": "Multilingual First Aid Assistant team",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations",
+            "alt": {
+              "en": "Moving picture: the person leans forward, supported at the chest; the helper strikes firmly between the shoulder blades with the heel of the hand, 5 times.",
+              "hi": "चलती तस्वीर: व्यक्ति आगे झुका है, छाती को सहारा दिया है; मदद करने वाला हथेली के निचले हिस्से से कंधों के बीच 5 बार ज़ोर से थपकी देता है।",
+              "hinglish": "Chalti tasveer: vyakti aage jhuka hai, chhaati ko sahara diya hai; madad karne wala hatheli ke nichle hisse se kandhon ke beech 5 baar zor se thapki deta hai.",
+              "mr": "हलते चित्र: व्यक्ती पुढे वाकली आहे, छातीला आधार दिला आहे; मदत करणारा तळहाताच्या खालच्या भागाने खांद्यांच्या मध्ये 5 वेळा जोरात थाप मारतो."
+            },
+            "verified": false
           }
         },
         {
@@ -171,6 +186,21 @@
             },
             "changes": "Resized to 500 px, white background, converted to WebP.",
             "verified": false
+          },
+          "animation": {
+            "file": "anim/ch_s5.svg",
+            "title": "Abdominal thrusts",
+            "author": "Multilingual First Aid Assistant team",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations",
+            "alt": {
+              "en": "Moving picture: the helper stands behind with a fist just above the belly button and pulls sharply inwards and upwards, 5 times.",
+              "hi": "चलती तस्वीर: मदद करने वाला पीछे खड़ा होकर नाभि के ठीक ऊपर मुट्ठी रखता है और 5 बार तेज़ी से अंदर और ऊपर की ओर खींचता है।",
+              "hinglish": "Chalti tasveer: madad karne wala peechhe khada hokar naabhi ke theek upar mutthi rakhta hai aur 5 baar tezi se andar aur upar ki or kheenchta hai.",
+              "mr": "हलते चित्र: मदत करणारा मागे उभा राहून बेंबीच्या थोडं वर मूठ ठेवतो आणि 5 वेळा जोरात आत आणि वर ओढतो."
+            },
+            "verified": false
           }
         },
         {
@@ -191,7 +221,22 @@
           "agreement": "unchecked",
           "evidence": "unchecked",
           "next": "ch_s7",
-          "verified": false
+          "verified": false,
+          "aid": {
+            "kind": "cycle",
+            "phases": [
+              {
+                "key": "back_blows",
+                "count": 5,
+                "image": "anim/ch_s4.svg"
+              },
+              {
+                "key": "abdominal_thrusts",
+                "count": 5,
+                "image": "anim/ch_s5.svg"
+              }
+            ]
+          }
         },
         {
           "id": "ch_s7",

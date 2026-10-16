@@ -50,6 +50,15 @@ def main() -> None:
                     todo.append("evidence")
                 if not s["verified"]:
                     todo.append("verified flag")
+                img = s.get("image")
+                if img and not img.get("verified"):
+                    todo.append(f"picture matches step ({img['file']})")
+                an = s.get("animation")
+                if an and not an.get("verified"):
+                    todo.append(f"movement matches guideline ({an['file']})")
+                aid = s.get("aid")
+                if aid:
+                    todo.append(f"aid: {aid['kind']}" + (f" {aid['seconds']} s" if aid.get("seconds") else ""))
                 langs = [l for l in ("hi", "hinglish", "mr") if not s["text"].get(l)]
                 if langs:
                     todo.append("translation: " + ", ".join(langs))

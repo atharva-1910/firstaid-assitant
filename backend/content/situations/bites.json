@@ -162,7 +162,11 @@
           "evidence": "unchecked",
           "next": null,
           "verified": false,
-          "verify_note": "VERIFY"
+          "verify_note": "VERIFY",
+          "aid": {
+            "kind": "note_time",
+            "key": "bite_time"
+          }
         }
       ],
       "do_not": [
@@ -617,7 +621,27 @@
           "evidence": "unchecked",
           "next": "bite_dog_s3",
           "verified": false,
-          "verify_note": "VERIFY duration"
+          "verify_note": "VERIFY duration",
+          "aid": {
+            "kind": "timer",
+            "seconds": 900
+          },
+          "image": {
+            "file": "bite_dog_s2.webp",
+            "title": "Wash the bite with soap and running water",
+            "author": "Multilingual First Aid Assistant team",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations",
+            "changes": "Original drawing made for this project.",
+            "alt": {
+              "en": "Bitten forearm washed under a running tap with soap bubbles, with a timer.",
+              "hi": "काटी हुई बाँह को साबुन और बहते नल के पानी से धोते हुए, साथ में टाइमर।",
+              "hinglish": "Kaati hui baanh ko sabun aur behte nal ke paani se dhote hue, saath mein timer.",
+              "mr": "चावलेला हात साबण आणि वाहत्या नळाच्या पाण्याने धुताना, सोबत टायमर."
+            },
+            "verified": false
+          }
         },
         {
           "id": "bite_dog_s3",

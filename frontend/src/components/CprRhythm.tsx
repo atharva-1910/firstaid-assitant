@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { CPR_BPM } from "../theme/tokens";
 
-function useReducedMotion(): boolean {
+export function useReducedMotion(): boolean {
   const [reduced, setReduced] = useState(() =>
     typeof window !== "undefined" && window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false,
   );

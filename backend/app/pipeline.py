@@ -95,6 +95,8 @@ def render_steps(record: dict, branch: dict, slots: dict, lang: str) -> list[dic
             "cpr_rhythm": bool(s.get("cpr_rhythm")),
             "link": s.get("link"),
             "image": render_image(s.get("image"), lang),
+            "animation": render_animation(s.get("animation"), lang),
+            "aid": render_aid(s.get("aid")),
             "do_not": step_dn,
         })
     return out
@@ -107,6 +109,28 @@ def render_image(img: dict | None, lang: str) -> dict | None:
     alt, _ = content.localized(img["alt"], lang)
     keys = ("title", "author", "license", "license_url", "source_url", "verified")
     return {"src": f"/steps/{img['file']}", "alt": alt, **{k: img[k] for k in keys}}
+
+
+def render_animation(anim: dict | None, lang: str) -> dict | None:
+    """A looping drawing that shows the movement (SVG with CSS animation; still when motion is reduced)."""
+    if not anim:
+        return None
+    alt, _ = content.localized(anim["alt"], lang)
+    keys = ("title", "author", "license", "license_url", "source_url", "verified")
+    return {"src": f"/steps/{anim['file']}", "alt": alt, **{k: anim[k] for k in keys}}
+
+
+def render_aid(aid: dict | None) -> dict | None:
+    """A timer, counter or clock that helps the user do what the step already says.
+
+    Aids add no instructions of their own: every duration and count comes from the step text.
+    """
+    if not aid:
+        return None
+    out = dict(aid)
+    if "phases" in out:
+        out["phases"] = [{**p, "image": f"/steps/{p['image']}" if p.get("image") else None} for p in out["phases"]]
+    return out
 
 
 def render_do_not(branch: dict, lang: str) -> list[dict]:

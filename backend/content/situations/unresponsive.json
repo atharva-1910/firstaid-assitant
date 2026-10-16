@@ -71,7 +71,23 @@
           "evidence": "unchecked",
           "next": "unr_s3",
           "verified": false,
-          "verify_note": "VERIFY"
+          "verify_note": "VERIFY",
+          "image": {
+            "file": "unr_s2.webp",
+            "title": "Tap the shoulders and speak loudly",
+            "author": "Multilingual First Aid Assistant team",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations",
+            "changes": "Original drawing made for this project.",
+            "alt": {
+              "en": "Helper kneeling beside a person lying on their back, tapping both shoulders and speaking loudly.",
+              "hi": "पीठ के बल लेटे व्यक्ति के पास घुटनों पर बैठकर दोनों कंधे थपथपाते और ज़ोर से बोलते हुए।",
+              "hinglish": "Peeth ke bal lete vyakti ke paas ghutnon par baithkar dono kandhe thapthapate aur zor se bolte hue.",
+              "mr": "पाठीवर झोपलेल्या व्यक्तीजवळ गुडघ्यावर बसून दोन्ही खांदे थोपटत मोठ्याने बोलताना."
+            },
+            "verified": false
+          }
         },
         {
           "id": "unr_s3",
@@ -100,7 +116,27 @@
             "default": "unr_a1"
           },
           "verified": false,
-          "verify_note": "VERIFY"
+          "verify_note": "VERIFY",
+          "aid": {
+            "kind": "timer",
+            "seconds": 10
+          },
+          "image": {
+            "file": "unr_s3.webp",
+            "title": "Look at the chest for breathing",
+            "author": "Multilingual First Aid Assistant team",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations",
+            "changes": "Original drawing made for this project.",
+            "alt": {
+              "en": "Helper watching the chest of a person lying down to see if it rises and falls.",
+              "hi": "लेटे हुए व्यक्ति की छाती को देखते हुए कि वह ऊपर-नीचे हो रही है या नहीं।",
+              "hinglish": "Lete hue vyakti ki chhaati ko dekhte hue ki woh upar-neeche ho rahi hai ya nahi.",
+              "mr": "झोपलेल्या व्यक्तीची छाती वर-खाली होते का ते पाहताना."
+            },
+            "verified": false
+          }
         },
         {
           "id": "unr_a1",
@@ -215,6 +251,21 @@
               "mr": "मदत करणारा गुडघ्यांवर, हात सरळ आणि खांदे हातांच्या वर, छाती दाबताना."
             },
             "changes": "Resized to 500 px, white background, converted to WebP.",
+            "verified": false
+          },
+          "animation": {
+            "file": "anim/unr_a4.svg",
+            "title": "Chest compressions",
+            "author": "Multilingual First Aid Assistant team",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "source_url": "https://github.com/atharva-1910/firstaid-assitant/tree/main/docs/illustrations",
+            "alt": {
+              "en": "Moving picture: the helper kneels beside the person, arms straight and shoulders over the hands, pushing the chest down and letting it rise fully, about 2 times a second.",
+              "hi": "चलती तस्वीर: मदद करने वाला घुटनों पर बैठकर, हाथ सीधे और कंधे हाथों के ऊपर रखकर, छाती को नीचे दबाता है और पूरी तरह ऊपर आने देता है, लगभग हर सेकंड 2 बार।",
+              "hinglish": "Chalti tasveer: madad karne wala ghutnon par baithkar, haath seedhe aur kandhe haathon ke upar rakhkar, chhaati ko neeche dabata hai aur poori tarah upar aane deta hai, lagbhag har second 2 baar.",
+              "mr": "हलते चित्र: मदत करणारा गुडघ्यावर बसून, हात सरळ आणि खांदे हातांच्या वर ठेवून, छाती खाली दाबतो आणि पूर्ण वर येऊ देतो, साधारण दर सेकंदाला 2 वेळा."
+            },
             "verified": false
           }
         },

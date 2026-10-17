@@ -1,5 +1,5 @@
 // Renders report_spec.json into CCA1_Report_FirstAid_Assistant.docx (US Letter, single column).
-// Each figure is 4.2 in tall: with its caption it takes half of the text area, two per page.
+// Each figure is at most 3.5 in tall (the architecture diagram is larger) and is followed by its caption and a short "What it means" note.
 const fs = require("fs");
 const path = require("path");
 const {
@@ -8,7 +8,7 @@ const {
 } = require("docx");
 
 const spec = JSON.parse(fs.readFileSync(path.join(__dirname, "report_spec.json"), "utf8"));
-const FIG_H_IN = 4.2;
+const FIG_H_IN = 3.5;
 const MAX_W_IN = 6.5;
 const NAVY = "1F3864";
 
@@ -64,15 +64,19 @@ for (const b of spec) {
         children: [new TextRun({ text: it, size: 19 })] }));
     });
   } else if (b.type === "figure") {
-    const { w, h, data } = pngSize(b.path);
-    let hIn = FIG_H_IN;
+    const { w, h, data } = pngSize(path.isAbsolute(b.path) ? b.path : path.join(__dirname, b.path));
+    let hIn = b.height_in || FIG_H_IN;
     let wIn = (hIn * w) / h;
     if (wIn > MAX_W_IN) { wIn = MAX_W_IN; hIn = (wIn * h) / w; }
     children.push(new Paragraph({ alignment: AlignmentType.CENTER, keepNext: true, spacing: { before: 120, after: 40 },
       children: [new ImageRun({ type: "png", data, transformation: { width: Math.round(wIn * 96), height: Math.round(hIn * 96) },
         altText: { title: b.caption, description: b.caption, name: path.basename(b.path) } })] }));
-    children.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 160 },
+    children.push(new Paragraph({ alignment: AlignmentType.CENTER, keepNext: !!b.explain, spacing: { after: b.explain ? 60 : 160 },
       children: [new TextRun({ text: b.caption, bold: true, size: 19 })] }));
+    if (b.explain) {
+      children.push(new Paragraph({ alignment: AlignmentType.JUSTIFIED, spacing: { after: 200 }, indent: { left: 360, right: 360 },
+        children: [new TextRun({ text: "What it means: ", bold: true, size: 19, color: NAVY }), new TextRun({ text: b.explain, size: 19 })] }));
+    }
   } else if (b.type === "table") {
     children.push(...table(b));
   } else if (b.type === "ref") {

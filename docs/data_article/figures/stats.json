@@ -1,0 +1,354 @@
+{
+ "n_steps": 68,
+ "n_branches": 10,
+ "n_do_not": 29,
+ "prim": {
+  "G2": 9,
+  "G1": 46,
+  "UNSOURCED": 2,
+  "G3": 11
+ },
+ "any": {
+  "G1": 52,
+  "G2": 12,
+  "G4": 3,
+  "UNSOURCED": 2,
+  "G3": 12
+ },
+ "verified": 0,
+ "page_filled": 45,
+ "agreement": {
+  "unchecked": 68
+ },
+ "evidence": {
+  "unchecked": 68
+ },
+ "images": 14,
+ "anims": 3,
+ "aids": {
+  "note_time": 1,
+  "timer": 4,
+  "stopwatch": 1,
+  "cycle": 1
+ },
+ "checks": 10,
+ "review": {
+  "bites": "draft",
+  "burns": "draft",
+  "choking": "draft",
+  "heart_attack": "draft",
+  "unresponsive": "draft"
+ },
+ "step_words": {
+  "en": 13.7,
+  "hi": 16.6,
+  "hinglish": 16.5,
+  "mr": 12.2
+ },
+ "branches": [
+  [
+   "bites",
+   "snake",
+   6,
+   5
+  ],
+  [
+   "bites",
+   "insect_sting",
+   5,
+   2
+  ],
+  [
+   "bites",
+   "scorpion",
+   5,
+   2
+  ],
+  [
+   "bites",
+   "dog",
+   5,
+   2
+  ],
+  [
+   "burns",
+   "fire_heat",
+   7,
+   3
+  ],
+  [
+   "burns",
+   "chemical_acid",
+   6,
+   2
+  ],
+  [
+   "burns",
+   "electrical",
+   5,
+   1
+  ],
+  [
+   "choking",
+   "default",
+   8,
+   3
+  ],
+  [
+   "heart_attack",
+   "default",
+   7,
+   4
+  ],
+  [
+   "unresponsive",
+   "default",
+   14,
+   5
+  ]
+ ],
+ "loc_strings": 268,
+ "loc_filled": {
+  "en": 268,
+  "hi": 268,
+  "hinglish": 268,
+  "mr": 268
+ },
+ "myths": 13,
+ "myth_src": {
+  "G5": 3,
+  "G1": 9,
+  "G2": 1
+ },
+ "questions": 9,
+ "lex": {
+  "en": {
+   "entries": 47,
+   "terms": 574,
+   "neg": 28,
+   "unc": 14,
+   "actions": 7
+  },
+  "hi": {
+   "entries": 45,
+   "terms": 353,
+   "neg": 6,
+   "unc": 8,
+   "actions": 6
+  },
+  "hinglish": {
+   "entries": 45,
+   "terms": 563,
+   "neg": 10,
+   "unc": 13,
+   "actions": 7
+  },
+  "mr": {
+   "entries": 45,
+   "terms": 348,
+   "neg": 6,
+   "unc": 9,
+   "actions": 5
+  }
+ },
+ "train": 2880,
+ "dev": 720,
+ "suite": 103,
+ "probe": 100,
+ "verifier": 1309,
+ "urgency": {
+  "emergency": 2083,
+  "None": 824,
+  "home": 250,
+  "clinic": 443
+ },
+ "suite_em": 85,
+ "suite_lang": {
+  "en": 30,
+  "hinglish": 25,
+  "hi": 24,
+  "mr": 24
+ },
+ "suite_expect": {
+  "unresponsive": 18,
+  "heart_attack": 12,
+  "choking": 13,
+  "bites": 27,
+  "burns": 21,
+  "child": 8,
+  "out_of_scope": 4
+ },
+ "probe_sit": {
+  "unresponsive": 21,
+  "heart_attack": 12,
+  "choking": 8,
+  "bites": 24,
+  "burns": 24,
+  "None": 11
+ },
+ "ver_kind": {
+  "identity": 352,
+  "punctuation": 352,
+  "negation_removed": 178,
+  "polite_form": 100,
+  "negation_added": 174,
+  "number_changed": 64,
+  "antonym": 69,
+  "call_dropped": 20
+ },
+ "ver_label": {
+  "same": 804,
+  "different": 505
+ },
+ "ver_lang": {
+  "en": 315,
+  "hi": 333,
+  "hinglish": 334,
+  "mr": 327
+ },
+ "slots": {
+  "age_group": 3600,
+  "time_since": 1790,
+  "bite_type": 600,
+  "burn_cause": 600,
+  "chest_pain": 472,
+  "breathing": 421,
+  "responsive": 406,
+  "choking_signs": 371,
+  "burn_area": 231,
+  "allergy_signs": 14
+ },
+ "subtypes": {
+  "unresponsive/path_a": 307,
+  "unresponsive/path_b": 114,
+  "bites/scorpion": 139,
+  "bites/dog": 172,
+  "bites/snake": 182,
+  "bites/insect_sting": 107,
+  "burns/electrical": 189,
+  "burns/chemical_acid": 128,
+  "burns/fire_heat": 283
+ },
+ "e4": {
+  "train (template)": {
+   "en": {
+    "mean_words": 10.959722222222222,
+    "vocab_per_24_messages": 86.68,
+    "vocabulary": 135,
+    "share_code_mixed": 0.0,
+    "cmi_mean": 0.0
+   },
+   "hi": {
+    "mean_words": 9.92361111111111,
+    "vocab_per_24_messages": 79.84,
+    "vocabulary": 107,
+    "share_code_mixed": 0.0,
+    "cmi_mean": 0.0
+   },
+   "hinglish": {
+    "mean_words": 9.708333333333334,
+    "vocab_per_24_messages": 81.68,
+    "vocabulary": 112,
+    "share_code_mixed": 0.43472222222222223,
+    "cmi_mean": 5.850906809240143
+   },
+   "mr": {
+    "mean_words": 7.847222222222222,
+    "vocab_per_24_messages": 68.44,
+    "vocabulary": 90,
+    "share_code_mixed": 0.0,
+    "cmi_mean": 0.0
+   }
+  },
+  "dev (template)": {
+   "en": {
+    "mean_words": 11.372222222222222,
+    "vocab_per_24_messages": 87.5,
+    "vocabulary": 135,
+    "share_code_mixed": 0.0,
+    "cmi_mean": 0.0
+   },
+   "hi": {
+    "mean_words": 9.916666666666666,
+    "vocab_per_24_messages": 82.34,
+    "vocabulary": 106,
+    "share_code_mixed": 0.0,
+    "cmi_mean": 0.0
+   },
+   "hinglish": {
+    "mean_words": 9.655555555555555,
+    "vocab_per_24_messages": 83.74,
+    "vocabulary": 112,
+    "share_code_mixed": 0.46111111111111114,
+    "cmi_mean": 6.039253955920623
+   },
+   "mr": {
+    "mean_words": 7.8277777777777775,
+    "vocab_per_24_messages": 69.88,
+    "vocabulary": 90,
+    "share_code_mixed": 0.0,
+    "cmi_mean": 0.0
+   }
+  },
+  "safety suite": {
+   "en": {
+    "mean_words": 7.566666666666666,
+    "vocab_per_24_messages": 109.0,
+    "vocabulary": 129,
+    "share_code_mixed": 0.0,
+    "cmi_mean": 0.0
+   },
+   "hi": {
+    "mean_words": 6.583333333333333,
+    "vocab_per_24_messages": 99.0,
+    "vocabulary": 99,
+    "share_code_mixed": 0.0,
+    "cmi_mean": 0.0
+   },
+   "hinglish": {
+    "mean_words": 7.72,
+    "vocab_per_24_messages": 107.26,
+    "vocabulary": 110,
+    "share_code_mixed": 0.28,
+    "cmi_mean": 5.093650793650794
+   },
+   "mr": {
+    "mean_words": 4.666666666666667,
+    "vocab_per_24_messages": 85.0,
+    "vocabulary": 85,
+    "share_code_mixed": 0.0,
+    "cmi_mean": 0.0
+   }
+  },
+  "probe": {
+   "en": {
+    "mean_words": 5.24,
+    "vocab_per_24_messages": 90.06,
+    "vocabulary": 93,
+    "share_code_mixed": 0.0,
+    "cmi_mean": 0.0
+   },
+   "hi": {
+    "mean_words": 5.4,
+    "vocab_per_24_messages": 84.56,
+    "vocabulary": 87,
+    "share_code_mixed": 0.0,
+    "cmi_mean": 0.0
+   },
+   "hinglish": {
+    "mean_words": 5.52,
+    "vocab_per_24_messages": 85.54,
+    "vocabulary": 88,
+    "share_code_mixed": 0.28,
+    "cmi_mean": 6.338095238095238
+   },
+   "mr": {
+    "mean_words": 3.56,
+    "vocab_per_24_messages": 75.38,
+    "vocabulary": 78,
+    "share_code_mixed": 0.0,
+    "cmi_mean": 0.0
+   }
+  }
+ }
+}
